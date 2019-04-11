@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+		This file is part of EDH SHIELDMATE
+		Copyright (C) 2018 Jorge Quintanilha, Paulo Mendonça
+		
+		EDH SHIELDMATE is free software: you can redistribute it 
+		under the terms of the GNU General Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.
+
+		EDH SHIELDMATE is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.
+
+		You should have received a copy of the GNU General Public License
+		along with EDH SHIELDMATE.  If not, see http://www.gnu.org/licenses/.
+	-->
+	<!--Developed by: Jorge Quintanilha-->
+    <meta charset="utf-8" />  
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width height=device-height" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' 'unsafe-eval' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
+	<link rel="stylesheet" type="text/css" href="css/rwd.css" />
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/lang.js"></script>
+    <title>EDH Shieldmate</title>
+</head>
+<body>
+    <div class="container h100p col100p noscroll" id="indexContainer">
+		<div class="row h02p"></div>
+        <div class="row h20p">
+            <div class="col100p h100p centerContent"><image id="mainLogo" src='./img/edhlogo.png'></image></div>
+        </div>
+		<div class="row h03p">
+			 <div class="col100p h100p centerContent"><span class="fontWhite fontFaded txt2 version" id="version.numext"></span></div>
+		</div>
+		<div class="row h02p"></div>
+		<div class="row h04p">
+        	 <div class="col100p h100p centerContent"><span class="fontBlack fontFaded txt4 loc" id="index.numplayers"></span></div>
+        </div>
+        <div class="row h08p">
+			<div class="col20p h100p"></div>
+            <div class="col20p h100p centerContent"><button class="btnMenu btnNumP btn80" id="1p"><span class="fontWhite txt5">1</span></button></div>
+            <div class="col20p h100p centerContent"><button class="btnMenu btnNumP btn80" id="2p"><span class="fontWhite txt5">2</span></button></div>
+            <div class="col20p h100p centerContent"><button class="btnMenu btnNumP btn80" id="3p"><span class="fontWhite txt5">3</span></button></div>
+			<div class="col20p h100p"></div>
+        </div>
+		<div class="row h08p">
+			<div class="col20p h100p"></div>
+            <div class="col20p h100p centerContent"><button class="btnMenu btnNumP btn80" id="4p"><span class="fontWhite txt5">4</span></button></div>
+            <div class="col20p h100p centerContent"><button class="btnMenu btnNumP btn80" id="5p"><span class="fontWhite txt5">5</span></button></div>
+            <div class="col20p h100p centerContent"><button class="btnMenu btnNumP btn80" id="6p"><span class="fontWhite txt5">6</span></button></div>
+			<div class="col20p h100p"></div>
+        </div>
+		<div class="row h08p">
+			<div class="col20p h100p"></div>
+        	 <div class="col60p h100p centerContent">
+				<button class="btnMenu btnNumP btn90" id="ae">
+					<span class="fontWhite txt4h loc" id="index.archenemy"></span>
+				</button>
+			 </div>
+			 <div class="col20p h100p"></div>
+        </div>
+		<div class="row h01p"></div>
+		<div class="row h04p">
+			<div class="col100p h100p centerContent"><span class="fontBlack fontFaded txt4 loc" id="index.usefulstuff"></span></div>
+		</div>
+        <div class="row h08p">
+			<div class="col10p h100p"></div>
+        	 <div class="col40p h100p centerContent">
+				<button class="btnMenu btnMenuLight btn90" id="btnBanlist"><span class="fontWhite txt4h loc" id="index.banlist"></span></button>
+			 </div>
+			 <div class="col40p h100p centerContent">
+				<button class="btnMenu btnMenuLight btn90" id="btnHowto"><span class="fontWhite txt4h loc" id="index.howto"></span></button>
+			 </div>
+			 <div class="col10p h100p"></div>
+        </div>
+        <div class="row h08p">
+			<div class="col10p h100p"></div>
+			<div class="col40p h100p centerContent">
+				<button class="btnMenu btnMenuLight btn90" id="btnAbout"><span class="fontWhite txt4h loc" id="index.about"></span></button>
+			</div>
+			<div class="col40p h100p centerContent">
+				<button class="btnMenu btnMenuLight btn90" id="btnOptions"><span class="fontWhite txt4h loc" id="index.options"></span></button>
+			</div>
+			<div class="col10p h100p"></div>
+        </div>
+		<div class="row h02p"></div>
+		<div class="row h04p">
+			<div class="col100p h100p centerContent"><span class="fontBlack fontFaded txt4 loc" id="index.language"></span></div>
+		</div>
+		<div class="row h06p">
+			<div class="col10p h100p"></div>
+			<div class="col40p h100p centerContent">
+				<button class="btnMenu btn30 btnLangBR" id="btnLng2"><span class="fontWhite txt5">&nbsp;</span></button>
+			</div>
+			<div class="col40p h100p centerContent">
+				<button class="btnMenu btn30 btnLangEN" id="btnLng1"><span class="fontWhite txt5">&nbsp;</span></button>
+			</div>
+			<div class="col10p h100p"></div>
+		</div>
+		<div class="row h01p"></div>
+		<div class="row h06p">
+			<div class="col15p h100p"></div>
+			<div class="col70p h100p centerContent">
+				<button class="btnMenu btnNumP btn90" id="btnSupport">
+					<span class="fontWhite txt3h loc" id="index.supporter"></span>
+				</button>
+			</div>
+			<div class="col15p h100p"></div>
+		</div>
+		<div class="row h01p"></div>
+		<div class="row h03p">
+			<div class="col10p h100p"></div>
+			<div class="col80p h100p centerContent">
+				<span class="fontBlack fontFaded txt2">MAGIC THE GATHERING &copy;</span><span class="fontBlack fontFaded txt2 loc" id="general.and"></span><span class="fontBlack fontFaded txt2">&reg; WIZARDS OF THE COAST LLC</span>
+			</div>
+			<div class="col10p h100p"></div>
+        </div>
+		<div class="row h01p"></div>
+    </div>
+	
+    <script>
+    	window.onload = function() { document.addEventListener("deviceready", init, false); }
+        function init() { screen.orientation.lock('portrait'); document.addEventListener("backbutton", backKeyDown, false); }
+		document.getElementById("1p").addEventListener('click', function(){sessionStorage.setItem('numPlayers',1); self.location="grid1p.html";}, false);
+		document.getElementById("2p").addEventListener('click', function(){sessionStorage.setItem('numPlayers',2); self.location="grid2p.html";}, false);
+		document.getElementById("3p").addEventListener('click', function(){sessionStorage.setItem('numPlayers',3); self.location="grid4p.html";}, false);
+		document.getElementById("4p").addEventListener('click', function(){sessionStorage.setItem('numPlayers',4); self.location="grid4p.html";}, false);      
+		document.getElementById("5p").addEventListener('click', function(){sessionStorage.setItem('numPlayers',5); self.location="grid6p.html";}, false);     
+		document.getElementById("6p").addEventListener('click', function(){sessionStorage.setItem('numPlayers',6); self.location="grid6p.html";}, false);	
+		document.getElementById("ae").addEventListener('click', function(){sessionStorage.setItem('numPlayers',4); self.location="gridae.html";}, false);
+		document.getElementById("btnBanlist").addEventListener('click', function(){self.location="banlist.html";}, false);
+		document.getElementById("btnHowto").addEventListener('click', function(){self.location="howto.html";}, false);
+		document.getElementById("btnAbout").addEventListener('click', function(){self.location="about.html";}, false);
+		document.getElementById("btnOptions").addEventListener('click', function(){self.location="options.html";}, false);
+		document.getElementById("btnLng1").addEventListener('click', function(){setLanguage('en'); localize('index');}, false);
+		document.getElementById("btnLng2").addEventListener('click', function(){setLanguage('br'); localize('index');}, false);
+		document.getElementById("btnSupport").addEventListener('click', function(){self.location="https://play.google.com/store/apps/details?id=com.wired.shieldmatesuper";}, false);
+		localize('index');
+		function backKeyDown(e) { 
+			e.preventDefault();
+			var lang = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
+			if(lang=='br') {
+				navigator.notification.confirm("Deseja fechar o aplicativo?", onConfirm, "Confirmação", "Sim,Não"); 
+			} else {
+				navigator.notification.confirm("Do you wish to close the app?", onConfirm, "Confirmation", "Yes,No"); 
+			}
+		}
+		function onConfirm(button) {
+			if(button==2){
+				return;
+			}else{
+				if (navigator.app) {navigator.app.exitApp();} else if (navigator.device) {navigator.device.exitApp();} else {window.close();}
+			}
+		}
+    </script>
+</body>
+</html>
