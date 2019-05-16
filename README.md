@@ -1,15 +1,23 @@
 # shieldmate
 EDH Shieldmate Source Code
 
-Gonna keep only the code here due to obvious reasons.
+Gonna keep only the code (everything but design assets and such) here due to obvious reasons.
 
 So! I am a beginner developer and decided to try my hand at javascript / css. This app is more of a learning process than a product itself.
 
-So, main issues about the code overall: It has a lot of hard coded stuff, and this bothers me a lot. I've been meaning to get to that but since time is limited, I decided to make a priority out of the stuff the user will actually see and use. The javascript isn't brilliant either.
+<h2>Introduction</h2>
 
-Listed below is the suggestions I receive from users and friends. This is more of a reminder, but sometimes I like to update what I think about each one.
+This project is fun, I like to add stuff to it and learn along the way how to deal with performance issues and so on. But I feel I'm close to reaching a technical ceiling and I'll study other technologies for android development. When I started this, I opted to go hybrid because I thought I'd be releasing in all three platforms (microsoft was still a thing back then) at the same time but alas, reality is not so gentle. Publishing to iOS went from a priority, to a desire, to me simply not caring anymore.
+
+Main issues about the code overall: It has a lot of hard coded stuff, and this bothers me a lot. I've been meaning to get to that but since time is limited, I decided to make a priority out of the stuff the user will actually see and use. The javascript isn't brilliant either.
+
+
+<h2>What's Going On</h2>
+This app went from a very, very small project to something I honestly love to work on and the community feedback has been great. With that in mind, I'll be porting the app to a newer framework. It will take A LOT of time, so I won't be updating the phonegap version anymore (maybe a just one last update to sort a few things out). I'm positive it'll come up way better AND it'll be a great learning process to me as well.
 
 <h2>Feature Brainstorm / Planning</h2>
+Listed below is the suggestions I receive from users and friends. This is more of a reminder, but sometimes I like to update what I think about each one.
+
     <h4>Saving matches:</h4> Not a priority. Could code something to save it in the storage, but I see no real point in it. Saving matches serve no purpose unless the user absolutely has to reset his phone.
     <h4>Rearranging panels:</h4>Also not a priority. Looking for a drag-and-drop solution that doesn't require jQuery.
     <h4>Different table designs for 3, 4 and 5 players:</h4> Want to, but it'll require a LOT of rework in some stuff I did back then due to lack of oversight. This is a good incentive because it'll improve code quality.
@@ -25,9 +33,4 @@ Listed below is the suggestions I receive from users and friends. This is more o
     <h4>Multiple theme/deck registration per player:</h4> Naturally this is where the player registry is aiming to become. It will come, maybe not in the near future but it will.
     <h4>Allow for negative life points:</h4> A situation came up where players can go into negative life points due to Platinum Angel or something like that. Niche, but possible to implement without a lot of work. It'll be on the next version as well.
     <h4>Allow the player to choose the background color:</h4> Nope. Not happening. Each color was chosen to give the combinations some identity. Having a bright yellow background with a black mana symbol is stupid. Same goes for gradient colors, background images, and so on. The app's design direction is what it is.
-    
-<h2>Final thoughts</h2>
 
-This project is fun, I like to add stuff to it and learn along the way how to deal with performance issues and so on. But I feel I'm close to reaching a technical ceiling and I'll study other technologies for android development. When I started this, I opted to go hybrid because I thought I'd be releasing in all three platforms (microsoft was still a thing back then) at the same time but alas, reality is not so gentle. Publishing to iOS went from a priority, to a desire, to me simply not caring anymore.
-
-For now, I will do a bit of adjustments here and there and probably call it a "final" version while I'm planning a next step of sorts. I'm studying Ionic, React, Angular and so on.
