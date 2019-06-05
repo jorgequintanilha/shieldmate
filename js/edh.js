@@ -22,6 +22,7 @@ function setGame(numPlayers, ori, mode) {
   sessionStorage.setItem("screen", screen);
   sessionStorage.setItem("orientation", ori);
   sessionStorage.setItem("mode", (mode == 0 ? 0 : 1));
+  sessionStorage.setItem("sessionPlayers", numPlayers);
   setTableInitialValues(screen);
   setGameScreenFunctions(screen, ori, mode);
   setManaSidebarFunctions(screen);
@@ -75,6 +76,30 @@ function toggleClass(elem, className) {
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+function flashRandomPlayer() {
+  var playerCards = document.getElementsByClassName("card");
+  for (let i = 0; i < playerCards.length; i++) {
+	  highlight(playerCards[i]);
+  }
+  
+  var rand = getRandomInt(1, sessionStorage.getItem("sessionPlayers"));
+
+  while (hasClass(document.getElementById("cardContP" + rand),"invisible")) {
+	rand = getRandomInt(1, sessionStorage.getItem("sessionPlayers"));
+  }
+  
+  sleep(700).then(() => {
+    highlight(playerCards[rand-1]);
+	sleep(700).then(() => {
+      highlight(playerCards[rand-1]);
+	});
+  });
 }
 
 function getRandomColor() {
@@ -421,6 +446,9 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
   }, false);
   document.getElementById("btnPlayers").addEventListener("click", function () {
     openSidebar("playerSidebar", "left");
+  }, false);
+  document.getElementById("btnRandomize").addEventListener("click", function () {
+    flashRandomPlayer();
   }, false);
   document.getElementById("btnManaSidebarClose").addEventListener("click", function () {
     closeSidebars();
