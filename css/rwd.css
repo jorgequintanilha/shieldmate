@@ -77,6 +77,10 @@ html {
 	overflow-y: hidden;
 }
 
+.hnoscroll {
+	overflow-x: hidden;
+}
+
 /* ALLOW VERTICAL SCROLL */
 .vscroll {
 	overflow-y: scroll;
@@ -362,6 +366,14 @@ a {
 	font-style: italic;
 }
 
+.autosize {
+
+}
+
+.fontPoison { color: #00ff80;}
+.fontExp { color: #fbff58;}
+.fontCast { color: #13f2ff;}
+.fontSig { color: #ffbcbc}
 .fontWhite { color: white;}
 .fontBlack { color: black;}
 .fontBlue { color: blue;}
@@ -820,11 +832,6 @@ textarea {
 	transition: all 0.5s ease-in-out;
 }
 
-#sideBarPad {
-	overflow: hidden;
-	opacity: 0.6;
-}
-
 #indexContainer {
 	background-color: #d7d7d7;
 	overflow: hidden;
@@ -913,13 +920,14 @@ button {
 .btnMenuMirran { background: url(../img/btnmirran.png) no-repeat center center; }
 .btnMenuFive { background: url(../img/btnfive.png) no-repeat center center; }
 .btnMenuColorless { background: url(../img/btncolorless.png) no-repeat center center; }
-.btnMenuGraveyard { background: url(../img/btnmirran.png) no-repeat center center; }
-.btnMenuAggro { background: url(../img/btnmirran.png) no-repeat center center; }
-.btnMenuCombo { background: url(../img/btnmirran.png) no-repeat center center; }
-.btnMenuControl{ background: url(../img/btnmirran.png) no-repeat center center; }
-.btnMenuTribal { background: url(../img/btnmirran.png) no-repeat center center; }
+.btnMenuGraveyard { background: url(../img/btngraveyard.png) no-repeat center center; }
+.btnMenuAggro { background: url(../img/btnaggro.png) no-repeat center center; }
+.btnMenuCombo { background: url(../img/btncombo.png) no-repeat center center; }
+.btnMenuControl{ background: url(../img/btncontrol.png) no-repeat center center; }
+.btnMenuTribal { background: url(../img/btntribal.png) no-repeat center center; }
 .btnMenuEnergy { background: url(../img/btnenergy.png) no-repeat center center; }
 .btnMenuBlank { background: url(../img/blank.png) no-repeat center center; }
+.btnMenuSnow{ background: url(../img/btnsnow.png) no-repeat center center; }
 .btnMenuWhiteDk { background: url(../img/btnwhitedk.png) no-repeat center center; }
 .btnMenuBlueDk { background: url(../img/btnbluedk.png) no-repeat center center; }
 .btnMenuBlackDk { background: url(../img/btnblackdk.png) no-repeat center center; }
@@ -938,9 +946,9 @@ button {
 .btnDmgDimir { background: #6d87af;}
 .btnDmgGolgari { background: #388058;}
 .btnDmgGruul { background: #708c41;}
-.btnDmgIzzet { background: #935b95;}
+.btnDmgIzzet { background: #864692;}
 .btnDmgOrzhov { background: #ab8f61;}
-.btnDmgRakdos { background: #a91b20;}
+.btnDmgRakdos { background: #8c1419;}
 .btnDmgSelesnya { background: #8abe4f;}
 .btnDmgSimic { background: #1aad9f;}
 .btnDmgAbzan { background: #727e5c;}
@@ -951,7 +959,7 @@ button {
 .btnDmgBant { background: #b5a22b;}
 .btnDmgEsper { background: #5da6b4;}
 .btnDmgGrixis { background: #634673;}
-.btnDmgJund { background: #7f5039;}
+.btnDmgJund { background: #9e4d26;}
 .btnDmgNaya { background: #a8ae42;}
 .btnDmgDune { background: #936438;}
 .btnDmgGlint { background: #706c74;}
@@ -961,7 +969,7 @@ button {
 .btnDmgBolas { background: #da811b;}
 .btnDmgCoalition { background: #4a93b9;}
 .btnDmgFive { background: #e0b944;}
-.btnDmgPhyrexia { background: #1e592c;}
+.btnDmgPhyrexia { background: #25422c;}
 .btnDmgPlaneswalker { background: #b9492d;}
 .btnDmgAvacyn { background: #ada79a}
 .btnDmgYawgmoth { background: #303364}
@@ -970,11 +978,15 @@ button {
 .btnDmgColorless { background: #978b99;}
 .btnDmgBlank { background: #444444;}
 .btnDmgExtra { background: #efefef;}
-.btnDmgGraveyard { background: #142f2d;}
-.btnDmgAggro{ background: #142f2d;}
-.btnDmgCombo { background: #142f2d;}
-.btnDmgControl { background: #142f2d;}
-.btnDmgTribal{ background: #142f2d;}
+.btnDmgGraveyard { background: #383a30;}
+.btnDmgAggro{ background: #823405;}
+.btnDmgCombo { background: #224486;}
+.btnDmgControl { background: #4d2175;}
+.btnDmgTribal { background: #8a711a;}
+.btnDmgSnow { background: #a1b1c4;}
+.btnDmgEnchantress { background: #49b37d;}
+.btnDmgArtificer { background: #6d5855;}
+.btnDmgSpellslinger { background: #7f3949;}
 
 .fontDmgWhite { color: #b7c17d;}
 .fontDmgBlue { color: #006eb9;}
@@ -986,9 +998,9 @@ button {
 .fontDmgDimir { color: #6d87af;}
 .fontDmgGolgari { color: #388058;}
 .fontDmgGruul { color: #708c41;}
-.fontDmgIzzet { color: #935b95;}
+.fontDmgIzzet { color: #864692;}
 .fontDmgOrzhov { color: #ab8f61;}
-.fontDmgRakdos { color: #a91b20;}
+.fontDmgRakdos { color: #8c1419;}
 .fontDmgSelesnya { color: #8abe4f;}
 .fontDmgSimic { color: #1aad9f;}
 .fontDmgAbzan { color: #727e5c;}
@@ -999,7 +1011,7 @@ button {
 .fontDmgBant { color: #b5a22b;}
 .fontDmgEsper { color: #5da6b4;}
 .fontDmgGrixis { color: #634673;}
-.fontDmgJund { color: #7f5039;}
+.fontDmgJund { color: #9e4d26;}
 .fontDmgNaya { color: #a8ae42;}
 .fontDmgDune { color: #936438;}
 .fontDmgGlint { color: #706c74;}
@@ -1009,7 +1021,7 @@ button {
 .fontDmgBolas { color: #da811b;}
 .fontDmgCoalition { color: #4a93b9;}
 .fontDmgFive { color: #e0b944;}
-.fontDmgPhyrexia { color: #1e592c;}
+.fontDmgPhyrexia { color: #25422c;}
 .fontDmgPlaneswalker { color: #b9492d;}
 .fontDmgAvacyn { color: #ada79a}
 .fontDmgYawgmoth { color: #303364}
@@ -1018,11 +1030,15 @@ button {
 .fontDmgColorless { color: #978b99;}
 .fontDmgBlank { color: #444444;}
 .fontDmgExtra { color: #efefef;}
-.fontDmgGraveyard { color: #142f2d;}
-.fontDmgAggro{ color: #142f2d;}
-.fontDmgCombo { color: #142f2d;}
-.fontDmgControl { color: #142f2d;}
-.fontDmgTribal{ color: #142f2d;}
+.fontDmgGraveyard { color: #383a30;}
+.fontDmgAggro{ color: #823405;}
+.fontDmgCombo { color: #224486;}
+.fontDmgControl { color: #4d2175;}
+.fontDmgTribal{ color: #8a711a;}
+.fontDmgSnow { color: #a1b1c4;}
+.fontDmgEnchantress { color: #49b37d;}
+.fontDmgArtificer { color: #6d5855;}
+.fontDmgSpellslinger { color: #7f3949;}
 
 .btn30 {
 	width: 30%;
@@ -1100,6 +1116,7 @@ button {
 .btnPoison { background: url(../img/psntp.png) no-repeat center center; }
 .btnMonarch { background: url(../img/montp.png) no-repeat center center; }
 .btnCast { background: url(../img/csttp.png) no-repeat center center; }
+.btnSig { background: url(../img/sigtp.png) no-repeat center center; }
 
 .btnClearOff {
 	background: url(../img/btnincsubclearoff.png) no-repeat center center;
@@ -1235,7 +1252,7 @@ button {
 }
 
 .btnAuxPtr {
-	background-size: 8vh 8vh;
+	background-size: 7vh 7vh;
 	height: 8vh;
 	width: 8vh;
 }
@@ -1399,35 +1416,42 @@ button {
 
 #btnToggleCast {
 	background: url(../img/tut_cst.png) no-repeat center center;
-	background-size: 6vh 6vh;
+	background-size: 5vh 5vh;
 	background-repeat: no-repeat;
 	border: none;
 }
 
 #btnToggleBls {
 	background: url(../img/tut_bls.png) no-repeat center center;
-	background-size: 6vh 6vh;
+	background-size: 5vh 5vh;
 	background-repeat: no-repeat;
 	border: none;
 }
 
 #btnTogglePoison {
 	background: url(../img/tut_psn.png) no-repeat center center;
-	background-size: 6vh 6vh;
+	background-size: 5vh 5vh;
 	background-repeat: no-repeat;
 	border: none;
 }
 
 #btnToggleMon {
 	background: url(../img/tut_mon.png) no-repeat center center;
-	background-size: 6vh 6vh;
+	background-size: 5vh 5vh;
 	background-repeat: no-repeat;
 	border: none;
 }
 
 #btnToggleExp {
 	background: url(../img/tut_exp.png) no-repeat center center;
-	background-size: 6vh 6vh;
+	background-size: 5vh 5vh;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+#btnToggleSig {
+	background: url(../img/tut_sig.png) no-repeat center center;
+	background-size: 5vh 5vh;
 	background-repeat: no-repeat;
 	border: none;
 }
@@ -1524,7 +1548,7 @@ label.checklabel {
 }
 
 .izzetPtr {
-	background: #935b95 url(../img/izzetptr.png) no-repeat center center;
+	background: #864692 url(../img/izzetptr.png) no-repeat center center;
 	background-size: 41vh 45vh;
 }
 
@@ -1534,7 +1558,7 @@ label.checklabel {
 }
 
 .rakdosPtr {
-	background: #a91b20 url(../img/rakdosptr.png) no-repeat center center;
+	background: #8c1419 url(../img/rakdosptr.png) no-repeat center center;
 	background-size: 45vh 32vh;
 }
 
@@ -1589,7 +1613,7 @@ label.checklabel {
 }
 
 .jundPtr {
-	background: #7f5039 url(../img/jundptr.png) no-repeat center center;
+	background: #9e4d26 url(../img/jundptr.png) no-repeat center center;
 	background-size: 36vh 45vh;
 }
 
@@ -1635,11 +1659,11 @@ label.checklabel {
 
 .fivePtr {
 	background: #e0b944 url(../img/fiveptr.png) no-repeat center center;
-	background-size: 41vh 45vh;
+	background-size: 45vh 45vh;
 }
 
 .phyrexiaPtr {
-	background: #1e592c url(../img/phyrexiaptr.png) no-repeat center center;
+	background: #25422c url(../img/phyrexiaptr.png) no-repeat center center;
 	background-size: 22vh 45vh;
 }
 
@@ -1674,28 +1698,48 @@ label.checklabel {
 }
 
 .graveyardPtr {
-	background: #142f2d url(../img/mirranptr.png) no-repeat center center;
+	background: #383a30 url(../img/graveyardptr.png) no-repeat center center;
 	background-size: 45vh 45vh;
 }
 
 .aggroPtr {
-	background: #142f2d url(../img/mirranptr.png) no-repeat center center;
-	background-size: 45vh 45vh;
+	background: #823405 url(../img/aggroptr.png) no-repeat center center;
+	background-size: 44vh 40vh;
 }
 
 .comboPtr {
-	background: #142f2d url(../img/mirranptr.png) no-repeat center center;
+	background: #224486 url(../img/comboptr.png) no-repeat center center;
 	background-size: 45vh 45vh;
 }
 
 .controlPtr {
-	background: #142f2d url(../img/mirranptr.png) no-repeat center center;
+	background: #4d2175 url(../img/controlptr.png) no-repeat center center;
 	background-size: 45vh 45vh;
 }
 
 .tribalPtr {
-	background: #142f2d url(../img/mirranptr.png) no-repeat center center;
+	background: #8a711a url(../img/tribalptr.png) no-repeat center center;
+	background-size: 44vh 38vh;
+}
+
+.snowPtr {
+	background: #a1b1c4 url(../img/snowptr.png) no-repeat center center;
 	background-size: 45vh 45vh;
+}
+
+.enchantressPtr {
+	background: #49b37d url(../img/sunriseptr.png) no-repeat center center;
+	background-size: 44vh 31vh;
+}
+
+.artificerPtr {
+	background: #6d5855 url(../img/artificerptr.png) no-repeat center center;
+	background-size: 45vh 28vh;
+}
+
+.spellslingerPtr {
+	background: #7f3949 url(../img/spellslingerptr.png) no-repeat center center;
+	background-size: 34vh 42vh;
 }
 
 .blankPtr {
@@ -1758,7 +1802,7 @@ label.checklabel {
 }
 
 .izzetLnd {
-	background: #935b95 url(../img/izzetlnd.png) no-repeat center center;
+	background: #864692 url(../img/izzetlnd.png) no-repeat center center;
 	background-size: 23vh 21vh;
 }
 
@@ -1768,8 +1812,8 @@ label.checklabel {
 }
 
 .rakdosLnd {
-	background: #a91b20 url(../img/rakdoslnd.png) no-repeat center center;
-	background-size: 16vh 23vh;
+	background: #8c1419 url(../img/rakdoslnd.png) no-repeat center center;
+	background-size: 19vh 27vh;
 }
 
 .selesnyaLnd {
@@ -1794,7 +1838,7 @@ label.checklabel {
 
 .marduLnd {
 	background: #b36061 url(../img/mardulnd.png) no-repeat center center;
-	background-size: 11vh 23vh;
+	background-size: 13vh 26vh;
 }
 
 .sultaiLnd {
@@ -1823,7 +1867,7 @@ label.checklabel {
 }
 
 .jundLnd {
-	background: #7f5039 url(../img/jundlnd.png) no-repeat center center;
+	background: #9e4d26 url(../img/jundlnd.png) no-repeat center center;
 	background-size: 23vh 19vh;
 }
 
@@ -1873,7 +1917,7 @@ label.checklabel {
 }
 
 .phyrexiaLnd {
-	background: #1e592c url(../img/phyrexialnd.png) no-repeat center center;
+	background: #25422c url(../img/phyrexialnd.png) no-repeat center center;
 	background-size: 23vh 12vh;
 }
 
@@ -1908,28 +1952,48 @@ label.checklabel {
 }
 
 .graveyardLnd {
-	background: #142f2d url(../img/mirranlnd.png) no-repeat center center;
+	background: #383a30 url(../img/graveyardlnd.png) no-repeat center center;
 	background-size: 22vh 22vh;
 }
 
 .aggroLnd {
-	background: #142f2d url(../img/mirranlnd.png) no-repeat center center;
-	background-size: 22vh 22vh;
+	background: #823405 url(../img/aggrolnd.png) no-repeat center center;
+	background-size: 20vh 24vh;
 }
 
 .comboLnd {
-	background: #142f2d url(../img/mirranlnd.png) no-repeat center center;
+	background: #224486 url(../img/combolnd.png) no-repeat center center;
 	background-size: 22vh 22vh;
 }
 
 .controlLnd {
-	background: #142f2d url(../img/mirranlnd.png) no-repeat center center;
+	background: #4d2175 url(../img/controllnd.png) no-repeat center center;
 	background-size: 22vh 22vh;
 }
 
 .tribalLnd {
-	background: #142f2d url(../img/mirranlnd.png) no-repeat center center;
-	background-size: 22vh 22vh;
+	background: #8a711a url(../img/triballnd.png) no-repeat center center;
+	background-size: 19vh 25vh;
+}
+
+.snowLnd {
+	background: #a1b1c4 url(../img/snowlnd.png) no-repeat center center;
+	background-size: 23vh 23vh;
+}
+
+.enchantressLnd {
+	background: #49b37d url(../img/sunriselnd.png) no-repeat center center;
+	background-size: 18vh 25vh;
+}
+
+.artificerLnd {
+	background: #6d5855 url(../img/artificerlnd.png) no-repeat center center;
+	background-size: 15vh 25vh;
+}
+
+.spellslingerLnd {
+	background: #7f3949 url(../img/spellslingerlnd.png) no-repeat center center;
+	background-size: 22vh 18vh;
 }
 
 .blankLnd {

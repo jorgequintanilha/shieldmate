@@ -26,31 +26,31 @@ function loadJSON(url,callback) {
         }
     }
 	req.overrideMimeType("application/json");
-	req.open('GET', url, true);
+	req.open("GET", url, true);
 	req.send();
 }
 
 function localize(page) {
-	var lang = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
+	var lang = localStorage.getItem("language") ? localStorage.getItem("language") : "en";
 	var url = getLanguage(lang);
 	loadJSON(url,function(response){
 		var jsonobj = JSON.parse(response);
-		var translate = document.getElementsByClassName('loc');
+		var translate = document.getElementsByClassName("loc");
 		for(var i=0;i<translate.length;i++) {
 			var keys = translate[i].id.split(".");
 			translate[i].innerHTML = jsonobj[keys[0]][keys[1]];
 		}
 		
-		var translate = document.getElementsByClassName('locph');
+		var translate = document.getElementsByClassName("locph");
 		for(var i=0;i<translate.length;i++) {
 			translate[i].placeholder = jsonobj[page][translate[i].id];
 		}
 	});
 	
 	if(page == "index" || page == "about"){
-		loadJSON('./loc/vv.json',function(response){
+		loadJSON("./loc/vv.json",function(response){
 			var jsonobj = JSON.parse(response);
-			var translate = document.getElementsByClassName('version');
+			var translate = document.getElementsByClassName("version");
 			for(var i=0;i<translate.length;i++) {
 				var keys = translate[i].id.split(".");
 				translate[i].innerHTML = jsonobj[keys[0]][keys[1]];
@@ -60,7 +60,7 @@ function localize(page) {
 }
 
 function getMessage(key,subkey) {
-	var lang = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
+	var lang = localStorage.getItem("language") ? localStorage.getItem("language") : "en";
 	var url = getLanguage(lang);
 	loadJSON(url,function(response){
 		var jsonobj = JSON.parse(response);
@@ -69,8 +69,8 @@ function getMessage(key,subkey) {
 }
 
 function configConfirmation(save) {
-	/* this is ugly, but I can't use return on async functions */
-	var lang = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
+	/* this is ugly, but I can"t use return on async functions */
+	var lang = localStorage.getItem("language") ? localStorage.getItem("language") : "en";
 	var url = getLanguage(lang);
 	loadJSON(url,function(response){
 		var jsonobj = JSON.parse(response);
@@ -81,21 +81,21 @@ function configConfirmation(save) {
 }
 
 function setLanguage(locale) {
-	localStorage.setItem('language',locale);
+	localStorage.setItem("language",locale);
 }
 
 function getLanguage(locale) {
 	switch(locale) {
-		case 'br':
-		case 'BR':
-		case 'pt-BR':
-		return './loc/br.json';
+		case "br":
+		case "BR":
+		case "pt-BR":
+		return "./loc/br.json";
 		break;
-		case 'en':
-		case 'EN':
-		case 'en-US':
+		case "en":
+		case "EN":
+		case "en-US":
 		default:
-		return './loc/en.json';
+		return "./loc/en.json";
 		break;
 	}
 }

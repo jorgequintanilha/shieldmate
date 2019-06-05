@@ -38,6 +38,16 @@ function initMenu() {
 		document.getElementById("btnSide4Close").addEventListener("click",function(){closeSidebars();},false);
 	}
 	
+	if(document.getElementById("btnSide5")) {
+		document.getElementById("btnSide5").addEventListener("click",function(){openSidebar("sidebar5","left");}, false);
+		document.getElementById("btnSide5Close").addEventListener("click",function(){closeSidebars();},false);
+	}
+	
+	if(document.getElementById("btnSide6")) {
+		document.getElementById("btnSide6").addEventListener("click",function(){openSidebar("sidebar6","right");}, false);
+		document.getElementById("btnSide6Close").addEventListener("click",function(){closeSidebars();},false);
+	}
+	
 	var blanks = document.querySelectorAll("a[target='_blank']");
 	for(var i=0; i<blanks.length;i++) {
 		blanks[i].addEventListener("click", function(e) {
@@ -62,5 +72,7 @@ function closeSidebars() {
 	if(document.getElementById("btnSide2")) {document.getElementById("sidebar2").style["right"] = "-"+offset+"px"};
 	if(document.getElementById("btnSide3")) {document.getElementById("sidebar3").style["left"] = "-"+offset+"px"};
 	if(document.getElementById("btnSide4")) {document.getElementById("sidebar4").style["right"] = "-"+offset+"px"};
+	if(document.getElementById("btnSide5")) {document.getElementById("sidebar5").style["left"] = "-"+offset+"px"};
+	if(document.getElementById("btnSide6")) {document.getElementById("sidebar6").style["right"] = "-"+offset+"px"};
 }
 

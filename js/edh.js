@@ -202,7 +202,7 @@ function setPlayerLife(op, amount, pnum) {
       if (lp.innerHTML > 998) {
         lp.innerHTML = "999";
       }
-      if (document.getElementById("cardP" + pnum).style.opacity < 1) {
+      if (document.getElementById("cardP" + pnum).style.opacity < 1 && lp.innerHTML > 0) {
         document.getElementById("cardP" + pnum).style.opacity = 1;
       }
       return;
@@ -210,6 +210,9 @@ function setPlayerLife(op, amount, pnum) {
     case -1:
       lp.innerHTML = (parseInt(lp.innerHTML, 10) - amount);
       if (lp.innerHTML < 1) {
+		if (localStorage.getItem('negativeLife')==1) {
+			  document.getElementById("cardP" + pnum).style.opacity = 0.6; return;
+			  }
         lp.innerHTML = "0";
         document.getElementById("cardP" + pnum).style.opacity = 0.4;
       }
@@ -220,6 +223,9 @@ function setPlayerLife(op, amount, pnum) {
         if (parseInt(amount, 10) > 998) {
           lp.innerHTML = "999";
         } else if (parseInt(amount, 10) < 1) {
+		  if (localStorage.getItem('negativeLife')==1) {
+			  lp.innerHTML = parseInt(amount, 10); document.getElementById("cardP" + pnum).style.opacity = 0.6; return;
+			  }
           lp.innerHTML = "0";
           document.getElementById("cardP" + pnum).style.opacity = 0.4;
           return;
@@ -280,6 +286,7 @@ function setDefaultSettings() {
     toggleClass(document.getElementById("btnTogglePoison"), "inactive");
     toggleClass(document.getElementById("btnToggleMon"), "inactive");
     toggleClass(document.getElementById("btnToggleCast"), "inactive");
+	toggleClass(document.getElementById("btnToggleSig"), "inactive");
 	var auxbtns = document.getElementsByClassName("btnAux");
 	for (var i = 0; i < auxbtns.length; i++) {
 		toggleClass(auxbtns[i], "invisible");
@@ -464,6 +471,11 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
       } else {
         removeClass(document.getElementById("btnToggleCast"), "inactive");
       }
+	  if (hasClass(document.getElementById("btnSig" + pnum), "invisible")) {
+        addClass(document.getElementById("btnToggleCSig"), "inactive");
+      } else {
+        removeClass(document.getElementById("btnToggleSig"), "inactive");
+      }
       openSidebar("styleSidebar", "left");
     }, false);
   }
@@ -581,6 +593,31 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
 
       var bid = document.getElementById("btnPoisonP" + i);
       bid.style.background = "url(./img/psntp.png)  no-repeat center center";
+      bid.style.backgroundSize = np;
+    }, false);
+	
+	document.getElementById("btnSigP" + i).addEventListener("click", function () {
+      var tp = document.getElementById("txtSigP" + i);
+      if (isNaN(parseInt(tp.innerHTML,10))) {
+        tp.innerHTML = "0";
+      }
+
+      tp.innerHTML = (parseInt(tp.innerHTML, 10) + 1);
+      if (tp.innerHTML > 99) {
+        tp.innerHTML = "99";
+      }
+
+      var bid = document.getElementById("btnSigP" + i);
+      bid.style.background = "url(./img/sigiv.png)  no-repeat center center";
+      bid.style.backgroundSize = np;
+    }, false);
+
+    document.getElementById("btnSigP" + i).addEventListener("long-press", function () {
+      var tp = document.getElementById("txtSigP" + i);
+      tp.innerHTML = "&nbsp;";
+
+      var bid = document.getElementById("btnSigP" + i);
+      bid.style.background = "url(./img/sigtp.png)  no-repeat center center";
       bid.style.backgroundSize = np;
     }, false);
 
@@ -1218,6 +1255,11 @@ function setSettingsSidebarFunctions() {
       elemset[i].style.background = "url(./img/csttp.png)  no-repeat center center";
       elemset[i].style.backgroundSize = np;
     }
+	var elemset = document.getElementsByClassName("btnSig");
+    for (let i = 0; i < elemset.length; i++) {
+      elemset[i].style.background = "url(./img/sigtp.png)  no-repeat center center";
+      elemset[i].style.backgroundSize = np;
+    }
     var numPlayers = sessionStorage.getItem("screen");
     for (var i = 1; i <= numPlayers; i++) {
       document.getElementById("cardP" + i).style.opacity = 1;
@@ -1445,7 +1487,28 @@ function setStyleSidebarFunctions(ori) {
       num++;
     }
   }
-
+  
+  /*secret themes gambiarra - coding laziness*/
+  document.getElementById("btnStyleBtn_Snow").addEventListener("click", function () {
+    document.getElementById("txtStyleSideBarSelectedTheme").innerHTML = "Snow";
+	document.getElementById("txtStyleSideBarSelectedTheme").className = "txt3h fontDmgSnow"; 
+  }, false);
+  
+  document.getElementById("btnStyleSideBarClear").addEventListener("long-press", function () {
+	document.getElementById("txtStyleSideBarSelectedTheme").innerHTML = "Artificer";
+	document.getElementById("txtStyleSideBarSelectedTheme").className = "txt3h fontDmgArtificer";
+  }, false);
+  
+  document.getElementById("btnStyleSideBarSave").addEventListener("long-press", function () {
+	document.getElementById("txtStyleSideBarSelectedTheme").innerHTML = "Enchantress";
+	document.getElementById("txtStyleSideBarSelectedTheme").className = "txt3h fontDmgEnchantress";
+  }, false);
+  
+  document.getElementById("txtStyleSideBarPad").addEventListener("long-press", function () {
+	document.getElementById("txtStyleSideBarSelectedTheme").innerHTML = "Spellslinger";
+	document.getElementById("txtStyleSideBarSelectedTheme").className = "txt3h fontDmgSpellslinger";
+  }, false);
+  
   document.getElementById("btnStyleSideBarClear").addEventListener("click", function () {
     let pnumDiv = document.getElementById("txtStyleSideBarPad");
     setStyle("", pnumDiv.innerHTML, ori);
@@ -1511,13 +1574,21 @@ function setStyleSidebarFunctions(ori) {
     toggleClass(document.getElementById("btnToggleCast"), "inactive");
     toggleClass(document.getElementById("btnCast" + pnum), "invisible");
   }, false);
+  
+  document.getElementById("btnToggleSig").addEventListener("click", function () {
+    let pnum = document.getElementById("txtStyleSideBarPad").innerHTML;
+    toggleClass(document.getElementById("btnToggleSig"), "inactive");
+    toggleClass(document.getElementById("btnSig" + pnum), "invisible");
+  }, false);
 }
 
 function setRandomStyles() {
   var numPlayers = sessionStorage.getItem("screen");
   var ori = sessionStorage.getItem("orientation");
   for (let i = 1; i <= numPlayers; i++) {
-    setStyle(getStyleName(getRandomInt(1, 40)), "P" + i, ori);
+	var stylenum = getRandomInt(1, 41);
+	if (stylenum == 41) { stylenum = 99; }
+    setStyle(getStyleName(stylenum), "P" + i, ori);
   }
 }
 
@@ -1561,21 +1632,45 @@ function setPlayerName(name, pnum) {
     var playerNameTxt = document.getElementById("txtPlayerName" + pnum);
     var playerNameManaTxt = document.getElementById("txtPlayerNameMana" + pnum);
     var playerNameCmdTxt = document.getElementById("txtPlayerNameCmd" + pnum);
+	var playerNameBlock = document.getElementById("blkPlayerName" + pnum);
 
     if (name == "" || name == null) {
       return;
     } else {
       let pid = "txtPlayerName" + pnum;
+
       if (playerNameTxt) {
-        playerNameTxt.innerHTML = name.substring(0, 14);
+        playerNameTxt.innerHTML = name.substring(0,20);
       }
       if (playerNameManaTxt) {
-        playerNameManaTxt.innerHTML = name.substring(0, 14);
+        playerNameManaTxt.innerHTML = name.substring(0,14);
       }
       if (playerNameCmdTxt) {
-        playerNameCmdTxt.innerHTML = name.substring(0, 14);
+        playerNameCmdTxt.innerHTML = name.substring(0,14);
       }
       sessionStorage.setItem(pnum + "name", name.toLowerCase());
+	  
+	  if(sessionStorage.getItem("orientation") == 0) {
+		if (playerNameTxt.offsetWidth > playerNameBlock.clientWidth) {
+		  var textsize = parseFloat(window.getComputedStyle(playerNameTxt).fontSize);
+		  do {
+			var textsize = textsize - 1;
+			playerNameTxt.style.fontSize = textsize + "px";
+		  }
+		  while (playerNameTxt.offsetWidth > playerNameBlock.clientWidth);
+	    }  
+	  }
+	  else {
+		if (playerNameTxt.offsetHeight > playerNameBlock.clientHeight) {
+		  var textsize = parseFloat(window.getComputedStyle(playerNameTxt).fontSize);
+		  do {
+			var textsize = textsize - 1;
+			playerNameTxt.style.fontSize = textsize + "px";
+		  }
+		  while (playerNameTxt.offsetHeight > playerNameBlock.clientHeight);
+	    }
+	  }
+	  
     }
   } else {
     return;
@@ -1613,28 +1708,6 @@ function setManaPoolMode(toggle, mode, numPlayers) {
       setManaPoolDefaultValues();
       break;
   }
-}
-
-function saveLastGameSession() {
-	var lastGame = [];
-	lastGame[0] = sessionStorage.getItem("numPlayers");
-	var reg =  + sessionStorage.getItem("orientation") == 0 ? "Ptr" : "Lnd";
-	for (var i = 1; i <= lastGame[0]; i++) {
-		var style = document.getElementById("cardBackP" + i).className.match(/\w*Lnd/)[0];
-		var pname = document.getElementById("txtPlayerNameP" + i).innerHTML;
-		var pstyle = style.substring(0, style.length - 3);
-		var plife = document.getElementById("txtLifePointsP" + i).innerHTML;
-		var cmdp1 = i == 1 ? 0 : document.getElementById("txtDmgCmdP"+i+"fromP1").innerHTML;
-		var cmdp2 = i == 2 ? 0 : document.getElementById("txtDmgCmdP"+i+"fromP2").innerHTML;
-		var cmdp3 = (i == 3) ? 0 : document.getElementById("txtDmgCmdP"+i+"fromP3").innerHTML;
-		var cmdp4 = (i == 4) ? 0 : document.getElementById("txtDmgCmdP"+i+"fromP4").innerHTML;
-		//var cmdp5 = (i == 5) ? 0 : document.getElementById("txtDmgCmdP"+i+"fromP5").innerHTML;
-		//var cmdp6 = (i == 6) ? 0 : document.getElementById("txtDmgCmdP"+i+"fromP6").innerHTML;
-		var cmde1 = document.getElementById("txtDmgCmdExtra1P"+i).innerHTML;
-		var cmde2 = document.getElementById("txtDmgCmdExtra2P"+i).innerHTML;
-		lastGame[i] = [pname,pstyle,plife,cmdp1,cmdp2,cmdp3,cmdp4,2,3,cmde1,cmde2];
-	}
-	localStorage.setItem("lastGame", lastGame);
 }
 
 function getStyleName(num) {
@@ -1761,6 +1834,18 @@ function getStyleName(num) {
       break;
     case 40:
       return "Mirran";
+      break;
+	case 96:
+      return "Spellslinger";
+      break;
+	case 97:
+      return "Enchantress";
+      break;
+	case 98:
+      return "Artificer";
+      break;
+	case 99:
+      return "Snow";
       break;
     default:
       return "Blank";

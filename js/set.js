@@ -37,7 +37,7 @@ function initOptions() {
 
 	if (localStorage.getItem('bindDamage')==1) {document.getElementById('checkbinddamage').checked = true;}
 	if (localStorage.getItem('hideButtonsDef')==1) {document.getElementById('checkhidebuttons').checked = true;}
-	if (localStorage.getItem('exitSaveSession')==1) {document.getElementById('checksavesession').checked = true;}
+	if (localStorage.getItem('negativeLife')==1) {document.getElementById('checknegativelife').checked = true;}
 	
 	var playerlist = document.getElementById("playersList");
 	var playernum = localStorage.getItem("numDefPlayers");
@@ -139,6 +139,13 @@ function setOptionsFunctions() {
 			localStorage.setItem('hideButtonsDef',1);
 		} 
 		else {localStorage.setItem('hideButtonsDef',0);}
+	},false);
+	
+	document.getElementById('checknegativelife').addEventListener('change',function(){
+		if(document.getElementById('checknegativelife').checked) {
+			localStorage.setItem('negativeLife',1);
+		} 
+		else {localStorage.setItem('negativeLife',0);}
 	},false);
 	
 	document.getElementById("btnCloseTableMap").addEventListener("click", function () {
