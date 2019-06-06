@@ -3,6 +3,8 @@ EDH Shieldmate Source Code
 
 -Gonna keep only the code here due to obvious reasons (everything but design assets and such)-
 
+<hr>
+
 <h2>Introduction</h2>
 
 So! I am a beginner developer and decided to try my hand at javascript / css. This app is more of a learning process than a product itself. Being a dedicated EDH player in the MTG world, I thought hey why not, lets make this happen.
@@ -11,10 +13,40 @@ This project is fun, I like to add stuff to it and learn along the way how to de
 
 Main issues about the code overall: It has a lot of hard coded stuff, and this bothers me a lot. I've been meaning to get to that but since time is limited, I decided to make a priority out of the stuff the user will actually see and use. The javascript isn't brilliant either.
 
+<hr>
+
+<h2>What is New</h2>
+
+Since its inception I've added a ton of new stuff to the app. Gonna list them below.
+
+<h3>Oathbreaker Support:</h3> Widely requested. It is just a simple counter button, just like the experience one. Doubles as a partner commander counter as well. Now, if cards like Rowan and Will become a trend I'm in deep sh!t.
+
+<h3>Player Registration:</h3> Just a way to record a player's name, default deck and default table position, to accelerate table setup for a familiar group. This is far from ideal but it is a step forward.
+
+<h3>Player Roulette:</h3> It flashes a random panel at the table, and can be used to decided who goes first or who to attack in random situations like, for instance, a player piloting a Ruhan deck.
+
+<h3>Hidden Themes:</h3> Long-pressing at the buttons or the player number in the styles screen activates one of the three hidden themes. Why do they exist? Mainly to reflect some of my favourite deck archetypes, and because I didn't want to add another row just for those. In the future, when I come up with more themes, new rows on the style sheet will be added of course. Also, I like easter eggs.
+
+<h3>Negative Life:</h3> It is a very niche situation, such as Platinum Angel, but it was easy enough to implement so why not. Disabled by default to avoid confusion.
+
+<h3>Timer:</h3> Some players requested it so I did, mostly so I could learn how to do it. Personally I don't really use it and don't care about it.
+
+<h3>Binding Player Life and Commander Damage:</h3> This is essential in any EDH game, but I decided to make it an optional parameter so players may play without it and avoid mistakes.
+
+<h3>Dice Roller:</h3> Another why-not functionality. Rarely used, but the settings page had a lot of empty space anyway.
+
+<h3>Hiding the auxiliary buttons:</h3> Requested so filthy modern and standard players can play without having a bunch of awesome EDH relevant buttons to look at! Just kidding, I like it as well (the functionality, not the formats).
+
+<h3>Hiding / Enabling Players on 4p and 6p Screens:</h3> Ugly workaround that turned out great at the end, since I now only two less game screen pages to mess around with.
+
+<hr>
+
 <h2>What's Going On</h2>
 This app went from a very, very small project to something I honestly love to work on and the community feedback has been great. With that in mind, I'll be porting the app to a newer framework. It will take A LOT of time, so I won't be updating the phonegap version anymore (maybe a just one or two last updates to sort a few things out). I'm positive it'll come up way better AND it'll be a great learning process to me as well.
 
 I'm divided between Flutter and Xamarin. Flutter (or maybe even React Native) looks awesome, but I'm a bit more familiar with C# dev environment and some of my coworkers use Xamarin at work so it might be a thing.
+
+<hr>
 
 <h2>Feature Brainstorm / Planning</h2>
 Listed below is the suggestions I receive from users and friends. This is more of a reminder, but sometimes I like to update what I think about each one.
@@ -41,7 +73,9 @@ Listed below is the suggestions I receive from users and friends. This is more o
 
 <h3>Allow the player to choose the background color:</h3> Nope. Not happening. Each color was chosen to give the combinations some identity. Having a bright yellow background with a black mana symbol is stupid. Same goes for gradient colors, background images, and so on. The app's design direction is what it is.
 
-<h2>Hardcoded Stuff In Need of Rework</h2>
+<hr>
+
+<h2>Hardcoded Stuff in Need of Rework</h2>
 This is where I map all the crap I did in a hurry to make the app work and never got back to.
 
 <h3>Orientation:</h3> I need to rewrite a bunch of stuff in regards to screen orientation if I ever want to code a better 3 and 5 player screns. Doesn't look like a lot of work, but it'll need a lot of testing.
