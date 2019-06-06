@@ -955,13 +955,13 @@ button {
 .btnDmgBoros { background: #f47b40;}
 .btnDmgDimir { background: #6d87af;}
 .btnDmgGolgari { background: #388058;}
-.btnDmgGruul { background: #708c41;}
+.btnDmgGruul { background: #616521;}
 .btnDmgIzzet { background: #864692;}
 .btnDmgOrzhov { background: #ab8f61;}
 .btnDmgRakdos { background: #8c1419;}
 .btnDmgSelesnya { background: #8abe4f;}
 .btnDmgSimic { background: #1aad9f;}
-.btnDmgAbzan { background: #727e5c;}
+.btnDmgAbzan { background: #a08833;}
 .btnDmgJeskai { background: #9b6fb0;}
 .btnDmgMardu { background: #b36061;}
 .btnDmgSultai { background: #285a72;}
@@ -988,6 +988,11 @@ button {
 .btnDmgColorless { background: #978b99;}
 .btnDmgBlank { background: #444444;}
 .btnDmgExtra { background: #efefef;}
+.btnDmgGraveyard { background: #383a30;}
+.btnDmgAggro{ background: #823405;}
+.btnDmgCombo { background: #224486;}
+.btnDmgControl { background: #4d2175;}
+.btnDmgTribal { background: #8a711a;}
 .btnDmgSnow { background: #a1b1c4;}
 .btnDmgEnchantress { background: #49b37d;}
 .btnDmgArtificer { background: #6d5855;}
@@ -1002,13 +1007,13 @@ button {
 .fontDmgBoros { color: #f47b40;}
 .fontDmgDimir { color: #6d87af;}
 .fontDmgGolgari { color: #388058;}
-.fontDmgGruul { color: #708c41;}
+.fontDmgGruul { color: #616521;}
 .fontDmgIzzet { color: #864692;}
 .fontDmgOrzhov { color: #ab8f61;}
 .fontDmgRakdos { color: #8c1419;}
 .fontDmgSelesnya { color: #8abe4f;}
 .fontDmgSimic { color: #1aad9f;}
-.fontDmgAbzan { color: #727e5c;}
+.fontDmgAbzan { color: #a08833;}
 .fontDmgJeskai { color: #9b6fb0;}
 .fontDmgMardu { color: #b36061;}
 .fontDmgSultai { color: #285a72;}
@@ -1035,6 +1040,11 @@ button {
 .fontDmgColorless { color: #978b99;}
 .fontDmgBlank { color: #444444;}
 .fontDmgExtra { color: #efefef;}
+.fontDmgGraveyard { color: #383a30;}
+.fontDmgAggro{ color: #823405;}
+.fontDmgCombo { color: #224486;}
+.fontDmgControl { color: #4d2175;}
+.fontDmgTribal{ color: #8a711a;}
 .fontDmgSnow { color: #a1b1c4;}
 .fontDmgEnchantress { color: #49b37d;}
 .fontDmgArtificer { color: #6d5855;}
@@ -1552,7 +1562,7 @@ label.checklabel {
 }
 
 .gruulPtr {
-	background: #708c41 url(../img/gruulptr.png) no-repeat center center;
+	background: #616521 url(../img/gruulptr.png) no-repeat center center;
 	background-size: 25vh 45vh;
 }
 
@@ -1582,7 +1592,7 @@ label.checklabel {
 }
 
 .abzanPtr {
-	background: #727e5c url(../img/abzanptr.png) no-repeat center center;
+	background: #a08833 url(../img/abzanptr.png) no-repeat center center;
 	background-size: 45vh 36vh;
 }
 
@@ -1706,6 +1716,31 @@ label.checklabel {
 	background-size: 45vh 45vh;
 }
 
+.graveyardPtr {
+	background: #383a30 url(../img/graveyardptr.png) no-repeat center center;
+	background-size: 45vh 45vh;
+}
+
+.aggroPtr {
+	background: #823405 url(../img/aggroptr.png) no-repeat center center;
+	background-size: 44vh 40vh;
+}
+
+.comboPtr {
+	background: #224486 url(../img/comboptr.png) no-repeat center center;
+	background-size: 45vh 45vh;
+}
+
+.controlPtr {
+	background: #4d2175 url(../img/controlptr.png) no-repeat center center;
+	background-size: 45vh 45vh;
+}
+
+.tribalPtr {
+	background: #8a711a url(../img/tribalptr.png) no-repeat center center;
+	background-size: 44vh 38vh;
+}
+
 .snowPtr {
 	background: #a1b1c4 url(../img/snowptr.png) no-repeat center center;
 	background-size: 45vh 45vh;
@@ -1781,7 +1816,7 @@ label.checklabel {
 }
 
 .gruulLnd {
-	background: #708c41 url(../img/gruullnd.png) no-repeat center center;
+	background: #616521 url(../img/gruullnd.png) no-repeat center center;
 	background-size: 23vh 13vh;
 }
 
@@ -1811,7 +1846,7 @@ label.checklabel {
 }
 
 .abzanLnd {
-	background: #727e5c url(../img/abzanlnd.png) no-repeat center center;
+	background: #a08833 url(../img/abzanlnd.png) no-repeat center center;
 	background-size: 18vh 23vh;
 }
 
@@ -1933,6 +1968,31 @@ label.checklabel {
 .colorlessLnd {
 	background: #978b99 url(../img/colorlesstp.png) no-repeat center center;
 	background-size: 23vh 23vh;
+}
+
+.graveyardLnd {
+	background: #383a30 url(../img/graveyardlnd.png) no-repeat center center;
+	background-size: 22vh 22vh;
+}
+
+.aggroLnd {
+	background: #823405 url(../img/aggrolnd.png) no-repeat center center;
+	background-size: 20vh 24vh;
+}
+
+.comboLnd {
+	background: #224486 url(../img/combolnd.png) no-repeat center center;
+	background-size: 22vh 22vh;
+}
+
+.controlLnd {
+	background: #4d2175 url(../img/controllnd.png) no-repeat center center;
+	background-size: 22vh 22vh;
+}
+
+.tribalLnd {
+	background: #8a711a url(../img/triballnd.png) no-repeat center center;
+	background-size: 19vh 25vh;
 }
 
 .snowLnd {

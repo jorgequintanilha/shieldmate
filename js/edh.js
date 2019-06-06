@@ -83,6 +83,9 @@ function sleep (time) {
 }
 
 function flashRandomPlayer() {
+  document.getElementById("btnRandomize").disabled = true;
+  document.getElementById("btnRandomize").style.opacity = 0.5;
+
   var playerCards = document.getElementsByClassName("card");
   for (let i = 0; i < playerCards.length; i++) {
 	  highlight(playerCards[i]);
@@ -90,7 +93,7 @@ function flashRandomPlayer() {
   
   var rand = getRandomInt(1, sessionStorage.getItem("sessionPlayers"));
 
-  while (hasClass(document.getElementById("cardContP" + rand),"invisible")) {
+  while (hasClass(document.getElementById("cardP" + rand),"invisible")) {
 	rand = getRandomInt(1, sessionStorage.getItem("sessionPlayers"));
   }
   
@@ -98,6 +101,10 @@ function flashRandomPlayer() {
     highlight(playerCards[rand-1]);
 	sleep(700).then(() => {
       highlight(playerCards[rand-1]);
+	  sleep(1000).then(() => {
+        document.getElementById("btnRandomize").disabled = false;
+		document.getElementById("btnRandomize").style.opacity = 1;
+	  });
 	});
   });
 }
@@ -447,9 +454,6 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
   document.getElementById("btnPlayers").addEventListener("click", function () {
     openSidebar("playerSidebar", "left");
   }, false);
-  document.getElementById("btnRandomize").addEventListener("click", function () {
-    flashRandomPlayer();
-  }, false);
   document.getElementById("btnManaSidebarClose").addEventListener("click", function () {
     closeSidebars();
   }, false);
@@ -466,6 +470,12 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
     closeSidebars();
   }, false);
 
+  if (numPlayers > 2) {
+	document.getElementById("btnRandomize").addEventListener("click", function () {
+	  flashRandomPlayer();
+	}, false);
+  }
+  
   var elemset = document.getElementsByClassName("txtPlayerName");
   for (let i = 0; i < elemset.length; i++) {
     elemset[i].addEventListener("long-press", function () {
