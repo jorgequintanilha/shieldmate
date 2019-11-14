@@ -18,20 +18,17 @@ along with EDH SHIELDMATE.  If not, see http://www.gnu.org/licenses/.
 "use strict";
 
 function setGame(numPlayers, ori, mode) {
-  var screen = getScreenMode(numPlayers);
-  sessionStorage.setItem("screen", screen);
   sessionStorage.setItem("orientation", ori);
   sessionStorage.setItem("mode", (mode == 0 ? 0 : 1));
   sessionStorage.setItem("sessionPlayers", numPlayers);
-  setTableInitialValues(screen);
-  setGameScreenFunctions(screen, ori, mode);
-  setManaSidebarFunctions(screen);
-  setStyleSidebarFunctions(ori);
-  setCmdDmgSidebarFunctions(screen);
+  setTableInitialValues(numPlayers);
+  setGameScreenFunctions(numPlayers, mode);
+  setManaSidebarFunctions(numPlayers);
+  setStyleSidebarFunctions();
+  setCmdDmgSidebarFunctions(numPlayers);
   setManaPoolDefaultValues();
   setSettingsSidebarFunctions();
   setPlayersSidebarFunctions();
-  setInitialCardVisibility(screen);
   setTimerFunctions(numPlayers);
   setDefaultSettings();
   AndroidFullScreen.immersiveMode(console.log(1), console.log(0));
@@ -78,7 +75,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function sleep (time) {
+function sleep(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
@@ -93,10 +90,6 @@ function flashRandomPlayer() {
   
   var rand = getRandomInt(1, sessionStorage.getItem("sessionPlayers"));
 
-  while (hasClass(document.getElementById("cardP" + rand),"invisible")) {
-	rand = getRandomInt(1, sessionStorage.getItem("sessionPlayers"));
-  }
-  
   sleep(700).then(() => {
     highlight(playerCards[rand-1]);
 	sleep(700).then(() => {
@@ -104,6 +97,15 @@ function flashRandomPlayer() {
 	  sleep(1000).then(() => {
         document.getElementById("btnRandomize").disabled = false;
 		document.getElementById("btnRandomize").style.opacity = 1;
+		if (localStorage.getItem('negativeLife')==1) {
+			var playerLife = document.getElementsByClassName("txtLifePoints");
+			for (let i = 0; i < playerLife.length; i++) { 
+				if(parseInt(playerLife[i].innerHTML) < 1) { 
+					let pnum = playerLife[i].id.substr(14,1);
+					document.getElementById("cardP" + pnum).style.opacity = 0.6;
+				}
+			}
+		}
 	  });
 	});
   });
@@ -136,17 +138,6 @@ function highlight(element) {
     op += 0.1;
     element.style.opacity = op;
   }, 50);
-}
-
-function getScreenMode(numPlayers) {
-  var nump = sessionStorage.getItem("numPlayers") ? sessionStorage.getItem("numPlayers") : numPlayers;
-  if (nump == 3) {
-    return 4;
-  } else if (nump == 5) {
-    return 6;
-  } else {
-    return nump;
-  }
 }
 
 function getManaPoolMode() {
@@ -282,7 +273,6 @@ function setPlayerLife(op, amount, pnum) {
 }
 
 function setTableInitialValues() {
-  var ori = sessionStorage.getItem("orientation");
   var mode = sessionStorage.getItem("mode");
   if (mode == 1) {
     var lifepoints = document.getElementsByClassName("txtLifePoints");
@@ -338,7 +328,7 @@ function loadTable() {
     var pstyle = localStorage.getItem("P" + i + "style");
     var pname = localStorage.getItem("P" + i + "name");
     if (pstyle) {
-      setStyle(localStorage.getItem("P" + i + "style"), "P" + i, sessionStorage.getItem("orientation"));
+      setStyle(localStorage.getItem("P" + i + "style"), "P" + i);
     }
     if (pname) {
       setPlayerName(localStorage.getItem("P" + i + "name"), "P" + i);
@@ -365,83 +355,8 @@ function closeSidebars() {
   sessionStorage.setItem("sidebarStatus",0);
 }
 
-function setInitialCardVisibility(screen) {
-  if (sessionStorage.getItem("mode") == 1) {
-    return;
-  }
-  for (let i = 1; i <= screen; i++) {
-    sessionStorage.setItem("visibilityP" + i, 1);
-  }
-  var numPlayers = sessionStorage.getItem("numPlayers");
-  if (numPlayers == 3) {
-    toggleCardVisibility("P4");
-  } else if (numPlayers == 5) {
-    toggleCardVisibility("P6");
-  }
-  
-  sessionStorage.setItem("randomXcolor",(localStorage.getItem("autoRandom") == 1) ? 1 : 0);
-  
-  var cardbacks  = document.getElementsByClassName("cardBack");
-  for (var i = 0; i < cardbacks.length; i++) {
-    cardbacks[i].addEventListener("click", function () {
-		let pnum = this.id.substr(this.id.length - 2);
-		if (sessionStorage.getItem("visibility" + pnum) == 0) {
-			this.style.backgroundColor = getRandomColor();
-		}
-	}, false);
-  }
-}
-
-function toggleAuxVisibility(pnum) {
-  if (sessionStorage.getItem("mode") == 1) {
-    return;
-  }
-  toggleClass(document.getElementById("cardCont" + pnum), "invisible");
-  toggleClass(document.getElementById("manaPlayerRow" + pnum), "invisible");
-  toggleClass(document.getElementById("cmdPlayerRow" + pnum), "invisible");
-  toggleClass(document.getElementById(pnum + "map"), "invisible");
-  var numPlayers = sessionStorage.getItem("numPlayers");
-  if (numPlayers == 3) {
-    numPlayers = 4;
-  } else if (numPlayers == 5) {
-    numPlayers = 6;
-  }
-  for (var i = 1; i <= numPlayers; i++) {
-    toggleClass(document.getElementById("buttonDmgDivP" + i + "from" + pnum), "invisible");
-  }
-}
-
-function toggleCardVisibility(pnum) {
-  if (sessionStorage.getItem("mode") == 1) {
-    return;
-  }
-  
-  if (sessionStorage.getItem("visibility" + pnum) == 1) {
-    sessionStorage.setItem("visibility" + pnum, 0);
-    var cardStyleDiv = document.getElementById("cardBack" + pnum);
-    var ori = sessionStorage.getItem("orientation");
-    var prevStyle = sessionStorage.getItem(pnum + "style");
-    setStyle("Blank", pnum, ori);
-    sessionStorage.setItem(pnum + "style", prevStyle);
-    cardStyleDiv.className = "cardBack h100p col100p x" + (ori == 0 ? "Ptr" : "Lnd");
-	if (sessionStorage.getItem("randomXcolor") == 1) {
-		document.getElementById("cardBack" + pnum).style.backgroundColor = getRandomColor();
-	}
-    toggleAuxVisibility(pnum);
-  } else {
-    sessionStorage.setItem("visibility" + pnum, 1);
-    var ori = sessionStorage.getItem("orientation");
-    var prevStyle = sessionStorage.getItem(pnum + "style");
-    sessionStorage.setItem("visibility" + pnum, 1);
-    document.getElementById("cardBack" + pnum).style.backgroundColor = "";
-    setStyle(prevStyle, pnum, ori);
-    toggleAuxVisibility(pnum);
-  }
-}
-
-
-function setGameScreenFunctions(numPlayers, ori, mode) {
-  var np = numPlayers > 2 ? "5vh 5vh" : "8vh 8vh";
+function setGameScreenFunctions(numPlayers, mode) {
+	
   document.getElementById("btnSettings").addEventListener("click", function () {
     openSidebar("settingsSidebar", "left");
   }, false);
@@ -470,7 +385,7 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
     closeSidebars();
   }, false);
 
-  if (numPlayers > 2) {
+  if (numPlayers > 1) {
 	document.getElementById("btnRandomize").addEventListener("click", function () {
 	  flashRandomPlayer();
 	}, false);
@@ -527,35 +442,9 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
     }, false);
   }
 
-  if (numPlayers > 2 && mode == 0) {
-    var lang = localStorage.getItem("language") ? localStorage.getItem("language") : "en";
-
-    var elemset = document.getElementsByClassName("txtIncExt");
-    for (let i = 0; i < elemset.length; i++) {
-      elemset[i].addEventListener("long-press", function (event) {
-        event.stopPropagation();
-        var pnum = this.id.substr(this.id.length - 2);
-        if (confirm(lang == "br" ? "Esconder Jogador?" : "Hide Player?")) {
-          toggleCardVisibility(pnum);
-        }
-      }, false);
-    }
-
-    var elemset = document.getElementsByClassName("cardBack");
-    for (let i = 0; i < elemset.length; i++) {
-      elemset[i].addEventListener("long-press", function (event) {
-        event.stopPropagation();
-        var pnum = this.id.substr(this.id.length - 2);
-        if (sessionStorage.getItem("visibility" + pnum) == 0) {
-          if (confirm(lang == "br" ? "Inserir Jogador?" : "Insert Player?")) {
-            toggleCardVisibility(pnum);
-          }
-        }
-      }, false);
-    }
-  }
-
   for (let i = 1; i <= (numPlayers); i++) {
+	let np = hasClass(document.getElementById("cardP" + i), "ptr") ? "7vh 7vh" : "5vh 5vh";
+	  
     document.getElementById("btnIncPlusMainP" + i).addEventListener("click", function () {
       setPlayerLife(1, 1, i);
     }, false);
@@ -599,7 +488,7 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
 
     document.getElementById("btnBlessP" + i).addEventListener("click", function () {
       var bid = document.getElementById("btnBlessP" + i);
-      bid.style.background = "url(./img/blsiv.png)  no-repeat center center";
+      bid.style.background = "url(./img/blsiv.png) no-repeat center center";
       bid.style.backgroundSize = np;
     }, false);
 
@@ -663,7 +552,8 @@ function setGameScreenFunctions(numPlayers, ori, mode) {
       var elemset = document.getElementsByClassName("btnMonarch");
       for (let i = 0; i < elemset.length; i++) {
         elemset[i].style.background = "url(./img/montp.png)  no-repeat center center";
-        elemset[i].style.backgroundSize = np;
+		let cardnum = i + 1;
+        elemset[i].style.backgroundSize = hasClass(document.getElementById("cardP" + cardnum), "ptr") ? "7vh 7vh" : "5vh 5vh";
       }
 
       var bid = document.getElementById("btnMonarchP" + i);
@@ -1298,7 +1188,7 @@ function setSettingsSidebarFunctions() {
       elemset[i].style.background = "url(./img/sigtp.png)  no-repeat center center";
       elemset[i].style.backgroundSize = np;
     }
-    var numPlayers = sessionStorage.getItem("screen");
+    var numPlayers = sessionStorage.getItem("numPlayers");
     for (var i = 1; i <= numPlayers; i++) {
       document.getElementById("cardP" + i).style.opacity = 1;
       document.getElementById("btnManaWP" + i).className = "btnMana btnMenuWhite" + (numPlayers > 2 ? " tilt" : " upfix");
@@ -1316,10 +1206,9 @@ function setSettingsSidebarFunctions() {
   }, false);
 
   document.getElementById("btnSetSideBarResetStyles").addEventListener("click", function () {
-    var or = sessionStorage.getItem("orientation");
-    var screen = sessionStorage.getItem("screen");
-    for (var i = 1; i <= screen; i++) {
-      setStyle("Blank", "P" + i, or);
+    var nump = sessionStorage.getItem("numPlayers");
+    for (var i = 1; i <= nump; i++) {
+      setStyle("Blank", "P" + i);
       setPlayerName("Player " + i, "P" + i);
       if (sessionStorage.getItem("mode") == 1 && i == 1) {
         setPlayerName("ARCHENEMY", "P" + i);
@@ -1432,15 +1321,14 @@ function setPlayersSidebarFunctions() {
 		mapbuttons[i].addEventListener("click", function () {
           var savedplayer = localStorage.getItem("savedP"+document.getElementById("playerId").innerHTML).split(',');
 		  if (savedplayer) {
-			  var ori = sessionStorage.getItem("orientation");
 			  var insertedPnum = document.getElementById("playerPositionP"+savedplayer[0]).innerHTML;
 			  if (!isNaN(parseInt(insertedPnum, 10))) {
-				setStyle("Blank", "P" + insertedPnum, ori);
+				setStyle("Blank", "P" + insertedPnum);
 				setPlayerName("Player " + insertedPnum, "P" + insertedPnum);
 			  }
 			  
 			  setPlayerName(savedplayer[1],this.id.substring(0,2));
-			  setStyle(savedplayer[2],this.id.substring(0,2),ori);
+			  setStyle(savedplayer[2],this.id.substring(0,2));
 			  clearPlayerFromPositionList(this.id.substring(1,2));
 			  document.getElementById("playerPositionP"+savedplayer[0]).innerHTML = this.id.substring(1,2);
 		  }
@@ -1511,7 +1399,7 @@ function openTableMap(pnum) {
 	toggleClass(document.getElementById("tablemap"), "invisible");
 }
 
-function setStyleSidebarFunctions(ori) {
+function setStyleSidebarFunctions() {
   var num = 1;
   for (let i = 1; i < 9; i++) {
     for (let j = 1; j < 6; j++) {
@@ -1526,30 +1414,9 @@ function setStyleSidebarFunctions(ori) {
     }
   }
   
-  /*secret themes gambiarra - coding laziness*/
-  document.getElementById("btnStyleBtn_Snow").addEventListener("click", function () {
-    document.getElementById("txtStyleSideBarSelectedTheme").innerHTML = "Snow";
-	document.getElementById("txtStyleSideBarSelectedTheme").className = "txt3h fontDmgSnow"; 
-  }, false);
-  
-  document.getElementById("btnStyleSideBarClear").addEventListener("long-press", function () {
-	document.getElementById("txtStyleSideBarSelectedTheme").innerHTML = "Artificer";
-	document.getElementById("txtStyleSideBarSelectedTheme").className = "txt3h fontDmgArtificer";
-  }, false);
-  
-  document.getElementById("btnStyleSideBarSave").addEventListener("long-press", function () {
-	document.getElementById("txtStyleSideBarSelectedTheme").innerHTML = "Enchantress";
-	document.getElementById("txtStyleSideBarSelectedTheme").className = "txt3h fontDmgEnchantress";
-  }, false);
-  
-  document.getElementById("txtStyleSideBarPad").addEventListener("long-press", function () {
-	document.getElementById("txtStyleSideBarSelectedTheme").innerHTML = "Spellslinger";
-	document.getElementById("txtStyleSideBarSelectedTheme").className = "txt3h fontDmgSpellslinger";
-  }, false);
-  
   document.getElementById("btnStyleSideBarClear").addEventListener("click", function () {
     let pnumDiv = document.getElementById("txtStyleSideBarPad");
-    setStyle("", pnumDiv.innerHTML, ori);
+    setStyle("", pnumDiv.innerHTML);
     setPlayerName(("Player " + pnumDiv.innerHTML.substring(1,2)), pnumDiv.innerHTML);
 	clearPlayerFromPositionList(pnumDiv.innerHTML.substring(1,2));
     closeSidebars();
@@ -1559,7 +1426,7 @@ function setStyleSidebarFunctions(ori) {
     let pnumDiv = document.getElementById("txtStyleSideBarPad");
     let styleName = document.getElementById("txtStyleSideBarSelectedTheme");
     if (styleName.innerHTML != "") {
-      setStyle(styleName.innerHTML, pnumDiv.innerHTML, ori);
+      setStyle(styleName.innerHTML, pnumDiv.innerHTML);
     } else {
       setPlayerName(document.getElementById("styleInpPlayerName").value, pnumDiv.innerHTML);
     }
@@ -1621,26 +1488,21 @@ function setStyleSidebarFunctions(ori) {
 }
 
 function setRandomStyles() {
-  var numPlayers = sessionStorage.getItem("screen");
-  var ori = sessionStorage.getItem("orientation");
+  var numPlayers = sessionStorage.getItem("numPlayers");
   for (let i = 1; i <= numPlayers; i++) {
-	var stylenum = getRandomInt(1, 41);
-	if (stylenum == 41) { stylenum = 99; }
-    setStyle(getStyleName(stylenum), "P" + i, ori);
+	var stylenum = getRandomInt(1, 40);
+    setStyle(getStyleName(stylenum), "P" + i);
   }
 }
 
-function setStyle(style, pnum, ori) {
-  if (document.getElementById("cardCont" + pnum)) {
-    if (hasClass(document.getElementById("cardCont" + pnum), "invisible")) {
-      style = "x";
-    }
-  }
-  var styleName = style.toLowerCase() + (ori == 0 ? "Ptr" : "Lnd");
+function setStyle(style, pnum) {
+  var or = hasClass(document.getElementById("card" + pnum), "ptr") ? "Ptr" : "Lnd";
+  var styleName = style.toLowerCase() + or;
   var cardStyleDiv = document.getElementById("cardBack" + pnum);
-  var numPlayers = sessionStorage.getItem("screen");
+  var numPlayers = sessionStorage.getItem("numPlayers");
   var mode = sessionStorage.getItem("mode");
-  cardStyleDiv.className = "cardBack h100p col100p " + ((mode == 1 && pnum == "P1") ? (style == "Blank" ? "" : "btnDmg") + (style != "" ? style : "Blank") : styleName);
+  var fivepfix = (pnum == "P5" && or == "Ptr") ? " fix5p": "";
+  cardStyleDiv.className = "cardBack h100p col100p " + ((mode == 1 && pnum == "P1") ? (style == "Blank" ? "" : "btnDmg") + (style != "" ? style : "Blank") : styleName) + fivepfix;
   setPlayerName(document.getElementById("styleInpPlayerName").value, pnum);
   sessionStorage.setItem(pnum + "style", style);
   if (numPlayers > 1) {
@@ -1688,7 +1550,7 @@ function setPlayerName(name, pnum) {
       }
       sessionStorage.setItem(pnum + "name", name.toLowerCase());
 	  
-	  if(sessionStorage.getItem("orientation") == 0) {
+	  if(hasClass(document.getElementById("card" + pnum), "ptr")) { 
 		if (playerNameTxt.offsetWidth > playerNameBlock.clientWidth) {
 		  var textsize = parseFloat(window.getComputedStyle(playerNameTxt).fontSize);
 		  do {
@@ -1829,19 +1691,19 @@ function getStyleName(num) {
       return "Naya";
       break;
     case 26:
-      return "Dune";
+      return "Artificer";
       break;
     case 27:
-      return "Glint";
+      return "Enchantress";
       break;
     case 28:
-      return "Ink";
+      return "Snow";
       break;
     case 29:
-      return "Witch";
+      return "Spellshaper";
       break;
     case 30:
-      return "Yore";
+      return "Elk";
       break;
     case 31:
       return "Coalition";
@@ -1872,18 +1734,6 @@ function getStyleName(num) {
       break;
     case 40:
       return "Mirran";
-      break;
-	case 96:
-      return "Spellslinger";
-      break;
-	case 97:
-      return "Enchantress";
-      break;
-	case 98:
-      return "Artificer";
-      break;
-	case 99:
-      return "Snow";
       break;
     default:
       return "Blank";

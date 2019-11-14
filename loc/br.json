@@ -341,7 +341,11 @@
 		"graveyard":"Cemitério",
 		"colorless":"Sem Cor",
 		"coalition":"Coalizão",
-		"snow":"Nevado"
+		"snow":"Nevado",
+		"artificer":"Artesão",
+		"enchantress":"Encantadora",
+		"spellshaper":"Magimodelador",
+		"elk":"Alce"
 	},
 	
 	"exit": {

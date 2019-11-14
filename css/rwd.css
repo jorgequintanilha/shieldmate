@@ -99,6 +99,7 @@ body {
 }
 
 .container {
+	z-index: 0;
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
@@ -410,17 +411,23 @@ a {
 .txtLifePoints.twoP { font-size: 25vh;}
 .txtIncMain.twoP { font-size: 10vh;}
 .txtIncExt.twoP { font-size: 10vh;}
+.txtPlayerName.threeP { font-size: 8vh;}
+.txtLifePoints.threeP { font-size: 20vh;}
 .txtPlayerName.fourP { font-size: 5vh;}
 .txtLifePoints.fourP { font-size: 15vh;}
 .txtIncMain.fourP { font-size: 10vh;}
 .txtIncExt.fourP { font-size: 10vh;}
+.txtPlayerName.fiveP { font-size: 6vh;}
+.txtLifePoints.fiveP { font-size: 18vh;}
+.txtIncMain.fiveP { font-size: 8vh;}
+.txtIncExt.fiveP { font-size: 8vh;}
 .txtPlayerName.sixP { font-size: 5vh;}
 .txtLifePoints.sixP { font-size: 15vh;}
 .txtIncMain.sixP { font-size: 8vh;}
 .txtIncExt.sixP { font-size: 8vh;}
 .txtAuxPt { 
-	font-size: 7vh;
-	-webkit-text-stroke: 0.5vw #222222; 
+	font-size: 6vh;
+	-webkit-text-stroke: 0.25vw #222222;
 	}
 .txtAuxLd {
 	font-size: 4.5vh;
@@ -511,8 +518,6 @@ option {
 	font-family: BebasNeue;
 }
 
-
-
 .defaultOption {
 	background: lightGray;
 	color: darkGray;
@@ -535,6 +540,10 @@ textarea {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.bigimgtut {
+	border: solid 2px darkGray;
 }
 
 .imghfix {
@@ -628,6 +637,17 @@ textarea {
 	background-color: #ffffff;
 }
 
+#vertLine3 {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 1vw;
+	height: 50vh;
+	background-color: #ffffff;
+}
+
 /* 4P white lines */
 #horLine1 {
 	position: absolute;
@@ -650,7 +670,6 @@ textarea {
 	height: 1vw;
 	background-color: #ffffff;
 }
-
 
 /* 6P white lines */
 #horLine3 {
@@ -683,7 +702,7 @@ textarea {
 	top: 0;
 	bottom: 0;
 	left: 0;
-	width: 25vw;
+	width: 18vw;
 	height: 1vw;
 	background-color: #ffffff;
 }
@@ -694,10 +713,22 @@ textarea {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	width: 25vw;
+	width: 18vw;
 	height: 1vw;
 	background-color: #ffffff;
 }
+
+#horLine7 {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 1vw;
+	background-color: #ffffff;
+}
+
 
 
 /* AE white lines */
@@ -730,7 +761,8 @@ textarea {
 	margin: auto;
 	top: 0;
 	bottom: 0;
-	left: 40%;
+	left: 0;
+	right: 0;
 	width: 4vh;
 	height: 4vh;
 }
@@ -740,7 +772,17 @@ textarea {
 	margin: auto;
 	top: 0;
 	bottom: 0;
-	right: 40%;
+	right: 33.33%;
+	width: 4vh;
+	height: 4vh;
+}
+
+#divRandomizePtr {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 33.33%;
 	width: 4vh;
 	height: 4vh;
 }
@@ -750,7 +792,7 @@ textarea {
 	margin: auto;
 	top: 0;
 	bottom: 0;
-	left: 28%;
+	left: 20%;
 	width: 4vh;
 	height: 4vh;
 }
@@ -760,7 +802,7 @@ textarea {
 	margin: auto;
 	top: 0;
 	bottom: 0;
-	right: 28%;
+	right: 20%;
 	width: 4vh;
 	height: 4vh;
 }
@@ -915,11 +957,6 @@ button {
 .btnMenuGrixis { background: url(../img/btngrixis.png) no-repeat center center; }
 .btnMenuJund { background: url(../img/btnjund.png) no-repeat center center; }
 .btnMenuNaya { background: url(../img/btnnaya.png) no-repeat center center; }
-.btnMenuDune { background: url(../img/btndune.png) no-repeat center center; }
-.btnMenuGlint { background: url(../img/btnglint.png) no-repeat center center; }
-.btnMenuInk { background: url(../img/btnink.png) no-repeat center center; }
-.btnMenuWitch { background: url(../img/btnwitch.png) no-repeat center center; }
-.btnMenuYore { background: url(../img/btnyore.png) no-repeat center center; }
 .btnMenuBolas { background: url(../img/btnbolas.png) no-repeat center center; }
 .btnMenuCoalition { background: url(../img/btncoalition.png) no-repeat center center; }
 .btnMenuPhyrexia { background: url(../img/btnphyrexia.png) no-repeat center center; }
@@ -937,7 +974,11 @@ button {
 .btnMenuTribal { background: url(../img/btntribal.png) no-repeat center center; }
 .btnMenuEnergy { background: url(../img/btnenergy.png) no-repeat center center; }
 .btnMenuBlank { background: url(../img/blank.png) no-repeat center center; }
+.btnMenuArtificer{ background: url(../img/btnartificer.png) no-repeat center center; }
+.btnMenuEnchantress{ background: url(../img/btnenchantress.png) no-repeat center center; }
 .btnMenuSnow{ background: url(../img/btnsnow.png) no-repeat center center; }
+.btnMenuSpellshaper{ background: url(../img/btnspellshaper.png) no-repeat center center; }
+.btnMenuElk{ background: url(../img/btnelk.png) no-repeat center center; }
 .btnMenuWhiteDk { background: url(../img/btnwhitedk.png) no-repeat center center; }
 .btnMenuBlueDk { background: url(../img/btnbluedk.png) no-repeat center center; }
 .btnMenuBlackDk { background: url(../img/btnblackdk.png) no-repeat center center; }
@@ -953,7 +994,7 @@ button {
 .btnDmgGreen { background: #329b4e;}
 .btnDmgAzorius { background: #4c9cd1;}
 .btnDmgBoros { background: #f47b40;}
-.btnDmgDimir { background: #6d87af;}
+.btnDmgDimir { background: #445f8a;}
 .btnDmgGolgari { background: #388058;}
 .btnDmgGruul { background: #616521;}
 .btnDmgIzzet { background: #864692;}
@@ -965,19 +1006,14 @@ button {
 .btnDmgJeskai { background: #9b6fb0;}
 .btnDmgMardu { background: #b36061;}
 .btnDmgSultai { background: #285a72;}
-.btnDmgTemur { background: #53857e;}
-.btnDmgBant { background: #b5a22b;}
+.btnDmgTemur { background: #755a5e;}
+.btnDmgBant { background: #a4b562;}
 .btnDmgEsper { background: #5da6b4;}
 .btnDmgGrixis { background: #634673;}
 .btnDmgJund { background: #9e4d26;}
 .btnDmgNaya { background: #a8ae42;}
-.btnDmgDune { background: #936438;}
-.btnDmgGlint { background: #706c74;}
-.btnDmgInk { background: #88ae63;}
-.btnDmgWitch { background: #6f688f;}
-.btnDmgYore { background: #9e7b75;}
 .btnDmgBolas { background: #da811b;}
-.btnDmgCoalition { background: #4a93b9;}
+.btnDmgCoalition { background: #d06b22;}
 .btnDmgFive { background: #e0b944;}
 .btnDmgPhyrexia { background: #25422c;}
 .btnDmgPlaneswalker { background: #b9492d;}
@@ -992,11 +1028,12 @@ button {
 .btnDmgAggro{ background: #823405;}
 .btnDmgCombo { background: #224486;}
 .btnDmgControl { background: #4d2175;}
-.btnDmgTribal { background: #8a711a;}
-.btnDmgSnow { background: #a1b1c4;}
-.btnDmgEnchantress { background: #49b37d;}
+.btnDmgTribal { background: #a6aeae;}
 .btnDmgArtificer { background: #6d5855;}
-.btnDmgSpellslinger { background: #7f3949;}
+.btnDmgEnchantress { background: #49b37d;}
+.btnDmgSnow { background: #a1b1c4;}
+.btnDmgSpellshaper { background: #7f3949;}
+.btnDmgElk { background: #73794d;}
 
 .fontDmgWhite { color: #b7c17d;}
 .fontDmgBlue { color: #006eb9;}
@@ -1005,7 +1042,7 @@ button {
 .fontDmgGreen { color: #329b4e;}
 .fontDmgAzorius { color: #4c9cd1;}
 .fontDmgBoros { color: #f47b40;}
-.fontDmgDimir { color: #6d87af;}
+.fontDmgDimir { color: #445f8a;}
 .fontDmgGolgari { color: #388058;}
 .fontDmgGruul { color: #616521;}
 .fontDmgIzzet { color: #864692;}
@@ -1017,19 +1054,14 @@ button {
 .fontDmgJeskai { color: #9b6fb0;}
 .fontDmgMardu { color: #b36061;}
 .fontDmgSultai { color: #285a72;}
-.fontDmgTemur { color: #53857e;}
-.fontDmgBant { color: #b5a22b;}
+.fontDmgTemur { color: #755a5e;}
+.fontDmgBant { color: #a4b562;}
 .fontDmgEsper { color: #5da6b4;}
 .fontDmgGrixis { color: #634673;}
 .fontDmgJund { color: #9e4d26;}
 .fontDmgNaya { color: #a8ae42;}
-.fontDmgDune { color: #936438;}
-.fontDmgGlint { color: #706c74;}
-.fontDmgInk { color: #88ae63;}
-.fontDmgWitch { color: #6f688f;}
-.fontDmgYore { color: #9e7b75;}
 .fontDmgBolas { color: #da811b;}
-.fontDmgCoalition { color: #4a93b9;}
+.fontDmgCoalition { color: #d06b22;}
 .fontDmgFive { color: #e0b944;}
 .fontDmgPhyrexia { color: #25422c;}
 .fontDmgPlaneswalker { color: #b9492d;}
@@ -1044,11 +1076,12 @@ button {
 .fontDmgAggro{ color: #823405;}
 .fontDmgCombo { color: #224486;}
 .fontDmgControl { color: #4d2175;}
-.fontDmgTribal{ color: #8a711a;}
-.fontDmgSnow { color: #a1b1c4;}
-.fontDmgEnchantress { color: #49b37d;}
+.fontDmgTribal{ color: #a6aeae;}
 .fontDmgArtificer { color: #6d5855;}
-.fontDmgSpellslinger { color: #7f3949;}
+.fontDmgEnchantress { color: #49b37d;}
+.fontDmgSnow { color: #a1b1c4;}
+.fontDmgSpellshaper { color: #7f3949;}
+.fontDmgElk { color: #73794d;}
 
 .btn30 {
 	width: 30%;
@@ -1097,6 +1130,14 @@ button {
 	}
 }
 
+@media (aspect-ratio: 18/37) {
+	.btnMana {
+		width: 6vh;
+		height: 6vh;
+		background-size: 6vh 6vh;
+	}
+}
+
 .btnDmgPtr {
 	border: none;
 	cursor: pointer;
@@ -1113,6 +1154,12 @@ button {
 	display: block;
 	width: 6vh;
 	height: 75%;
+}
+
+@media (aspect-ratio: 18/37) {
+	.btnDmgLnd {
+		height: 62%;
+	}
 }
 
 @media (aspect-ratio: 9/18) {
@@ -1263,8 +1310,8 @@ button {
 
 .btnAuxPtr {
 	background-size: 7vh 7vh;
-	height: 8vh;
-	width: 8vh;
+	height: 7vh;
+	width: 7vh;
 }
 
 .btnAuxLnd {
@@ -1552,7 +1599,7 @@ label.checklabel {
 }
 
 .dimirPtr {
-	background: #6d87af url(../img/dimirptr.png) no-repeat center center;
+	background: #445f8a url(../img/dimirptr.png) no-repeat center center;
 	background-size: 41vh 45vh;
 }
 
@@ -1612,12 +1659,12 @@ label.checklabel {
 }
 
 .temurPtr {
-	background: #53857e url(../img/temurptr.png) no-repeat center center;
+	background: #755a5e url(../img/temurptr.png) no-repeat center center;
 	background-size: 42vh 45vh;
 }
 
 .bantPtr {
-	background: #b5a22b url(../img/bantptr.png) no-repeat center center;
+	background: #a4b562 url(../img/bantptr.png) no-repeat center center;
 	background-size: 36vh 45vh;
 }
 
@@ -1641,38 +1688,13 @@ label.checklabel {
 	background-size: 45vh 45vh;
 }
 
-.dunePtr {
-	background: #936438 url(../img/duneptr.png) no-repeat center center;
-	background-size: 38vh 45vh;
-}
-
-.glintPtr {
-	background: #706c74 url(../img/glintptr.png) no-repeat center center;
-	background-size: 45vh 45vh;
-}
-
-.inkPtr {
-	background: #88ae63 url(../img/inkptr.png) no-repeat center center;
-	background-size: 36vh 45vh;
-}
-
-.witchPtr {
-	background: #6f688f url(../img/witchptr.png) no-repeat center center;
-	background-size: 35vh 45vh;
-}
-
-.yorePtr {
-	background: #9e7b75 url(../img/yoreptr.png) no-repeat center center;
-	background-size: 45vh 40vh;
-}
-
 .bolasPtr {
 	background: #da811b url(../img/bolasptr.png) no-repeat center center;
 	background-size: 35vh 45vh;
 }
 
 .coalitionPtr {
-	background: #4a93b9 url(../img/coalitionptr.png) no-repeat center center;
+	background: #d06b22 url(../img/coalitionptr.png) no-repeat center center;
 	background-size: 32vh 45vh;
 }
 
@@ -1737,13 +1759,8 @@ label.checklabel {
 }
 
 .tribalPtr {
-	background: #8a711a url(../img/tribalptr.png) no-repeat center center;
+	background: #a6aeae url(../img/tribalptr.png) no-repeat center center;
 	background-size: 44vh 38vh;
-}
-
-.snowPtr {
-	background: #a1b1c4 url(../img/snowptr.png) no-repeat center center;
-	background-size: 45vh 45vh;
 }
 
 .enchantressPtr {
@@ -1756,18 +1773,23 @@ label.checklabel {
 	background-size: 45vh 28vh;
 }
 
-.spellslingerPtr {
-	background: #7f3949 url(../img/spellslingerptr.png) no-repeat center center;
+.snowPtr {
+	background: #a1b1c4 url(../img/snowptr.png) no-repeat center center;
+	background-size: 45vh 45vh;
+}
+
+.spellshaperPtr {
+	background: #7f3949 url(../img/spellshaperptr.png) no-repeat center center;
 	background-size: 34vh 42vh;
+}
+
+.elkPtr {
+	background: #73794d url(../img/elkptr.png) no-repeat center center;
+	background-size: 45vh 45vh;
 }
 
 .blankPtr {
 	background: #000000;
-}
-
-.xPtr {
-	background: url(../img/blank.png) no-repeat center center;
-	background-size: 43vh 43vh;
 }
 
 .whiteLnd {
@@ -1806,7 +1828,7 @@ label.checklabel {
 }
 
 .dimirLnd {
-	background: #6d87af url(../img/dimirlnd.png) no-repeat center center;
+	background: #445f8a url(../img/dimirlnd.png) no-repeat center center;
 	background-size: 23vh 21vh;
 }
 
@@ -1866,12 +1888,12 @@ label.checklabel {
 }
 
 .temurLnd {
-	background: #53857e url(../img/temurlnd.png) no-repeat center center;
+	background: #755a5e url(../img/temurlnd.png) no-repeat center center;
 	background-size: 23vh 21vh;
 }
 
 .bantLnd {
-	background: #b5a22b url(../img/bantlnd.png) no-repeat center center;
+	background: #a4b562 url(../img/bantlnd.png) no-repeat center center;
 	background-size: 23vh 18vh;
 }
 
@@ -1895,38 +1917,13 @@ label.checklabel {
 	background-size: 23vh 23vh;
 }
 
-.duneLnd {
-	background: #936438 url(../img/dunelnd.png) no-repeat center center;
-	background-size: 23vh 20vh;
-}
-
-.glintLnd {
-	background: #706c74 url(../img/glintlnd.png) no-repeat center center;
-	background-size: 23vh 21vh;
-}
-
-.inkLnd {
-	background: #88ae63 url(../img/inklnd.png) no-repeat center center;
-	background-size: 23vh 19vh;
-}
-
-.witchLnd {
-	background: #6f688f url(../img/witchlnd.png) no-repeat center center;
-	background-size: 23vh 19vh;
-}
-
-.yoreLnd {
-	background: #9e7b75 url(../img/yorelnd.png) no-repeat center center;
-	background-size: 23vh 25vh;
-}
-
 .bolasLnd {
 	background: #da811b url(../img/bolaslnd.png) no-repeat center center;
 	background-size: 23vh 18vh;
 }
 
 .coalitionLnd {
-	background: #4a93b9 url(../img/coalitionlnd.png) no-repeat center center;
+	background: #d06b22 url(../img/coalitionlnd.png) no-repeat center center;
 	background-size: 23vh 17vh;
 }
 
@@ -1991,18 +1988,8 @@ label.checklabel {
 }
 
 .tribalLnd {
-	background: #8a711a url(../img/triballnd.png) no-repeat center center;
+	background: #a6aeae url(../img/triballnd.png) no-repeat center center;
 	background-size: 19vh 25vh;
-}
-
-.snowLnd {
-	background: #a1b1c4 url(../img/snowlnd.png) no-repeat center center;
-	background-size: 23vh 23vh;
-}
-
-.enchantressLnd {
-	background: #49b37d url(../img/sunriselnd.png) no-repeat center center;
-	background-size: 18vh 25vh;
 }
 
 .artificerLnd {
@@ -2010,16 +1997,30 @@ label.checklabel {
 	background-size: 15vh 25vh;
 }
 
-.spellslingerLnd {
-	background: #7f3949 url(../img/spellslingerlnd.png) no-repeat center center;
+.enchantressLnd {
+	background: #49b37d url(../img/sunriselnd.png) no-repeat center center;
+	background-size: 18vh 25vh;
+}
+
+.snowLnd {
+	background: #a1b1c4 url(../img/snowlnd.png) no-repeat center center;
+	background-size: 23vh 23vh;
+}
+
+.spellshaperLnd {
+	background: #7f3949 url(../img/spellshaperlnd.png) no-repeat center center;
 	background-size: 22vh 18vh;
+}
+
+.elkLnd {
+	background: #73794d url(../img/elklnd.png) no-repeat center center;
+	background-size: 23vh 23vh;
 }
 
 .blankLnd {
 	background: #000000;
 }
 
-.xLnd {
-	background: url(../img/blank.png) no-repeat center center;
-	background-size: 22vh 22vh;
+.fix5p {
+	background-size: contain;
 }

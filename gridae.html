@@ -35,7 +35,7 @@
     <div class="container h100p col100p noscroll" id="idcontainer">
 	<div class="column h100p col50p">
 		<div class="row h100p">
-			<div class="card h100p" id="cardP1">
+			<div class="card h100p lnd" id="cardP1">
             <div class="cardBack h100p col100p" id="cardBackP1">
               <div class="cardContent h100p col100p">
 				<!--<div class="pad row h02p col100p"></div>-->
@@ -128,10 +128,10 @@
 	
 	<div class="column h100p col50p">
       <div class="row h33p">
-		  <div class="card h100p flip" id="cardP2">
+		  <div class="card h100p flip lnd" id="cardP2">
             <div class="cardBack h100p col100p" id="cardBackP2">
               <div class="cardContent h100p col92p">
-			  <div class="cardBottom h100p col25p vscroll">
+			   <div class="cardBottom h100p col25p vscroll">
 					<div class="h20p col100p centerContent">
                       <button class="btnBless btnAux btnAuxLnd tilt" id="btnBlessP2">
                         <span class="txtBless txtAux txtAuxLd fontWhite" id="txtBlessP2">&nbsp;</span>
@@ -211,7 +211,7 @@
           </div>
       </div>
       <div class="row h33p">
-        <div class="card h100p flip" id="cardP3">
+        <div class="card h100p flip lnd" id="cardP3">
             <div class="cardBack h100p col100p" id="cardBackP3">
               <div class="cardContent h100p col92p">
 				<div class="cardBottom h100p col25p vscroll">
@@ -294,7 +294,7 @@
           </div>  
       </div>
       <div class="row h33p">
-        <div class="card h100p flip" id="cardP4">
+        <div class="card h100p flip lnd" id="cardP4">
             <div class="cardBack h100p col100p" id="cardBackP4">
               <div class="cardContent h100p col92p">
 			  <div class="cardBottom h100p col25p vscroll">
@@ -1132,27 +1132,27 @@
         </div>
         <div class="sidebarRow row h07p">
           <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuDune btnStyle btnFull" id="btnStyleBtn_Dune">
+            <button class="btnMenu btnMenuArtificer btnStyle btnFull" id="btnStyleBtn_Artificer">
               <span>&nbsp;</span>
             </button>
           </div>
           <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuGlint btnStyle btnFull" id="btnStyleBtn_Glint">
+            <button class="btnMenu btnMenuEnchantress btnStyle btnFull" id="btnStyleBtn_Enchantress">
               <span>&nbsp;</span>
             </button>
           </div>
           <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuInk btnStyle btnFull" id="btnStyleBtn_Ink">
+            <button class="btnMenu btnMenuSnow btnStyle btnFull" id="btnStyleBtn_Snow">
               <span>&nbsp;</span>
             </button>
           </div>
           <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuWitch btnStyle btnFull" id="btnStyleBtn_Witch">
+            <button class="btnMenu btnMenuSpellshaper btnStyle btnFull" id="btnStyleBtn_Spellshaper">
               <span>&nbsp;</span>
             </button>
           </div>
           <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuYore btnStyle btnFull" id="btnStyleBtn_Yore">
+            <button class="btnMenu btnMenuElk btnStyle btnFull" id="btnStyleBtn_Elk">
               <span>&nbsp;</span>
             </button>
           </div>
@@ -1164,7 +1164,7 @@
             </button>
           </div>
           <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuPlaneswalker btnStyle btnFull" id="btnStyleBtn_Planeswalker">
+            <button class="btnMenu btnMenuAvacyn btnStyle btnFull" id="btnStyleBtn_Avacyn">
               <span>&nbsp;</span>
             </button>
           </div>
@@ -1200,8 +1200,8 @@
               <span>&nbsp;</span>
             </button>
           </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuAvacyn btnStyle btnFull" id="btnStyleBtn_Avacyn">
+		  <div class="sidebarCol h100p col20p centerContent">
+            <button class="btnMenu btnMenuPlaneswalker btnStyle btnFull" id="btnStyleBtn_Planeswalker">
               <span>&nbsp;</span>
             </button>
           </div>
@@ -1217,11 +1217,7 @@
               <span class="fontWhite txt4 loc" id="general.clear"></span>
             </button>
           </div>
-		  <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuSnow btnStyle btnFull" id="btnStyleBtn_Snow">
-              <span>&nbsp;</span>
-            </button>
-          </div>
+		  <div class="sidebarCol h100p col20p centerContent"></div>
 		  <div class="sidebarStyleBoxSlot col40p h100p centerContent">
             <button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnStyleSideBarSave">
               <span class="fontWhite txt4 loc" id="general.save"></span>
@@ -1329,11 +1325,11 @@
 					<option value="Sultai" class="btnDmgSultai">Sultai</option>
 					<option value="Mardu" class="btnDmgMardu">Mardu</option>
 					<option value="Temur" class="btnDmgTemur">Temur</option>
-					<option value="Glint" class="btnDmgGlint loc" id="themes.glint">Glint</option>
-					<option value="Dune" class="btnDmgDune loc" id="themes.dune">Dune</option>
-					<option value="Ink" class="btnDmgInk loc" id="themes.ink">Ink</option>
-					<option value="Witch" class="btnDmgWitch loc" id="themes.witch">Witch</option>
-					<option value="Yore" class="btnDmgYore loc" id="themes.yore">Yore</option>
+					<option value="Artificer" class="btnDmgArtificer loc" id="themes.artificer">Artificer</option>
+					<option value="Enchantress" class="btnDmgEnchantress loc" id="themes.enchantress">Enchantress</option>
+					<option value="Snow" class="btnDmgSnow loc" id="themes.snow">Snow</option>
+					<option value="Spellshaper" class="btnDmgSpellshaper loc" id="themes.spellshaper">Spellshaper</option>
+					<option value="Elk" class="btnDmgElk loc" id="themes.elk">Elk</option>
 					<option value="Coalition" class="btnDmgCoalition">Coalition</option>
 					<option value="Avacyn" class="btnDmgAvacyn">Avacyn</option>
 					<option value="Mirran" class="btnDmgMirran">Mirran</option>
@@ -1344,7 +1340,6 @@
 					<option value="Bolas" class="btnDmgBolas">Bolas</option>
 					<option value="Colorless" class="btnDmgColorless">Colorless</option>
 					<option value="Five" class="btnDmgFive loc" id="themes.five">Five</option>
-					<option value="Snow" class="btnDmgSnow loc" id="themes.snow">Snow</option>
 				</select>
 			</div>
 		</div>

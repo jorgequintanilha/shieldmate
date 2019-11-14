@@ -342,7 +342,11 @@
 		"graveyard":"Graveyard",
 		"colorless":"Colorless",
 		"coalition":"Coalition",
-		"snow":"Snow"
+		"snow":"Snow",
+		"artificer":"Artificer",
+		"enchantress":"Enchantress",
+		"spellshaper":"Spellshaper",
+		"elk":"Elk"
 	},
 	
 	"exit": {

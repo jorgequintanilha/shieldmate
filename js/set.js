@@ -98,7 +98,8 @@ function setOptionsFunctions() {
 	},false);
 	
 	document.getElementById('btnLifeCS').addEventListener('click',function(){
-		var x = prompt('ENTER CUSTOM VALUE');
+		var lang = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
+		var x = prompt(lang == 'br' ? "DIGITE UM VALOR" : "ENTER CUSTOM VALUE");
 		if (parseInt(x,10)) {
 			if (parseInt(x,10) > 999) { localStorage.setItem('default_lp',999); }
 			else { localStorage.setItem('default_lp',parseInt(x,10)); }
