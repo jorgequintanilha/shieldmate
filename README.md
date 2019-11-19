@@ -37,6 +37,8 @@ Since its inception I've added a ton of new stuff to the app. Gonna list them be
 
 <h3>Hiding the auxiliary buttons:</h3> Requested so filthy modern and standard players can play without having a bunch of awesome EDH relevant buttons to look at! Just kidding, I like it as well (the functionality, not the formats).
 
+<h3>Small improvments:</h3> Been learning better CSS practices so user interaction should feel a lot better. Bigger button areas, removed useless elements from the game screen, and so on.
+
 <hr>
 
 <h2>What was taken out</h2>
@@ -52,7 +54,7 @@ This app went from a very, very small project to something I honestly love to wo
 
 I'm divided between Flutter and Xamarin. Flutter (or maybe even React Native) looks awesome, but I'm a bit more familiar with C# dev environment and some of my coworkers use Xamarin at work so it might be a thing.
 
-Meanwhile, I might not be updating the phonegap version unless absolutely necessary. I think version 1.7.7 is as good a final release as any.
+Meanwhile, I might not be updating the phonegap version unless absolutely necessary. I think version 1.8.0 is as good a final release as any.
 
 <hr>
 
@@ -92,4 +94,4 @@ This is where I map all the crap I did in a hurry to make the app work and never
 
 <h3>Better Layout:</h3> Right now I'm pretty satisfied with the app's layout. It isn't the most modern and sleek ever but I think the retro feel is a charm. With my plans for switching frameworks, I also intend to create a much more reactive interface.
 
-<h3>Media Queries:</h3> If it ain't broken... you know the drill.
+<h3>Media Queries:</h3> If it ain't broken...
