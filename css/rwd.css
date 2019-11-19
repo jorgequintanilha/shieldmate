@@ -367,10 +367,6 @@ a {
 	font-style: italic;
 }
 
-.autosize {
-
-}
-
 .fontPoison { color: #00ff80;}
 .fontExp { color: #fbff58;}
 .fontCast { color: #13f2ff;}
@@ -405,26 +401,26 @@ a {
 .txt50 { font-size: 50vh;}
 .txtPlayerName.oneP { font-size: 12vh;}
 .txtLifePoints.oneP { font-size: 30vh;}
-.txtIncMain.oneP { font-size: 15vh;}
-.txtIncExt.oneP { font-size: 15vh;}
+.txtIncMain.oneP { font-size: 10vh;}
+.txtIncExt.oneP { font-size: 10vh;}
 .txtPlayerName.twoP { font-size: 10vh;}
 .txtLifePoints.twoP { font-size: 25vh;}
-.txtIncMain.twoP { font-size: 10vh;}
-.txtIncExt.twoP { font-size: 10vh;}
+.txtIncMain.twoP { font-size: 8vh;}
+.txtIncExt.twoP { font-size: 8vh;}
 .txtPlayerName.threeP { font-size: 8vh;}
 .txtLifePoints.threeP { font-size: 20vh;}
 .txtPlayerName.fourP { font-size: 5vh;}
-.txtLifePoints.fourP { font-size: 15vh;}
-.txtIncMain.fourP { font-size: 10vh;}
-.txtIncExt.fourP { font-size: 10vh;}
+.txtLifePoints.fourP { font-size: 13vh;}
+.txtIncMain.fourP { font-size: 6vh;}
+.txtIncExt.fourP { font-size: 6vh;}
 .txtPlayerName.fiveP { font-size: 6vh;}
 .txtLifePoints.fiveP { font-size: 18vh;}
 .txtIncMain.fiveP { font-size: 8vh;}
 .txtIncExt.fiveP { font-size: 8vh;}
 .txtPlayerName.sixP { font-size: 5vh;}
-.txtLifePoints.sixP { font-size: 15vh;}
-.txtIncMain.sixP { font-size: 8vh;}
-.txtIncExt.sixP { font-size: 8vh;}
+.txtLifePoints.sixP { font-size: 13vh;}
+.txtIncMain.sixP { font-size: 5vh;}
+.txtIncExt.sixP { font-size: 5vh;}
 .txtAuxPt { 
 	font-size: 6vh;
 	-webkit-text-stroke: 0.25vw #222222;
@@ -443,6 +439,20 @@ a {
 
 .inactive {
 	opacity: 0.3;
+}
+
+.blockIncrement {
+	position: relative;
+}
+
+.backtext {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
 .cardBack {
@@ -575,25 +585,17 @@ textarea {
 
 .timer4p {
 	right: 0;
-	top: 12%;
+	top: 10%;
 	left: 0;
 	width: 4.5vh;
 	height: 25vh;
 }
 
-.timer2p1 {
-	left: 0%;
-	top: 0;
-	bottom: 0;
-	width: 26vw;
-	height: 5vh;
-}
-
-.timer2p2 {
-	right: 0%;
-	top: 0;
-	bottom: 0;
-	width: 26vw;
+.timer2p {
+	right: 0;
+	left: 0;
+	bottom: 11%;
+	width: 50vw;
 	height: 5vh;
 }
 
@@ -607,12 +609,12 @@ textarea {
 
 #timerLnd,
 #timerLnd2 {
-	z-index: 990;
+	z-index: 5;
 }
 
 #timerConfirmation,
 #timerConfirmation2 {
-	z-index: 1000;
+	z-index: 10;
 }
 
 #vertLine1 {
@@ -857,6 +859,47 @@ textarea {
 	height: 4vh;
 }
 
+#divInfo6p {
+	position: absolute;
+	margin: auto;
+	top: 5%;
+	right: 0;
+	left: 0;
+	width: 4vh;
+	height: 4vh;
+}
+
+#divInfo4p {
+	position: absolute;
+	margin: auto;
+	top: 5%;
+	right: 0;
+	left: 0;
+	width: 4vh;
+	height: 4vh;
+}
+
+#divInfo2p {
+	position: absolute;
+	margin: auto;
+	bottom: 11%;
+	right: 0;
+	left: 0;
+	width: 4vh;
+	height: 4vh;
+}
+
+#divInfo1p {
+	position: absolute;
+	margin: auto;
+	bottom: 15%;
+	right: 0;
+	left: 0;
+	width: 4vh;
+	height: 4vh;
+}
+
+
 /* sidebars */
 .rightSidebar {
 	position: fixed;
@@ -866,7 +909,7 @@ textarea {
 	right: -100vw;
 	height: 100%;
 	width: 100vw;
-	z-index: 9999;
+	z-index: 20;
 	background-color: #cccccc;
 	transition: all 0.5s ease-in-out;
 }
@@ -879,7 +922,7 @@ textarea {
 	left: -100vw;
 	height: 100%;
 	width: 100vw;
-	z-index: 9999;
+	z-index: 20;
 	background-color: #cccccc;
 	transition: all 0.5s ease-in-out;
 }
@@ -913,17 +956,32 @@ textarea {
 	width: 100%;
 }
 
+.img80p {
+	max-width: 80%;
+	max-height: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 .dimBackground {
 	background: black;
 	opacity: 0.5;
 }
 
 #tablemap {
-	z-index: 999;
+	z-index: 30;
 }
 
 #tablemapMiddle {
 	background: #333333;
+}
+
+#infoPanel {
+	z-index: 40;
+}
+
+#infoPanelMiddle {
+	background: #aaaaaa;
 }
 
 /* ============================ BUTTONS ============================ */
@@ -1013,7 +1071,7 @@ button {
 .btnDmgJund { background: #9e4d26;}
 .btnDmgNaya { background: #a8ae42;}
 .btnDmgBolas { background: #da811b;}
-.btnDmgCoalition { background: #d06b22;}
+.btnDmgCoalition { background: #ada816;}
 .btnDmgFive { background: #e0b944;}
 .btnDmgPhyrexia { background: #25422c;}
 .btnDmgPlaneswalker { background: #b9492d;}
@@ -1061,7 +1119,7 @@ button {
 .fontDmgJund { color: #9e4d26;}
 .fontDmgNaya { color: #a8ae42;}
 .fontDmgBolas { color: #da811b;}
-.fontDmgCoalition { color: #d06b22;}
+.fontDmgCoalition { color: #ada816;}
 .fontDmgFive { color: #e0b944;}
 .fontDmgPhyrexia { color: #25422c;}
 .fontDmgPlaneswalker { color: #b9492d;}
@@ -1122,15 +1180,7 @@ button {
 	background-size: 7vh 7vh;
 }
 
-@media (aspect-ratio: 9/18) {
-	.btnMana {
-		width: 6vh;
-		height: 6vh;
-		background-size: 6vh 6vh;
-	}
-}
-
-@media (aspect-ratio: 18/37) {
+@media (max-aspect-ratio: 9/18) {
 	.btnMana {
 		width: 6vh;
 		height: 6vh;
@@ -1156,13 +1206,7 @@ button {
 	height: 75%;
 }
 
-@media (aspect-ratio: 18/37) {
-	.btnDmgLnd {
-		height: 62%;
-	}
-}
-
-@media (aspect-ratio: 9/18) {
+@media (max-aspect-ratio: 9/18) {
 	.btnDmgLnd {
 		height: 65%;
 	}
@@ -1298,6 +1342,7 @@ button {
 	cursor: pointer;
 	overflow: hidden;
 	display: block;
+	z-index: 1;
 }
 
 .btnAux {
@@ -1480,6 +1525,15 @@ button {
 	height: 100%;
 }
 
+#btnInfo {
+	background: url(../img/info.png) no-repeat center center;
+	background-size: 4vh 4vh;
+	background-repeat: no-repeat;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
 #btnToggleCast {
 	background: url(../img/tut_cst.png) no-repeat center center;
 	background-size: 5vh 5vh;
@@ -1524,7 +1578,7 @@ button {
 
 input[type=checkbox].checksquare {
 	position: absolute;
-	z-index: -1000;
+	z-index: -10;
 	left: -1000px;
 	overflow: hidden;
 	clip: rect(0 0 0 0);
@@ -1694,7 +1748,7 @@ label.checklabel {
 }
 
 .coalitionPtr {
-	background: #d06b22 url(../img/coalitionptr.png) no-repeat center center;
+	background: #ada816 url(../img/coalitionptr.png) no-repeat center center;
 	background-size: 32vh 45vh;
 }
 
@@ -1923,7 +1977,7 @@ label.checklabel {
 }
 
 .coalitionLnd {
-	background: #d06b22 url(../img/coalitionlnd.png) no-repeat center center;
+	background: #ada816 url(../img/coalitionlnd.png) no-repeat center center;
 	background-size: 23vh 17vh;
 }
 

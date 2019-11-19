@@ -1124,7 +1124,15 @@ function setSettingsSidebarFunctions() {
   var np = sessionStorage.getItem("numPlayers") > 2 ? "5vh 5vh" : "8vh 8vh";
   var lang = localStorage.getItem("language") ? localStorage.getItem("language") : "en";
   document.getElementById("txtSetSideBarLifeSet").innerHTML = "(" + localStorage.getItem("default_lp") + ")";
-
+  
+  document.getElementById("btnInfo").addEventListener("click", function () {
+    toggleClass(document.getElementById("infoPanel"), "invisible");
+  }, false);
+  
+  document.getElementById("btnCloseInfoPanel").addEventListener("click", function () {
+    toggleClass(document.getElementById("infoPanel"), "invisible");
+  }, false);
+  
   document.getElementById("btnSetSideBarRandomStyles").addEventListener("click", function () {
     setRandomStyles();
     document.getElementById("inpSetStatus").value = lang == "br" ? "ESTILOS APLICADOS!" : "STYLES SET!";

@@ -349,6 +349,35 @@
 		"elk":"Elk"
 	},
 	
+	"info": {
+		"infopanel":"information",
+		"monarch":"monarch",
+		"citybless":"city's blessing",
+		"experience":"experience counters",
+		"poison":"poison counters",
+		"casting":"commander castings",
+		"signature":"signature spell castings",
+		"cmddmgchart":"commander damage chart",
+		"manapool":"mana pool chart",
+		"roulette":"player roulette",
+		"players":"player selection screen",
+		"settings":"settings screen",
+		"tapplusone":"tap once: +1",
+		"taptoggle":"tap once: toggle",
+		"tapactivate":"tap once: activate",
+		"longpress":"press and hold: reset",
+		"partner":"( or partner castings )",
+		"storm":"( or storm counting )",
+		"style":"style screen",
+		"cmddmgscreen":"each row tracks damage taken",
+		"cmddmgextra":"extra columns are for stolen / partner commanders",
+		"manapoolscreen":"also tracks energy counters",
+		"playerscreen":"save / load player names and styles",
+		"settingscreen":"reset game / roll dice",
+		"roulettepress":"highlights a random player",
+		"stylescreen":"press and hold on a player name to acess the style selection screen"
+	},
+	
 	"exit": {
 		"confirmation":"confirmation",
 		"yesno":"yes,no",

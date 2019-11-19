@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <!--
+	<head>
+		<!--
          This file is part of EDH SHIELDMATE
          Copyright (C) 2018 Jorge Quintanilha, Paulo Mendonça
          
@@ -18,1148 +18,1343 @@
          You should have received a copy of the GNU General Public License
          along with EDH SHIELDMATE.  If not, see http://www.gnu.org/licenses/.
          -->
-      <!--Developed by: Jorge Quintanilha-->
-      <meta charset="utf-8" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="msapplication-tap-highlight" content="no" />
-      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width height=device-height" />
-      <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' 'unsafe-eval' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
-      <link rel="stylesheet" type="text/css" href="css/rwd.css" />
-      <script type="text/javascript" src="cordova.js"></script>
-      <script src="js/long-press.js"></script>
-      <script type="text/javascript" src="js/edh.js"></script>  
-      <script type="text/javascript" src="js/lang.js"></script>
-      <title>EDH Shieldmate</title>
-   </head>
-   <body>
-      <div class="container h100p col100p noscroll" id="idcontainer">
-         <div class="row h50p">
-            <div class="column h100p col50p">
-               <div class="card h100p lnd" id="cardP1">
-                  <div class="cardBack h100p col100p" id="cardBackP1">
-                     <div class="cardContent h100p col92p" id="cardContP1">
-                        <div class="blkIncMain row h15p col100p">
-                           <div class="blkIncMinusMain h100p col30p centerContent">
-                              <button class="btnIncMinusMain btnInc btnFull tilt" id="btnIncMinusMainP1">
-                              <img src="./img/lfmintp.png" class="btnIncImg" />
-                              </button>
-                           </div>
-                           <div class="blkIncNumMain h100p col40p centerContent">
-                              <span class="txtIncMain fontWhite fontFaded vertical fourP" id="txtIncMainP1">1</span>
-                           </div>
-                           <div class="blkIncPlusMain h100p col30p centerContent">
-                              <button class="btnIncPlusMain btnInc btnFull tilt" id="btnIncPlusMainP1">
-                              <img src="./img/lfplustp.png" class="btnIncImg" />
-                              </button>
-                           </div>
-                        </div>
-                        <div class="cardMiddle row h70p col100p">
-                           <div class="cardBottom h100p col25p">
-							  <div class="h16p col100p centerContent">
-                                 <button class="btnBless btnAux btnAuxLnd tilt" id="btnBlessP1">
-                                 <span class="txtBless txtAux txtAuxLd fontWhite" id="txtBlessP1">&nbsp;</span>
-                                 </button>
-                              </div>
-                              <div class="h16p col100p centerContent">
-                                 <button class="btnExp btnAux btnAuxLnd tilt" id="btnExpP1">
-                                 <span class="txtExp txtAux txtAuxLd fontExp" id="txtExpP1">&nbsp;</span>
-                                 </button>
-                              </div>
-                              <div class="h16p col100p centerContent">
-                                 <button class="btnPoison btnAux btnAuxLnd tilt" id="btnPoisonP1">
-                                 <span class="txtPoison txtAux txtAuxLd fontPoison" id="txtPoisonP1">&nbsp;</span>
-                                 </button>
-                              </div>
-                              <div class="h16p col100p centerContent">
-                                 <button class="btnCast btnAux btnAuxLnd tilt" id="btnCastP1">
-                                 <span class="txtCast txtAux txtAuxLd fontCast" id="txtCastP1">&nbsp;</span>
-                                 </button>
-                              </div>
-							  <div class="h16p col100p centerContent">
-                                 <button class="btnSig btnAux btnAuxLnd tilt" id="btnSigP1">
-                                 <span class="txtSig txtAux txtAuxLd fontSig" id="txtSigP1">&nbsp;</span>
-                                 </button>
-                              </div>
-							  <div class="h16p col100p centerContent">
-                                 <button class="btnMonarch btnAux btnAuxLnd tilt" id="btnMonarchP1">
-                                 <span class="txtMonarch txtAux txtAuxLd fontWhite" id="txtMonarchP1">&nbsp;</span>
-                                 </button>
-                              </div>
-                           </div>
-                           <div class="blkLifePts h100p col50p centerContent">
-                              <span class="txtLifePoints fontWhite vertical fourP" id="txtLifePointsP1">0</span>
-                           </div>
-                           <div class="cardTop row h100p col25p">
-                              <div class="blkPlayerName vertTableFix h100p col100p centerContent" id="blkPlayerNameP1">
-                                 <span class="txtPlayerName fontWhite vertical fourP" id="txtPlayerNameP1">PLAYER 1</span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="blkIncExt row h15p col100p">
-                           <div class="blkIncMinusExt h100p col30p centerContent">
-                              <button class="btnIncMinusExt btnInc btnFull tilt" id="btnIncMinusExtP1">
-                              <img src="./img/lfmintp.png" class="btnIncImg" />
-                              </button>
-                           </div>
-                           <div class="blkIncNumExt h100p col40p centerContent">
-                              <span class="txtIncExt fontWhite fontFaded vertical fourP" id="txtIncExtP1">5</span>
-                           </div>
-                           <div class="blkIncPlusExt h100p col30p centerContent">
-                              <button class="btnIncPlusExt btnInc btnFull tilt" id="btnIncPlusExtP1">
-                              <img src="./img/lfplustp.png" class="btnIncImg" />
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="cardTopPad h100p col08p"></div>
-                  </div>
-               </div>
-            </div>
-            <div class="column h100p col50p">
-               <div class="card h100p flip lnd" id="cardP2">
-                  <div class="cardBack h100p col100p" id="cardBackP2">
-                     <div class="cardContent h100p col92p"  id="cardContP2">
-                        <div class="blkIncMain row h15p col100p">
-                           <div class="blkIncMinusMain h100p col30p centerContent">
-                              <button class="btnIncMinusMain btnInc btnFull tilt" id="btnIncMinusMainP2">
-                              <img src="./img/lfmintp.png" class="btnIncImg" />
-                              </button>
-                           </div>
-                           <div class="blkIncNumMain h100p col40p centerContent">
-                              <span class="txtIncMain fontWhite fontFaded vertical fourP" id="txtIncMainP2">1</span>
-                           </div>
-                           <div class="blkIncPlusMain h100p col30p centerContent">
-                              <button class="btnIncPlusMain btnInc btnFull tilt" id="btnIncPlusMainP2">
-                              <img src="./img/lfplustp.png" class="btnIncImg" />
-                              </button>
-                           </div>
-                        </div>
-                        <div class="cardMiddle row h70p col100p">
-                           <div class="cardBottom h100p col25p">
-							  <div class="h16p col100p centerContent">
-                                 <button class="btnBless btnAux btnAuxLnd tilt" id="btnBlessP2">
-                                 <span class="txtBless txtAux txtAuxLd fontWhite" id="txtBlessP2">&nbsp;</span>
-                                 </button>
-                              </div>
-                              <div class="h16p col100p centerContent">
-                                 <button class="btnExp btnAux btnAuxLnd tilt" id="btnExpP2">
-                                 <span class="txtExp txtAux txtAuxLd fontExp" id="txtExpP2">&nbsp;</span>
-                                 </button>
-                              </div>
-                              <div class="h16p col100p centerContent">
-                                 <button class="btnPoison btnAux btnAuxLnd tilt" id="btnPoisonP2">
-                                 <span class="txtPoison txtAux txtAuxLd fontPoison" id="txtPoisonP2">&nbsp;</span>
-                                 </button>
-                              </div>
-                              <div class="h16p col100p centerContent">
-                                 <button class="btnCast btnAux btnAuxLnd tilt" id="btnCastP2">
-                                 <span class="txtCast txtAux txtAuxLd fontCast" id="txtCastP2">&nbsp;</span>
-                                 </button>
-                              </div>
-							  <div class="h16p col100p centerContent">
-                                 <button class="btnSig btnAux btnAuxLnd tilt" id="btnSigP2">
-                                 <span class="txtSig txtAux txtAuxLd fontSig" id="txtSigP2">&nbsp;</span>
-                                 </button>
-                              </div>
-							  <div class="h16p col100p centerContent">
-                                 <button class="btnMonarch btnAux btnAuxLnd tilt" id="btnMonarchP2">
-                                 <span class="txtMonarch txtAux txtAuxLd fontWhite" id="txtMonarchP2">&nbsp;</span>
-                                 </button>
-                              </div>
-                           </div>
-                           <div class="blkLifePts h100p col50p centerContent">
-                              <span class="txtLifePoints fontWhite vertical fourP" id="txtLifePointsP2">0</span>
-                           </div>
-                           <div class="cardTop row h100p col25p">
-                              <div class="blkPlayerName vertTableFix h100p col100p centerContent" id="blkPlayerNameP2">
-                                 <span class="txtPlayerName fontWhite vertical fourP" id="txtPlayerNameP2">PLAYER 2</span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="blkIncExt row h15p col100p">
-                           <div class="blkIncMinusExt h100p col30p centerContent">
-                              <button class="btnIncMinusExt btnInc btnFull tilt" id="btnIncMinusExtP2">
-                              <img src="./img/lfmintp.png" class="btnIncImg" />
-                              </button>
-                           </div>
-                           <div class="blkIncNumExt h100p col40p centerContent">
-                              <span class="txtIncExt fontWhite fontFaded vertical fourP" id="txtIncExtP2">5</span>
-                           </div>
-                           <div class="blkIncPlusExt h100p col30p centerContent">
-                              <button class="btnIncPlusExt btnInc btnFull tilt" id="btnIncPlusExtP2">
-                              <img src="./img/lfplustp.png" class="btnIncImg" />
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="cardTopPad h100p col08p"></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row h50p">
-		 <div class="card h100p ptr" id="cardP3">
-          <div class="cardBack h100p col100p" id="cardBackP3">
-            <div class="cardTopPad h20p col100p">
-				<div class="h100p col20p">
-					<button id="btnManaPool">&nbsp;</button>
-				</div>
-				<div class="h100p col20p">
-					<button id="btnRandomize">&nbsp;</button>
-				</div>
-				<div class="h100p col20p">
-					<button id="btnSettings">&nbsp;</button>
-				</div>
-				<div class="h100p col20p">
-					<button id="btnPlayers">&nbsp;</button>
-				</div>
-				<div class="h100p col20p">
-					<button id="btnCmdDmg">&nbsp;</button>
-				</div>
-			</div>
-            <div class="cardContent col100p h80p">
-              <div class="cardTop row col100p h20p">
-                <div class="blkPlayerName col100p centerContent h100p" id="blkPlayerNameP3">
-                  <span class="txtPlayerName fontWhite threeP" id="txtPlayerNameP3">PLAYER 3</span>
-                </div>
-              </div>
-              <div class="cardMiddle row col100p h55p">
-                <div class="blkIncMain h100p col16p">
-                  <div class="blkIncPlusMain h30p col100p centerContent">
-                    <button class="btnIncPlusMain btnInc btnFull" id="btnIncPlusMainP3">
-                      <img src="./img/lfplustp.png" class="btnIncImg" />
-                    </button>
-                  </div>
-                  <div class="blkIncNumMain h40p col100p centerContent">
-                    <span class="txtIncMain fontWhite fontFaded twoP" id="txtIncMainP3">1</span>
-                  </div>
-                  <div class="blkIncMinusMain h30p col100p centerContent">
-                    <button class="btnIncMinusMain btnInc btnFull" id="btnIncMinusMainP3">
-                      <img src="./img/lfmintp.png" class="btnIncImg" />
-                    </button>
-                  </div>
-                </div>
-                <div class="blkLifePts h100p col66p centerContent">
-                  <span class="txtLifePoints fontWhite threeP" id="txtLifePointsP3">0</span>
-                </div>
-                <div class="blkIncExt h100p col16p">
-                  <div class="blkIncPlusExt h30p col100p centerContent">
-                    <button class="btnIncPlusExt btnInc btnFull" id="btnIncPlusExtP3">
-                      <img src="./img/lfplustp.png" class="btnIncImg" />
-                    </button>
-                  </div>
-                  <div class="blkIncNumExt h40p col100p centerContent">
-                    <span class="txtIncExt fontWhite fontFaded twoP" id="txtIncExtP3">5</span>
-                  </div>
-                  <div class="blkIncMinusExt h30p col100p centerContent">
-                    <button class="btnIncMinusExt btnInc btnFull" id="btnIncMinusExtP3">
-                      <img src="./img/lfmintp.png" class="btnIncImg" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="cardBottom row col100p h25p">
-			  <div class="h100p col16p centerContent">
-                  <button class="btnBless btnAux btnAuxPtr" id="btnBlessP3">
-                    <span class="txtBless txtAux txtAuxPt fontWhite" id="txtBlessP3">&nbsp;</span>
-                  </button>
-                </div>
-                <div class="h100p col16p centerContent">
-                  <button class="btnExp btnAux btnAuxPtr" id="btnExpP3">
-                    <span class="txtExp txtAux txtAuxPt fontExp" id="txtExpP3">&nbsp;</span>
-                  </button>
-                </div>
-                <div class="h100p col16p centerContent">
-                  <button class="btnPoison btnAux btnAuxPtr" id="btnPoisonP3">
-                    <span class="txtPoison txtAux txtAuxPt fontPoison" id="txtPoisonP3">&nbsp;</span>
-                  </button>
-                </div>
-                <div class="h100p col16p centerContent">
-                  <button class="btnCast btnAux btnAuxPtr" id="btnCastP3">
-                    <span class="txtCast txtAux txtAuxPt fontCast" id="txtCastP3">&nbsp;</span>
-                  </button>
-                </div>
-				<div class="h100p col16p centerContent">
-                  <button class="btnSig btnAux btnAuxPtr" id="btnSigP3">
-                    <span class="txtSig txtAux txtAuxPt fontSig" id="txtSigP3">&nbsp;</span>
-                  </button>
-                </div>
-				<div class="h100p col16p centerContent">
-                  <button class="btnMonarch btnAux btnAuxPtr" id="btnMonarchP3">
-                    <span class="txtMonarch txtAux txtAuxPt fontWhite" id="txtMonarchP3">&nbsp;</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-         </div>
-      </div>
-      <div id="timerLnd" class="timerbox timer4p invisible">
-         <div class="blkTimerBtn vertTableFix h20p col100p">
-            <button id="btnResetTimer" class="tilt">&nbsp;</button>
-         </div>
-         <div class="blkTimerTime vertTableFix h60p col100p centerContent" id="timerText">
-            <span class="txtTimer fontBlack vertical txt4" id="txtTimerDisplay">00:00:00</span>
-         </div>
-         <div class="blkTimerBtn vertTableFix h20p col100p">
-            <button id="btnPlayPause" class="tilt">&nbsp;</button>
-         </div>
-      </div>
-      <div id="timerConfirmation" class="timerbox timer4p invisible">
-         <div class="blkTimerTime vertTableFix h60p col100p centerContent" id="timerText">
-            <span class="txtTimer fontBlack vertical txt4 loc" id="general.confirm"></span>
-         </div>
-         <div class="blkTimerBtn vertTableFix h20p col100p">
-            <button class="btnMenu tilt" id="btnResetConfirmYes">&nbsp;</button>
-         </div>
-         <div class="blkTimerBtn vertTableFix h20p col100p">
-            <button class="btnMenu tilt" id="btnResetConfirmNo">&nbsp;</button>
-         </div>
-      </div>
-      <div id="vertLine3"></div>
-      <div id="horLine7"></div>
-	  
-      <div id="manaSidebar" class="row h100p col100p rightSidebar">
-         <div class="manaSidebarSidePad col05p h100p"></div>
-         <div class="manaSidebarMiddle col80p h100p" id="manaSidebarMiddle">
-            <div class="sidebarMiddleRows row col100p h80p" id="manaSidebarMiddleRows">
-               <div class="manaPlayerRow col16p h100p" id="manaPlayerRowP6"></div>
-               <div class="manaPlayerRow col16p h100p" id="manaPlayerRowP5"></div>
-			   <div class="manaPlayerRow col16p h100p" id="manaPlayerRowP4"></div>
-               <div class="manaPlayerRow col16p h100p" id="manaPlayerRowP3">
-                  <div class="playerNameManaDiv row col100p h30p centerContent" id="playerNameManaDivP3">
-                     <span class="txtPlayerNameMana fontBlack fontFaded txt5 vertical" id="txtPlayerNameManaP3">PLAYER 3</span>
-                  </div>
-                  <div class="buttonWDiv row col100p h10p centerContent" id="buttonWDivP3">
-                     <button class="btnMana btnMenuWhite tilt" id="btnManaWP3">
-                     <span class="txtMana fontWhite txt5" id="txtManaWP3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonUDiv row col100p h10p centerContent" id="buttonUDivP3">
-                     <button class="btnMana btnMenuBlue tilt" id="btnManaUP3">
-                     <span class="txtMana fontWhite txt5" id="txtManaUP3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonBDiv row col100p h10p centerContent" id="buttonBDivP3">
-                     <button class="btnMana btnMenuBlack tilt" id="btnManaBP3">
-                     <span class="txtMana fontWhite txt5" id="txtManaBP3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonRDiv row col100p h10p centerContent" id="buttonRDivP3">
-                     <button class="btnMana btnMenuRed tilt" id="btnManaRP3">
-                     <span class="txtMana fontWhite txt5" id="txtManaRP3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonGDiv row col100p h10p centerContent" id="buttonGDivP3">
-                     <button class="btnMana btnMenuGreen tilt" id="btnManaGP3">
-                     <span class="txtMana fontWhite txt5" id="txtManaGP3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonCDiv row col100p h10p centerContent" id="buttonCDivP3">
-                     <button class="btnMana btnMenuColorless tilt" id="btnManaCP3">
-                     <span class="txtMana fontWhite txt5" id="txtManaCP3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonEDiv row col100p h10p centerContent" id="buttonEDivP3">
-                     <button class="btnMana btnMenuEnergy tilt" id="btnManaEP3">
-                     <span class="txtMana fontWhite txt5" id="txtManaEP3">&nbsp;</span>
-                     </button>
-                  </div>
-               </div>
-               <div class="manaPlayerRow col16p h100p" id="manaPlayerRowP2">
-                  <div class="playerNameManaDiv row col100p h30p centerContent" id="playerNameManaDivP2">
-                     <span class="txtPlayerNameMana fontBlack fontFaded txt5 vertical" id="txtPlayerNameManaP2">PLAYER 2</span>
-                  </div>
-                  <div class="buttonWDiv row col100p h10p centerContent" id="buttonWDivP2">
-                     <button class="btnMana btnMenuWhite tilt" id="btnManaWP2">
-                     <span class="txtMana fontWhite txt5" id="txtManaWP2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonUDiv row col100p h10p centerContent" id="buttonUDivP2">
-                     <button class="btnMana btnMenuBlue tilt" id="btnManaUP2">
-                     <span class="txtMana fontWhite txt5" id="txtManaUP2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonBDiv row col100p h10p centerContent" id="buttonBDivP2">
-                     <button class="btnMana btnMenuBlack tilt" id="btnManaBP2">
-                     <span class="txtMana fontWhite txt5" id="txtManaBP2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonRDiv row col100p h10p centerContent" id="buttonRDivP2">
-                     <button class="btnMana btnMenuRed tilt" id="btnManaRP2">
-                     <span class="txtMana fontWhite txt5" id="txtManaRP2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonGDiv row col100p h10p centerContent" id="buttonGDivP2">
-                     <button class="btnMana btnMenuGreen tilt" id="btnManaGP2">
-                     <span class="txtMana fontWhite txt5" id="txtManaGP2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonCDiv row col100p h10p centerContent" id="buttonCDivP2">
-                     <button class="btnMana btnMenuColorless tilt" id="btnManaCP2">
-                     <span class="txtMana fontWhite txt5" id="txtManaCP2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonEDiv row col100p h10p centerContent" id="buttonEDivP2">
-                     <button class="btnMana btnMenuEnergy tilt" id="btnManaEP2">
-                     <span class="txtMana fontWhite txt5" id="txtManaEP2">&nbsp;</span>
-                     </button>
-                  </div>
-               </div>
-               <div class="manaPlayerRow col16p h100p" id="manaPlayerRowP1">
-                  <div class="playerNameManaDiv row col100p h30p centerContent" id="playerNameManaDivP1">
-                     <span class="txtPlayerNameMana fontBlack fontFaded txt5 vertical" id="txtPlayerNameManaP1">PLAYER 1</span>
-                  </div>
-                  <div class="buttonWDiv row col100p h10p centerContent" id="buttonWDivP1">
-                     <button class="btnMana btnMenuWhite tilt" id="btnManaWP1">
-                     <span class="txtMana fontWhite txt5" id="txtManaWP1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonUDiv row col100p h10p centerContent" id="buttonUDivP1">
-                     <button class="btnMana btnMenuBlue tilt" id="btnManaUP1">
-                     <span class="txtMana fontWhite txt5" id="txtManaUP1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonBDiv row col100p h10p centerContent" id="buttonBDivP1">
-                     <button class="btnMana btnMenuBlack tilt" id="btnManaBP1">
-                     <span class="txtMana fontWhite txt5" id="txtManaBP1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonRDiv row col100p h10p centerContent" id="buttonRDivP1">
-                     <button class="btnMana btnMenuRed tilt" id="btnManaRP1">
-                     <span class="txtMana fontWhite txt5" id="txtManaRP1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonGDiv row col100p h10p centerContent" id="buttonGDivP1">
-                     <button class="btnMana btnMenuGreen tilt" id="btnManaGP1">
-                     <span class="txtMana fontWhite txt5" id="txtManaGP1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonCDiv row col100p h10p centerContent" id="buttonCDivP1">
-                     <button class="btnMana btnMenuColorless tilt" id="btnManaCP1">
-                     <span class="txtMana fontWhite txt5" id="txtManaCP1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonEDiv row col100p h10p centerContent" id="buttonEDivP1">
-                     <button class="btnMana btnMenuEnergy tilt" id="btnManaEP1">
-                     <span class="txtMana fontWhite txt5" id="txtManaEP1">&nbsp;</span>
-                     </button>
-                  </div>
-               </div>
-            </div>
-            <div class="sidebarMiddleButtons row col100p h20p centerContent" id="manaSidebarMiddleButtons">
-               <div class="sidebarMiddleButtonsSlot col25p h100p centerContent" id="sidebarMiddleButtonsSlot3">
-                  <button class="btnMenu btnSideBar btnIncSub btnMinusOffLnd" id="btnManaSideBarMinus"></button>
-               </div>
-               <div class="sidebarMiddleButtonsSlot col25p h100p centerContent" id="sidebarMiddleButtonsSlot2">
-                  <button class="btnMenu btnSideBar btnClearSub btnClearOff" id="btnManaSideBarClear"></button>
-               </div>
-               <div class="sidebarMiddleButtonsSlot col25p h100p centerContent" id="sidebarMiddleButtonsSlot1">
-                  <button class="btnMenu btnSideBar btnIncSub btnPlusOff" id="btnManaSideBarPlus"></button>
-               </div>
-            </div>
-         </div>
-         <div class="manaSidebarTop col15p h100p" id="manaSidebarTop">
-            <div class="manaSidebarTitlePad row col100p h15p centerContent" id="manaSidebarClose">
-               <button class="btnMenu btnMenuClose tilt" id="btnManaSidebarClose">
-               <span class="fontWhite txt5">&nbsp;</span>
-               </button>
-            </div>
-            <div class="manaSidebarTitle row col100p h70p centerContent" id="manaSidebarTitle">
-               <span class="fontBlack fontFaded txt5 vertical loc" id="game.manapool"></span>
-            </div>
-            <div class="manaSidebarTitlePad row col100p h15p"></div>
-         </div>
-      </div>
-      <div id="cmdDmgSidebar" class="row h100p col100p rightSidebar">
-         <div class="cmdDmgSidebarSidePad col05p h100p"></div>
-         <div class="cmdDmgSidebarMiddle col80p h100p" id="cmdDmgSidebarMiddle">
-            <div class="sidebarMiddleRows row col90p h100p" id="cmdDmgSidebarMiddleRows">
-               <div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP6"></div>
-               <div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP5"></div>
-			   <div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP4"></div>
-               <div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP3">
-                  <div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivRowP3">
-                     <span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtRowP3">P3</span>
-                  </div>
-                  <div class="playerNameCmdDiv row col100p h24p centerContent" id="playerNameCmdDivP3">
-                     <span class="txtPlayerNameCmd fontBlack fontFaded txt5 vertical" id="txtPlayerNameCmdP3">PLAYER 3</span>
-                  </div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP3fromP1">
-                     <button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP1 tilt" id="btnDmgCmdP3fromP1">
-                     <span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP3fromP1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP3fromP2">
-                     <button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP2 tilt" id="btnDmgCmdP3fromP2">
-                     <span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP3fromP2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP3fromP3"></div>
-                  <div class="cmdDmgExtraPad row col100p h02p centerContent" id="cmdDmgExtraPad3"></div>
-                  <div class="cmdDmgExtraDiv1 row col100p h08p centerContent" id="cmdDmgExtraDiv1P3">
-                     <button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra1P3 tilt" id="btnDmgCmdExtra1P3">
-                     <span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra1P3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="cmdDmgExtraDiv2 row col100p h08p centerContent" id="cmdDmgExtraDiv2P3">
-                     <button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra2P3 tilt" id="btnDmgCmdExtra2P3">
-                     <span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra2P3">&nbsp;</span>
-                     </button>
-                  </div>
-               </div>
-               <div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP2">
-                  <div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivRowP2">
-                     <span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtRowP2">P2</span>
-                  </div>
-                  <div class="playerNameCmdDiv row col100p h24p centerContent" id="playerNameCmdDivP2">
-                     <span class="txtPlayerNameCmd fontBlack fontFaded txt5 vertical" id="txtPlayerNameCmdP2">PLAYER 2</span>
-                  </div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP2fromP1">
-                     <button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP1 tilt" id="btnDmgCmdP2fromP1">
-                     <span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP2fromP1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP2fromP2"></div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP2fromP3">
-                     <button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP3 tilt" id="btnDmgCmdP2fromP3">
-                     <span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP2fromP3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="cmdDmgExtraPad row col100p h02p centerContent" id="cmdDmgExtraPad2"></div>
-                  <div class="cmdDmgExtraDiv1 row col100p h08p centerContent" id="cmdDmgExtraDiv1P2">
-                     <button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra1P2 tilt" id="btnDmgCmdExtra1P2">
-                     <span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra1P2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="cmdDmgExtraDiv2 row col100p h08p centerContent" id="cmdDmgExtraDiv2P2">
-                     <button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra2P2 tilt" id="btnDmgCmdExtra2P2">
-                     <span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra2P2">&nbsp;</span>
-                     </button>
-                  </div>
-               </div>
-               <div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP1">
-                  <div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivRowP1">
-                     <span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtRowP1">P1</span>
-                  </div>
-                  <div class="playerNameCmdDiv row col100p h24p centerContent" id="playerNameCmdDivP1">
-                     <span class="txtPlayerNameCmd fontBlack fontFaded txt5 vertical" id="txtPlayerNameCmdP1">PLAYER 1</span>
-                  </div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP1fromP1"></div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP1fromP2">
-                     <button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP2 tilt" id="btnDmgCmdP1fromP2">
-                     <span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP1fromP2">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP1fromP3">
-                     <button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP3 tilt" id="btnDmgCmdP1fromP3">
-                     <span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP1fromP3">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="cmdDmgExtraPad row col100p h02p centerContent" id="cmdDmgExtraPad1"></div>
-                  <div class="cmdDmgExtraDiv1 row col100p h08p centerContent" id="cmdDmgExtraDiv1P1">
-                     <button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra1P1 tilt" id="btnDmgCmdExtra1P1">
-                     <span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra1P1">&nbsp;</span>
-                     </button>
-                  </div>
-                  <div class="cmdDmgExtraDiv2 row col100p h08p centerContent" id="cmdDmgExtraDiv2P1">
-                     <button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra2P1 tilt" id="btnDmgCmdExtra2P1">
-                     <span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra2P1">&nbsp;</span>
-                     </button>
-                  </div>
-               </div>
-            </div>
-            <div class="sidebarMiddlePad row col10p h100p" id="cmdDmgSidebarMiddlePad">
-               <div class="pnumDmgPad row col100p h32p centerContent" id="pnumDmgPad"></div>
-               <div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivP1">
-                  <span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtP1">P1</span>
-               </div>
-               <div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivP2">
-                  <span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtP2">P2</span>
-               </div>
-               <div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivP3">
-                  <span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtP3">P3</span>
-               </div>
-               <div class="pnumDmgDivExtra row col100p h20p centerContent" id="pnumDmgDivExtra">
-                  <span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtExtra">Extra</span>
-               </div>
-            </div>
-         </div>
-         <div class="cmdDmgSidebarTop col15p h100p" id="cmdDmgSidebarTop">
-            <div class="cmdDmgSidebarTitlePad row col100p h15p centerContent" id="cmdDmgSidebarClose">
-               <button class="btnMenu btnMenuClose tilt" id="btnCmdDmgSidebarClose">
-               <span class="fontWhite txt5">&nbsp;</span>
-               </button>
-            </div>
-            <div class="cmdDmgSidebarTitle row col100p h70p centerContent" id="cmdDmgSidebarTitle">
-               <span class="fontBlack fontFaded txt5 vertical loc" id="game.cmddamagelnd"></span>
-            </div>
-            <div class="cmdDmgSidebarTitlePad row col100p h15p centerContent">
-               <button class="btnMenu btnMenuClear tilt" id="btnCmdSideBarClear">
-               <span class="fontRed txt3 loc" id="general.clear"></span>
-               </button>
-            </div>
-         </div>
-      </div>
-	  
-      <div id="settingsSidebar" class="row h100p col100p leftSidebar">
-      <div class="sidebarSide col10p h100p"></div>
-      <div class="sidebarMiddle col80p h100p">
-        <div class="sidebarTop row h08p">
-          <div class="col15p h100p centerContent"></div>
-          <div class="sideBarTitle col70p h100p centerContent">
-            <span class="fontBlack fontFaded txt5 loc" id="game.settings"></span>
-          </div>
-          <div class="sideBarClose col15p h100p centerContent">
-            <button class="btnMenu btnMenuClose" id="btnSetSideBarClose">
-              <span class="fontWhite txt5">&nbsp;</span>
-            </button>
-          </div>
-        </div>
-		<div class="row h01p"></div>
-		<div class="sidebarRow row h06p centerContent">
-			<input readonly type="text" class="textField inpSetStatus locph" id="inpSetStatus" placeholder="LOG" />
-		</div>
-		<div class="sidebarRow row h08p">
-			<div class="sideBarSlot col100p h100p centerContent">
-				<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarResetGame">
-					<span class="fontWhite txt4 loc" id="game.resetgame"></span>
-				</button>
-			</div>
-		</div>
-		<div class="sidebarRow row h08p">
-			<div class="sideBarSlot col100p h100p centerContent">
-				<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarResetStyles">
-					<span class="fontWhite txt4 loc" id="game.resetstyles"></span>
-				</button>
-			</div>
-		</div>
-		<div class="sidebarRow row h08p">
-			<div class="sideBarSlot col100p h100p centerContent">
-				<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRandomStyles">
-					<span class="fontWhite txt4 loc" id="game.randomstyles"></span>
-				</button>
-			</div>
-		</div>
-		<div class="sidebarRow row h08p">
-			<div class="sideBarSlot col100p h100p centerContent">
-				<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarTimerToggle">
-					<span class="fontWhite txt4 loc" id="game.toggletimer"></span>
-				</button>
-			</div>
-		</div>
-		<div class="sidebarRow row h02p"></div>
-		<div class="sidebarRow row h04p">
-			<div class="sideBarSection col100p h100p centerContent">
-				<span class="fontBlack fontFaded txt3 loc" id="game.startlifepoints"></span>
-				<span class="fontBlack fontFaded txt3" id="txtSetSideBarLifeSet"></span>
-			</div>
-		</div>
-		<div class="sidebarRow row h08p">
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP20">
-					<span class="fontWhite txt5">20</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP25">
-					<span class="fontWhite txt5">25</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP30">
-					<span class="fontWhite txt5">30</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP40">
-					<span class="fontWhite txt5">40</span>
-				</button>
-			</div>
-		</div>
-		<div class="sidebarRow row h02p"></div>
-		<div class="sidebarRow row h04p">
-			<div class="sideBarSection col100p h100p centerContent">
-				<span class="fontBlack fontFaded txt3 loc" id="game.diceroller"></span>
-			</div>
-		</div>
-		<div class="sidebarRow row h10p">
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnFaded btnDiceD4 btnFull" id="btnDiceD4">
-					<span class="fontWhite txt3">&nbsp;</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnFaded btnDiceD6 btnFull" id="btnDiceD6">
-					<span class="fontWhite txt3">&nbsp;</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnFaded btnDiceD8 btnFull" id="btnDiceD8">
-					<span class="fontWhite txt3">&nbsp;</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnFaded btnDicePlanar btnFull" id="btnDicePlanar">
-					<span class="fontWhite txt3">&nbsp;</span>
-				</button>
-			</div>
-		</div>
-		<div class="sidebarRow row h10p">
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnFaded btnDiceD10 btnFull" id="btnDiceD10">
-					<span class="fontWhite txt3">&nbsp;</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnFaded btnDiceD12 btnFull" id="btnDiceD12">
-					<span class="fontWhite txt3">&nbsp;</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnFaded btnDiceD20 btnFull" id="btnDiceD20">
-					<span class="fontWhite txt3">&nbsp;</span>
-				</button>
-			</div>
-			<div class="sidebarCol h100p col25p centerContent">
-				<button class="btnMenu btnFaded btnDiceCoin btnFull" id="btnDiceCoin">
-					<span class="fontWhite txt3">&nbsp;</span>
-				</button>
-			</div>
-		</div>
-		<div class="sidebarRow row h10p centerContent">
-			<input readonly type="text" class="textField inpDiceResult locph" id="setDiceResult" placeholder="RESULTS" />
-		</div>
-		<div class="row h03p"></div>
-      </div>
-      <div class="sidebarSide col10p h100p"></div>
-    </div>
-	  
-    <div id="styleSidebar" class="row h100p col100p leftSidebar">
-      <div class="sidebarSide col10p h100p"></div>
-      <div class="sidebarMiddle col80p h100p">
-        <div class="sidebarTop row h08p">
-          <div class="col15p h100p centerContent">
-            <span class="txtSideBarPad fontWhite txt5 lnd" id="txtStyleSideBarPad">0</span>
-          </div>
-          <div class="sideBarTitle col70p h100p centerContent">
-            <span class="fontBlack fontFaded txt5 loc" id="game.customization"></span>
-          </div>
-          <div class="sideBarClose col15p h100p centerContent">
-            <button class="btnMenu btnMenuClose" id="btnStyleSideBarClose">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-        <div class="sidebarPlayerBox row h05p centerContent">
-          <input type="text" class="textField inpPlayerName locph" id="styleInpPlayerName" placeholder="PLAYER NAME" />
-        </div>
-		<div class="row h01p"></div>
-		<div class="row h04p centerContent">
-			 <span class="fontBlack fontFaded txt3h loc" id="game.togglebuttons"></span>
-		</div>
-		  <div class="sidebarRow row h06p">
-			<div class="column h100p col16p centerContent">
-				<button class="btnToggle btnMenu btnFull" id="btnToggleBls">
-					<span>&nbsp;</span>
-				</button>
-			</div>
-			<div class="column h100p col16p centerContent">
-				<button class="btnToggle btnMenu btnFull" id="btnToggleExp">
-					<span>&nbsp;</span>
-				</button>
-			</div>
-			<div class="column h100p col16p centerContent">
-				<button class="btnToggle btnMenu btnFull" id="btnTogglePoison">
-					<span>&nbsp;</span>
-				</button>
-			</div>
-			<div class="column h100p col16p centerContent">
-				<button class="btnToggle btnMenu btnFull" id="btnToggleCast">
-					<span>&nbsp;</span>
-				</button>
-			</div>
-			<div class="column h100p col16p centerContent">
-				<button class="btnToggle btnMenu btnFull" id="btnToggleSig">
-					<span>&nbsp;</span>
-				</button>
-			</div>
-			<div class="column h100p col16p centerContent">
-				<button class="btnToggle btnMenu btnFull" id="btnToggleMon">
-					<span>&nbsp;</span>
-				</button>
-			</div>
-		</div>
-		<div class="row h01p"></div>
-        <div class="sidebarSubtext row h04p centerContent">
-          <span class="fontBlack fontFaded txt3h loc" id="game.selectheme"></span>
-		  <span class="txt3h" id="txtStyleSideBarSelectedTheme">&nbsp;</span>
-        </div>
-        <div class="sidebarRow row h07p">
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuWhite btnStyle btnFull" id="btnStyleBtn_White">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuBlue btnStyle btnFull" id="btnStyleBtn_Blue">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuBlack btnStyle btnFull" id="btnStyleBtn_Black">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuRed btnStyle btnFull" id="btnStyleBtn_Red">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuGreen btnStyle btnFull" id="btnStyleBtn_Green">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-        <div class="sidebarRow row h07p">
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuAzorius btnStyle btnFull" id="btnStyleBtn_Azorius">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuBoros btnStyle btnFull" id="btnStyleBtn_Boros">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuDimir btnStyle btnFull" id="btnStyleBtn_Dimir">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuGolgari btnStyle btnFull" id="btnStyleBtn_Golgari">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuGruul btnStyle btnFull" id="btnStyleBtn_Gruul">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-        <div class="sidebarRow row h07p">
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuIzzet btnStyle btnFull" id="btnStyleBtn_Izzet">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuOrzhov btnStyle btnFull" id="btnStyleBtn_Orzhov">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuRakdos btnStyle btnFull" id="btnStyleBtn_Rakdos">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuSelesnya btnStyle btnFull" id="btnStyleBtn_Selesnya">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuSimic btnStyle btnFull" id="btnStyleBtn_Simic">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-        <div class="sidebarRow row h07p">
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuAbzan btnStyle btnFull" id="btnStyleBtn_Abzan">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuJeskai btnStyle btnFull" id="btnStyleBtn_Jeskai">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuMardu btnStyle btnFull" id="btnStyleBtn_Mardu">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuSultai btnStyle btnFull" id="btnStyleBtn_Sultai">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuTemur btnStyle btnFull" id="btnStyleBtn_Temur">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-        <div class="sidebarRow row h07p">
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuBant btnStyle btnFull" id="btnStyleBtn_Bant">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuEsper btnStyle btnFull" id="btnStyleBtn_Esper">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuGrixis btnStyle btnFull" id="btnStyleBtn_Grixis">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuJund btnStyle btnFull" id="btnStyleBtn_Jund">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuNaya btnStyle btnFull" id="btnStyleBtn_Naya">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-        <div class="sidebarRow row h07p">
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuArtificer btnStyle btnFull" id="btnStyleBtn_Artificer">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuEnchantress btnStyle btnFull" id="btnStyleBtn_Enchantress">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuSnow btnStyle btnFull" id="btnStyleBtn_Snow">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuSpellshaper btnStyle btnFull" id="btnStyleBtn_Spellshaper">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuElk btnStyle btnFull" id="btnStyleBtn_Elk">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-        <div class="sidebarRow row h07p">
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuCoalition btnStyle btnFull" id="btnStyleBtn_Coalition">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuAvacyn btnStyle btnFull" id="btnStyleBtn_Avacyn">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuColorless btnStyle btnFull" id="btnStyleBtn_Colorless">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuBolas btnStyle btnFull" id="btnStyleBtn_Bolas">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuPhyrexia btnStyle btnFull" id="btnStyleBtn_Phyrexia">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-		<div class="sidebarRow row h07p">
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuYawgmoth btnStyle btnFull" id="btnStyleBtn_Yawgmoth">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuEldrazi btnStyle btnFull" id="btnStyleBtn_Eldrazi">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuFive btnStyle btnFull" id="btnStyleBtn_Five">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-		  <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuPlaneswalker btnStyle btnFull" id="btnStyleBtn_Planeswalker">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-          <div class="sidebarCol h100p col20p centerContent">
-            <button class="btnMenu btnMenuMirran btnStyle btnFull" id="btnStyleBtn_Mirran">
-              <span>&nbsp;</span>
-            </button>
-          </div>
-        </div>
-        <div class="sidebarStyleBox row h07p">
-          <div class="sidebarStyleBoxSlot col40p h100p centerContent">
-            <button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnStyleSideBarClear">
-              <span class="fontWhite txt4 loc" id="general.clear"></span>
-            </button>
-          </div>
-		  <div class="sidebarCol h100p col20p centerContent"></div>
-		  <div class="sidebarStyleBoxSlot col40p h100p centerContent">
-            <button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnStyleSideBarSave">
-              <span class="fontWhite txt4 loc" id="general.save"></span>
-            </button>
-          </div>
-        </div>
-		<div class="sidebarRow row h07p">
-          
-        </div>
-		<div class="row h01p"></div>
-      </div>
-      <div class="sidebarSide col10p h100p"></div>
-    </div>
-	  
-	<div id="playerSidebar" class="row h100p col100p leftSidebar">
-	 <div class="h100p col100p invisible absolutepos" id="tablemap">
-		<div class="col15p h100p dimBackground"></div>
-		<div class="col70p h100p">
-			<div class="col100p h20p dimBackground"></div>
-			<div class="col100p h60p" id="tablemapMiddle">
-				<div class="row col100p h15p">
-					<div class="col80p h100p centerContent">
-						<span class="fontWhite txt4 loc" id="players.tablemap"></span>
-					</div>
-					<div class="col20p h100p centerContent">
-						<button class="btnMenu btnXClose" id="btnCloseTableMap"><span class="fontWhite txt5">&nbsp;</span></button>
-					</div>
-				</div>
-				<div class="row col100p h10p centerContent">
-					<span class="fontWhite txt2h loc" id="players.selectpos"></span>
-				</div>
-				<div class="row col100p h70p">
-					<div class="row col100p h50p">
-						<div class="col50p h100p centerContent">
-							<button class="btnMenu btnFull btnMapPosition tilt" id="P1map"><span class="fontWhite txt10">1</span></button>
-						</div>
-						<div class="col50p h100p centerContent flip">
-							<button class="btnMenu btnFull btnMapPosition tilt" id="P2map"><span class="fontWhite txt10">2</span></button>
-						</div>
-					</div>
-					<div class="row col100p h50p">
-						<div class="col100p h100p centerContent">
-							<button class="btnMenu btnFull btnMapPosition" id="P3map"><span class="fontWhite txt10">3</span></button>
+		<!--Developed by: Jorge Quintanilha-->
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width height=device-height" />
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' 'unsafe-eval' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
+		<link rel="stylesheet" type="text/css" href="css/rwd.css" />
+		<script type="text/javascript" src="cordova.js"></script>
+		<script src="js/long-press.js"></script>
+		<script type="text/javascript" src="js/edh.js"></script>  
+		<script type="text/javascript" src="js/lang.js"></script>
+		<title>EDH Shieldmate</title>
+	</head>
+	<body>
+		<div class="container h100p col100p noscroll" id="idcontainer">
+			<div class="row h50p">
+				<div class="column h100p col50p">
+					<div class="card h100p lnd" id="cardP1">
+						<div class="cardBack h100p col100p" id="cardBackP1">
+							<div class="cardContent h100p col92p" id="cardContP1">
+								<div class="blockIncrement row h15p col100p">
+									<div class="blkIncMinusMain h100p col50p centerContent">
+										<button class="btnIncMinusMain btnInc btnFull" id="btnIncMinusMainP1">
+											<img src="./img/lfmintp.png" class="btnIncImg tilt" />
+										</button>
+									</div>
+									<div class="backtext centerContent">
+										<span class="txtIncMain fontWhite fontFaded vertical fourP" id="txtIncMainP1">1</span>
+									</div>
+									<div class="blkIncPlusMain h100p col50p centerContent">
+										<button class="btnIncPlusMain btnInc btnFull" id="btnIncPlusMainP1">
+											<img src="./img/lfplustp.png" class="btnIncImg tilt" />
+										</button>
+									</div>
+								</div>
+								<div class="cardMiddle row h70p col100p">
+									<div class="cardBottom h100p col25p">
+										<div class="h16p col100p centerContent">
+											<button class="btnBless btnAux btnAuxLnd tilt" id="btnBlessP1">
+												<span class="txtBless txtAux txtAuxLd fontWhite" id="txtBlessP1">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnExp btnAux btnAuxLnd tilt" id="btnExpP1">
+												<span class="txtExp txtAux txtAuxLd fontExp" id="txtExpP1">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnPoison btnAux btnAuxLnd tilt" id="btnPoisonP1">
+												<span class="txtPoison txtAux txtAuxLd fontPoison" id="txtPoisonP1">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnCast btnAux btnAuxLnd tilt" id="btnCastP1">
+												<span class="txtCast txtAux txtAuxLd fontCast" id="txtCastP1">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnSig btnAux btnAuxLnd tilt" id="btnSigP1">
+												<span class="txtSig txtAux txtAuxLd fontSig" id="txtSigP1">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnMonarch btnAux btnAuxLnd tilt" id="btnMonarchP1">
+												<span class="txtMonarch txtAux txtAuxLd fontWhite" id="txtMonarchP1">&nbsp;</span>
+											</button>
+										</div>
+									</div>
+									<div class="blkLifePts h100p col50p centerContent">
+										<span class="txtLifePoints fontWhite vertical fourP" id="txtLifePointsP1">0</span>
+									</div>
+									<div class="cardTop row h100p col25p">
+										<div class="blkPlayerName vertTableFix h100p col100p centerContent" id="blkPlayerNameP1">
+											<span class="txtPlayerName fontWhite vertical fourP" id="txtPlayerNameP1">PLAYER 1</span>
+										</div>
+									</div>
+								</div>
+								<div class="blockIncrement row h15p col100p">
+									<div class="blkIncMinusExt h100p col50p centerContent">
+										<button class="btnIncMinusExt btnInc btnFull" id="btnIncMinusExtP1">
+											<img src="./img/lfmintp.png" class="btnIncImg tilt" />
+										</button>
+									</div>
+									<div class="backtext centerContent">
+										<span class="txtIncExt fontWhite fontFaded vertical fourP" id="txtIncExtP1">5</span>
+									</div>
+									<div class="blkIncPlusExt h100p col50p centerContent">
+										<button class="btnIncPlusExt btnInc btnFull" id="btnIncPlusExtP1">
+											<img src="./img/lfplustp.png" class="btnIncImg tilt" />
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="cardTopPad h100p col08p"></div>
 						</div>
 					</div>
 				</div>
-				<div class="row col100p h05p">
-					<span class="fontWhite txt2 invisible" id="playerId">0</span>
+				<div class="column h100p col50p">
+					<div class="card h100p flip lnd" id="cardP2">
+						<div class="cardBack h100p col100p" id="cardBackP2">
+							<div class="cardContent h100p col92p"  id="cardContP2">
+								<div class="blockIncrement row h15p col100p">
+									<div class="blkIncMinusMain h100p col50p centerContent">
+										<button class="btnIncMinusMain btnInc btnFull" id="btnIncMinusMainP2">
+											<img src="./img/lfmintp.png" class="btnIncImg tilt" />
+										</button>
+									</div>
+									<div class="backtext centerContent">
+										<span class="txtIncMain fontWhite fontFaded vertical fourP" id="txtIncMainP2">1</span>
+									</div>
+									<div class="blkIncPlusMain h100p col50p centerContent">
+										<button class="btnIncPlusMain btnInc btnFull" id="btnIncPlusMainP2">
+											<img src="./img/lfplustp.png" class="btnIncImg tilt" />
+										</button>
+									</div>
+								</div>
+								<div class="cardMiddle row h70p col100p">
+									<div class="cardBottom h100p col25p">
+										<div class="h16p col100p centerContent">
+											<button class="btnBless btnAux btnAuxLnd tilt" id="btnBlessP2">
+												<span class="txtBless txtAux txtAuxLd fontWhite" id="txtBlessP2">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnExp btnAux btnAuxLnd tilt" id="btnExpP2">
+												<span class="txtExp txtAux txtAuxLd fontExp" id="txtExpP2">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnPoison btnAux btnAuxLnd tilt" id="btnPoisonP2">
+												<span class="txtPoison txtAux txtAuxLd fontPoison" id="txtPoisonP2">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnCast btnAux btnAuxLnd tilt" id="btnCastP2">
+												<span class="txtCast txtAux txtAuxLd fontCast" id="txtCastP2">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnSig btnAux btnAuxLnd tilt" id="btnSigP2">
+												<span class="txtSig txtAux txtAuxLd fontSig" id="txtSigP2">&nbsp;</span>
+											</button>
+										</div>
+										<div class="h16p col100p centerContent">
+											<button class="btnMonarch btnAux btnAuxLnd tilt" id="btnMonarchP2">
+												<span class="txtMonarch txtAux txtAuxLd fontWhite" id="txtMonarchP2">&nbsp;</span>
+											</button>
+										</div>
+									</div>
+									<div class="blkLifePts h100p col50p centerContent">
+										<span class="txtLifePoints fontWhite vertical fourP" id="txtLifePointsP2">0</span>
+									</div>
+									<div class="cardTop row h100p col25p">
+										<div class="blkPlayerName vertTableFix h100p col100p centerContent" id="blkPlayerNameP2">
+											<span class="txtPlayerName fontWhite vertical fourP" id="txtPlayerNameP2">PLAYER 2</span>
+										</div>
+									</div>
+								</div>
+								<div class="blockIncrement row h15p col100p">
+									<div class="blkIncMinusExt h100p col50p centerContent">
+										<button class="btnIncMinusExt btnInc btnFull" id="btnIncMinusExtP2">
+											<img src="./img/lfmintp.png" class="btnIncImg tilt" />
+										</button>
+									</div>
+									<div class="backtext centerContent">
+										<span class="txtIncExt fontWhite fontFaded vertical fourP" id="txtIncExtP2">5</span>
+									</div>
+									<div class="blkIncPlusExt h100p col50p centerContent">
+										<button class="btnIncPlusExt btnInc btnFull" id="btnIncPlusExtP2">
+											<img src="./img/lfplustp.png" class="btnIncImg tilt" />
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="cardTopPad h100p col08p"></div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col100p h20p dimBackground"></div>
-		</div>
-		<div class="col15p h100p dimBackground"></div>
-	 </div>
-	  <div class="sidebarSide col05p h100p"></div>
-      <div class="sidebarMiddle col90p h100p">
-        <div class="sidebarTop row h08p">
-          <div class="col15p h100p"></div>
-          <div class="sideBarTitle col70p h100p centerContent">
-            <span class="fontBlack fontFaded txt5 loc" id="options.players"></span>
-          </div>
-          <div class="sideBarClose col15p h100p centerContent">
-            <button class="btnMenu btnMenuClose" id="btnSidePlayersClose">
-              <span class="fontWhite txt5">&nbsp;</span>
-            </button>
-          </div>
-        </div>
-		<div class="row h04p centerContent">
-			<span class="fontWhite txt3 loc" id="options.registerplayer"></span>
-		</div>
-		<div class="row h05p centerContent">
-			<input type="text" class="textField inpPlayerName locph" id="inpDefaultPName" placeholder="PLAYER NAME" />
-		</div>
-		<div class="row h05p centerContent">
-			<div class="col05p h100p"></div>
-			<div class="col20p h100p">
-				<span class="fontBlack fontFaded lineMiddle txt3 loc" id="options.theme"></span>
+			<div class="row h50p">
+				<div class="card h100p ptr" id="cardP3">
+					<div class="cardBack h100p col100p" id="cardBackP3">
+						<div class="cardTopPad h20p col100p">
+							<div class="h100p col20p">
+								<button id="btnManaPool">&nbsp;</button>
+							</div>
+							<div class="h100p col20p">
+								<button id="btnRandomize">&nbsp;</button>
+							</div>
+							<div class="h100p col20p">
+								<button id="btnSettings">&nbsp;</button>
+							</div>
+							<div class="h100p col20p">
+								<button id="btnPlayers">&nbsp;</button>
+							</div>
+							<div class="h100p col20p">
+								<button id="btnCmdDmg">&nbsp;</button>
+							</div>
+						</div>
+						<div class="cardContent col100p h80p">
+							<div class="cardTop row col100p h20p">
+								<div class="blkPlayerName col100p centerContent h100p" id="blkPlayerNameP3">
+									<span class="txtPlayerName fontWhite threeP" id="txtPlayerNameP3">PLAYER 3</span>
+								</div>
+							</div>
+							<div class="cardMiddle row col100p h55p">
+								<div class="blockIncrement h100p col16p">
+									<div class="blkIncPlusMain h50p col100p centerContent">
+										<button class="btnIncPlusMain btnInc btnFull" id="btnIncPlusMainP3">
+											<img src="./img/lfplustp.png" class="btnIncImg" />
+										</button>
+									</div>
+									<div class="backtext centerContent">
+										<span class="txtIncMain fontWhite fontFaded fourP" id="txtIncMainP3">1</span>
+									</div>
+									<div class="blkIncMinusMain h50p col100p centerContent">
+										<button class="btnIncMinusMain btnInc btnFull" id="btnIncMinusMainP3">
+											<img src="./img/lfmintp.png" class="btnIncImg" />
+										</button>
+									</div>
+								</div>
+								<div class="blkLifePts h100p col66p centerContent">
+									<span class="txtLifePoints fontWhite threeP" id="txtLifePointsP3">0</span>
+								</div>
+								<div class="blockIncrement h100p col16p">
+									<div class="blkIncPlusExt h50p col100p centerContent">
+										<button class="btnIncPlusExt btnInc btnFull" id="btnIncPlusExtP3">
+											<img src="./img/lfplustp.png" class="btnIncImg" />
+										</button>
+									</div>
+									<div class="backtext centerContent">
+										<span class="txtIncExt fontWhite fontFaded fourP" id="txtIncExtP3">5</span>
+									</div>
+									<div class="blkIncMinusExt h50p col100p centerContent">
+										<button class="btnIncMinusExt btnInc btnFull" id="btnIncMinusExtP3">
+											<img src="./img/lfmintp.png" class="btnIncImg" />
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="cardBottom row col100p h25p">
+								<div class="h100p col16p centerContent">
+									<button class="btnBless btnAux btnAuxPtr" id="btnBlessP3">
+										<span class="txtBless txtAux txtAuxPt fontWhite" id="txtBlessP3">&nbsp;</span>
+									</button>
+								</div>
+								<div class="h100p col16p centerContent">
+									<button class="btnExp btnAux btnAuxPtr" id="btnExpP3">
+										<span class="txtExp txtAux txtAuxPt fontExp" id="txtExpP3">&nbsp;</span>
+									</button>
+								</div>
+								<div class="h100p col16p centerContent">
+									<button class="btnPoison btnAux btnAuxPtr" id="btnPoisonP3">
+										<span class="txtPoison txtAux txtAuxPt fontPoison" id="txtPoisonP3">&nbsp;</span>
+									</button>
+								</div>
+								<div class="h100p col16p centerContent">
+									<button class="btnCast btnAux btnAuxPtr" id="btnCastP3">
+										<span class="txtCast txtAux txtAuxPt fontCast" id="txtCastP3">&nbsp;</span>
+									</button>
+								</div>
+								<div class="h100p col16p centerContent">
+									<button class="btnSig btnAux btnAuxPtr" id="btnSigP3">
+										<span class="txtSig txtAux txtAuxPt fontSig" id="txtSigP3">&nbsp;</span>
+									</button>
+								</div>
+								<div class="h100p col16p centerContent">
+									<button class="btnMonarch btnAux btnAuxPtr" id="btnMonarchP3">
+										<span class="txtMonarch txtAux txtAuxPt fontWhite" id="txtMonarchP3">&nbsp;</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col75p h100p centerContent" id="selectdiv">
-				<select id="selectThemes" class="selectBox">
-					<option disabled selected value class="defaultOption loc" id="options.selectvalue"></option>
-					<option value="White" class="btnDmgWhite loc" id="themes.white">White</option>
-					<option value="Blue" class="btnDmgBlue loc" id="themes.blue">Blue</option>
-					<option value="Black" class="btnDmgBlack loc" id="themes.black">Black</option>
-					<option value="Red" class="btnDmgRed loc" id="themes.red">Red</option>
-					<option value="Green" class="btnDmgGreen loc" id="themes.green">Green</option>
-					<option value="Selesnya" class="btnDmgSelesnya">Selesnya</option>
-					<option value="Azorius" class="btnDmgAzorius">Azorius</option>
-					<option value="Dimir" class="btnDmgDimir">Dimir</option>
-					<option value="Rakdos" class="btnDmgRakdos">Rakdos</option>
-					<option value="Gruul" class="btnDmgGruul">Gruul</option>
-					<option value="Boros" class="btnDmgBoros">Boros</option>
-					<option value="Simic" class="btnDmgSimic">Simic</option>
-					<option value="Orzhov" class="btnDmgOrzhov">Orzhov</option>
-					<option value="Izzet" class="btnDmgIzzet">Izzet</option>
-					<option value="Golgari" class="btnDmgGolgari">Golgari</option>
-					<option value="Bant" class="btnDmgBant">Bant</option>
-					<option value="Esper" class="btnDmgEsper">Esper</option>
-					<option value="Grixis" class="btnDmgGrixis">Grixis</option>
-					<option value="Jund" class="btnDmgJund">Jund</option>
-					<option value="Naya" class="btnDmgNaya">Naya</option>
-					<option value="Abzan" class="btnDmgAbzan">Abzan</option>
-					<option value="Jeskai" class="btnDmgJeskai">Jeskai</option>
-					<option value="Sultai" class="btnDmgSultai">Sultai</option>
-					<option value="Mardu" class="btnDmgMardu">Mardu</option>
-					<option value="Temur" class="btnDmgTemur">Temur</option>
-					<option value="Artificer" class="btnDmgArtificer loc" id="themes.artificer">Artificer</option>
-					<option value="Enchantress" class="btnDmgEnchantress loc" id="themes.enchantress">Enchantress</option>
-					<option value="Snow" class="btnDmgSnow loc" id="themes.snow">Snow</option>
-					<option value="Spellshaper" class="btnDmgSpellshaper loc" id="themes.spellshaper">Spellshaper</option>
-					<option value="Elk" class="btnDmgElk loc" id="themes.elk">Elk</option>
-					<option value="Coalition" class="btnDmgCoalition">Coalition</option>
-					<option value="Avacyn" class="btnDmgAvacyn">Avacyn</option>
-					<option value="Mirran" class="btnDmgMirran">Mirran</option>
-					<option value="Planeswalker" class="btnDmgPlaneswalker loc" id="themes.planeswalker">Planeswalker</option>
-					<option value="Yawgmoth" class="btnDmgYawgmoth">Yawgmoth</option>
-					<option value="Eldrazi" class="btnDmgEldrazi">Eldrazi</option>
-					<option value="Phyrexia" class="btnDmgPhyrexia">Phyrexia</option>
-					<option value="Bolas" class="btnDmgBolas">Bolas</option>
-					<option value="Colorless" class="btnDmgColorless">Colorless</option>
-					<option value="Five" class="btnDmgFive loc" id="themes.five">Five</option>
-				</select>
+		</div>
+		<div id="timerLnd" class="timerbox timer4p invisible">
+			<div class="blkTimerBtn vertTableFix h20p col100p">
+				<button id="btnResetTimer" class="tilt">&nbsp;</button>
+			</div>
+			<div class="blkTimerTime vertTableFix h60p col100p centerContent" id="timerText">
+				<span class="txtTimer fontBlack vertical txt4" id="txtTimerDisplay">00:00:00</span>
+			</div>
+			<div class="blkTimerBtn vertTableFix h20p col100p">
+				<button id="btnPlayPause" class="tilt">&nbsp;</button>
 			</div>
 		</div>
-		<div class="row h05p centerContent">
-			<button class="btnMenu btnMenuLight btn90" id="btnRegister"><span class="fontWhite txt3 loc" id="options.register"></span></button>
+		<div id="timerConfirmation" class="timerbox timer4p invisible">
+			<div class="blkTimerTime vertTableFix h60p col100p centerContent" id="timerText">
+				<span class="txtTimer fontBlack vertical txt4 loc" id="general.confirm"></span>
+			</div>
+			<div class="blkTimerBtn vertTableFix h20p col100p">
+				<button class="btnMenu tilt" id="btnResetConfirmYes">&nbsp;</button>
+			</div>
+			<div class="blkTimerBtn vertTableFix h20p col100p">
+				<button class="btnMenu tilt" id="btnResetConfirmNo">&nbsp;</button>
+			</div>
 		</div>
-		<div class="row h01p"></div>
-		<div class="row h04p centerContent">
-			<span class="fontWhite txt3 loc" id="options.registeredplayers"></span>
+		<div id="vertLine3"></div>
+		<div id="horLine7"></div>
+
+		<div id="infoPanel" class="h100p col100p absolutepos invisible">
+			<div class="col05p h100p dimBackground"></div>
+			<div class="col90p h100p">
+				<div class="col100p h05p dimBackground"></div>
+				<div class="col100p h90p" id="infoPanelMiddle">
+					<div class="col15p h06p"></div>
+					<div class="col70p h06p centerContent">
+						<span class="fontBlack fontFaded txt4h loc" id="info.infopanel"></span>
+					</div>
+					<div class="col15p h06p">
+						<button class="btnMenu btnXClose" id="btnCloseInfoPanel"><span class="fontWhite txt4h">&nbsp;</span></button>
+					</div>
+					<div class="col04p h90p"></div>
+					<div class="col92p h90p vscroll">
+						<div class="row col100p centerContent">
+							<span class="fontRed fontFaded txt3 loc" id="howto.scrolldown"></span>
+						</div>
+						<div class="col100p h05p"></div>
+						<div class="row h40p col100p centerContent">
+							<image class="tutimg imghfix" src='./img/tut_panel.png'></image>
+						</div>
+						<div class="col100p h05p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/tut_mon.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.monarch"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.taptoggle"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.longpress"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/tut_bls.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.citybless"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.tapactivate"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.longpress"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/tut_psn.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.poison"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.tapplusone"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.longpress"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/tut_exp.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.experience"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.tapplusone"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.longpress"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/tut_cst.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.casting"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.tapplusone"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.longpress"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/tut_sig.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.signature"></span>
+								<br/>
+								<span class="fontBlue fontFaded txt3 wrapped loc" id="info.partner"></span>
+								<br/>
+								<span class="fontBlue fontFaded txt3 wrapped loc" id="info.storm"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.tapplusone"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.longpress"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p h02p dimBackground"></div>
+						<div class="col100p h02p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/btnfive.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.style"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.stylescreen"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/cmddmg.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.cmddmgchart"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.cmddmgscreen"></span>
+								<br/>
+								<span class="fontBlue fontFaded txt3 wrapped loc" id="info.cmddmgextra"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/manapool.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.manapool"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.manapoolscreen"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/set.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.settings"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.settingscreen"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/players.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.players"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.playerscreen"></span>
+							</div>
+						</div>
+						<div class="col100p h04p"></div>
+						<div class="col100p centerContent">
+							<div class="row col18p centerContent">
+								<image class="tutimg" src='./img/randomize.png'></image>
+							</div>
+							<div class="row col02p"><span>&nbsp;</span></div>
+							<div class="row col80p">
+								<span class="fontWhite txt3 wrapped loc" id="info.roulette"></span>
+								<br/>
+								<span class="fontBlack fontFaded txt3 wrapped loc" id="info.roulettepress"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col04p h90p"></div>
+				</div>	
+				<div class="col100p h05p dimBackground"></div>
+			</div>
+			<div class="col05p h100p dimBackground"></div>
 		</div>
-		<div class="row h60p vscroll" id="playersList"></div>
-		<div class="row h05p centerContent">
-			<button class="btnMenu btnMenuLight btn90" id="btnLoadTable"><span class="fontWhite txt3 loc" id="players.loadtable"></span></button>
+
+		<div id="manaSidebar" class="row h100p col100p rightSidebar">
+			<div class="manaSidebarSidePad col05p h100p"></div>
+			<div class="manaSidebarMiddle col80p h100p" id="manaSidebarMiddle">
+				<div class="sidebarMiddleRows row col100p h80p" id="manaSidebarMiddleRows">
+					<div class="manaPlayerRow col16p h100p" id="manaPlayerRowP6"></div>
+					<div class="manaPlayerRow col16p h100p" id="manaPlayerRowP5"></div>
+					<div class="manaPlayerRow col16p h100p" id="manaPlayerRowP4"></div>
+					<div class="manaPlayerRow col16p h100p" id="manaPlayerRowP3">
+						<div class="playerNameManaDiv row col100p h30p centerContent" id="playerNameManaDivP3">
+							<span class="txtPlayerNameMana fontBlack fontFaded txt5 vertical" id="txtPlayerNameManaP3">PLAYER 3</span>
+						</div>
+						<div class="buttonWDiv row col100p h10p centerContent" id="buttonWDivP3">
+							<button class="btnMana btnMenuWhite tilt" id="btnManaWP3">
+								<span class="txtMana fontWhite txt5" id="txtManaWP3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonUDiv row col100p h10p centerContent" id="buttonUDivP3">
+							<button class="btnMana btnMenuBlue tilt" id="btnManaUP3">
+								<span class="txtMana fontWhite txt5" id="txtManaUP3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonBDiv row col100p h10p centerContent" id="buttonBDivP3">
+							<button class="btnMana btnMenuBlack tilt" id="btnManaBP3">
+								<span class="txtMana fontWhite txt5" id="txtManaBP3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonRDiv row col100p h10p centerContent" id="buttonRDivP3">
+							<button class="btnMana btnMenuRed tilt" id="btnManaRP3">
+								<span class="txtMana fontWhite txt5" id="txtManaRP3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonGDiv row col100p h10p centerContent" id="buttonGDivP3">
+							<button class="btnMana btnMenuGreen tilt" id="btnManaGP3">
+								<span class="txtMana fontWhite txt5" id="txtManaGP3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonCDiv row col100p h10p centerContent" id="buttonCDivP3">
+							<button class="btnMana btnMenuColorless tilt" id="btnManaCP3">
+								<span class="txtMana fontWhite txt5" id="txtManaCP3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonEDiv row col100p h10p centerContent" id="buttonEDivP3">
+							<button class="btnMana btnMenuEnergy tilt" id="btnManaEP3">
+								<span class="txtMana fontWhite txt5" id="txtManaEP3">&nbsp;</span>
+							</button>
+						</div>
+					</div>
+					<div class="manaPlayerRow col16p h100p" id="manaPlayerRowP2">
+						<div class="playerNameManaDiv row col100p h30p centerContent" id="playerNameManaDivP2">
+							<span class="txtPlayerNameMana fontBlack fontFaded txt5 vertical" id="txtPlayerNameManaP2">PLAYER 2</span>
+						</div>
+						<div class="buttonWDiv row col100p h10p centerContent" id="buttonWDivP2">
+							<button class="btnMana btnMenuWhite tilt" id="btnManaWP2">
+								<span class="txtMana fontWhite txt5" id="txtManaWP2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonUDiv row col100p h10p centerContent" id="buttonUDivP2">
+							<button class="btnMana btnMenuBlue tilt" id="btnManaUP2">
+								<span class="txtMana fontWhite txt5" id="txtManaUP2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonBDiv row col100p h10p centerContent" id="buttonBDivP2">
+							<button class="btnMana btnMenuBlack tilt" id="btnManaBP2">
+								<span class="txtMana fontWhite txt5" id="txtManaBP2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonRDiv row col100p h10p centerContent" id="buttonRDivP2">
+							<button class="btnMana btnMenuRed tilt" id="btnManaRP2">
+								<span class="txtMana fontWhite txt5" id="txtManaRP2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonGDiv row col100p h10p centerContent" id="buttonGDivP2">
+							<button class="btnMana btnMenuGreen tilt" id="btnManaGP2">
+								<span class="txtMana fontWhite txt5" id="txtManaGP2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonCDiv row col100p h10p centerContent" id="buttonCDivP2">
+							<button class="btnMana btnMenuColorless tilt" id="btnManaCP2">
+								<span class="txtMana fontWhite txt5" id="txtManaCP2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonEDiv row col100p h10p centerContent" id="buttonEDivP2">
+							<button class="btnMana btnMenuEnergy tilt" id="btnManaEP2">
+								<span class="txtMana fontWhite txt5" id="txtManaEP2">&nbsp;</span>
+							</button>
+						</div>
+					</div>
+					<div class="manaPlayerRow col16p h100p" id="manaPlayerRowP1">
+						<div class="playerNameManaDiv row col100p h30p centerContent" id="playerNameManaDivP1">
+							<span class="txtPlayerNameMana fontBlack fontFaded txt5 vertical" id="txtPlayerNameManaP1">PLAYER 1</span>
+						</div>
+						<div class="buttonWDiv row col100p h10p centerContent" id="buttonWDivP1">
+							<button class="btnMana btnMenuWhite tilt" id="btnManaWP1">
+								<span class="txtMana fontWhite txt5" id="txtManaWP1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonUDiv row col100p h10p centerContent" id="buttonUDivP1">
+							<button class="btnMana btnMenuBlue tilt" id="btnManaUP1">
+								<span class="txtMana fontWhite txt5" id="txtManaUP1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonBDiv row col100p h10p centerContent" id="buttonBDivP1">
+							<button class="btnMana btnMenuBlack tilt" id="btnManaBP1">
+								<span class="txtMana fontWhite txt5" id="txtManaBP1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonRDiv row col100p h10p centerContent" id="buttonRDivP1">
+							<button class="btnMana btnMenuRed tilt" id="btnManaRP1">
+								<span class="txtMana fontWhite txt5" id="txtManaRP1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonGDiv row col100p h10p centerContent" id="buttonGDivP1">
+							<button class="btnMana btnMenuGreen tilt" id="btnManaGP1">
+								<span class="txtMana fontWhite txt5" id="txtManaGP1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonCDiv row col100p h10p centerContent" id="buttonCDivP1">
+							<button class="btnMana btnMenuColorless tilt" id="btnManaCP1">
+								<span class="txtMana fontWhite txt5" id="txtManaCP1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonEDiv row col100p h10p centerContent" id="buttonEDivP1">
+							<button class="btnMana btnMenuEnergy tilt" id="btnManaEP1">
+								<span class="txtMana fontWhite txt5" id="txtManaEP1">&nbsp;</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="sidebarMiddleButtons row col100p h20p centerContent" id="manaSidebarMiddleButtons">
+					<div class="sidebarMiddleButtonsSlot col25p h100p centerContent" id="sidebarMiddleButtonsSlot3">
+						<button class="btnMenu btnSideBar btnIncSub btnMinusOffLnd" id="btnManaSideBarMinus"></button>
+					</div>
+					<div class="sidebarMiddleButtonsSlot col25p h100p centerContent" id="sidebarMiddleButtonsSlot2">
+						<button class="btnMenu btnSideBar btnClearSub btnClearOff" id="btnManaSideBarClear"></button>
+					</div>
+					<div class="sidebarMiddleButtonsSlot col25p h100p centerContent" id="sidebarMiddleButtonsSlot1">
+						<button class="btnMenu btnSideBar btnIncSub btnPlusOff" id="btnManaSideBarPlus"></button>
+					</div>
+				</div>
+			</div>
+			<div class="manaSidebarTop col15p h100p" id="manaSidebarTop">
+				<div class="manaSidebarTitlePad row col100p h15p centerContent" id="manaSidebarClose">
+					<button class="btnMenu btnMenuClose tilt" id="btnManaSidebarClose">
+						<span class="fontWhite txt5">&nbsp;</span>
+					</button>
+				</div>
+				<div class="manaSidebarTitle row col100p h70p centerContent" id="manaSidebarTitle">
+					<span class="fontBlack fontFaded txt5 vertical loc" id="game.manapool"></span>
+				</div>
+				<div class="manaSidebarTitlePad row col100p h15p"></div>
+			</div>
 		</div>
-		<div class="row h03p"></div>
-       </div>
-      <div class="sidebarSide col05p h100p"></div>
-	</div>
-	  
-      <script>
+		<div id="cmdDmgSidebar" class="row h100p col100p rightSidebar">
+			<div class="cmdDmgSidebarSidePad col05p h100p"></div>
+			<div class="cmdDmgSidebarMiddle col80p h100p" id="cmdDmgSidebarMiddle">
+				<div class="sidebarMiddleRows row col90p h100p" id="cmdDmgSidebarMiddleRows">
+					<div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP6"></div>
+					<div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP5"></div>
+					<div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP4"></div>
+					<div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP3">
+						<div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivRowP3">
+							<span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtRowP3">P3</span>
+						</div>
+						<div class="playerNameCmdDiv row col100p h24p centerContent" id="playerNameCmdDivP3">
+							<span class="txtPlayerNameCmd fontBlack fontFaded txt5 vertical" id="txtPlayerNameCmdP3">PLAYER 3</span>
+						</div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP3fromP1">
+							<button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP1 tilt" id="btnDmgCmdP3fromP1">
+								<span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP3fromP1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP3fromP2">
+							<button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP2 tilt" id="btnDmgCmdP3fromP2">
+								<span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP3fromP2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP3fromP3"></div>
+						<div class="cmdDmgExtraPad row col100p h02p centerContent" id="cmdDmgExtraPad3"></div>
+						<div class="cmdDmgExtraDiv1 row col100p h08p centerContent" id="cmdDmgExtraDiv1P3">
+							<button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra1P3 tilt" id="btnDmgCmdExtra1P3">
+								<span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra1P3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="cmdDmgExtraDiv2 row col100p h08p centerContent" id="cmdDmgExtraDiv2P3">
+							<button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra2P3 tilt" id="btnDmgCmdExtra2P3">
+								<span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra2P3">&nbsp;</span>
+							</button>
+						</div>
+					</div>
+					<div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP2">
+						<div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivRowP2">
+							<span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtRowP2">P2</span>
+						</div>
+						<div class="playerNameCmdDiv row col100p h24p centerContent" id="playerNameCmdDivP2">
+							<span class="txtPlayerNameCmd fontBlack fontFaded txt5 vertical" id="txtPlayerNameCmdP2">PLAYER 2</span>
+						</div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP2fromP1">
+							<button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP1 tilt" id="btnDmgCmdP2fromP1">
+								<span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP2fromP1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP2fromP2"></div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP2fromP3">
+							<button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP3 tilt" id="btnDmgCmdP2fromP3">
+								<span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP2fromP3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="cmdDmgExtraPad row col100p h02p centerContent" id="cmdDmgExtraPad2"></div>
+						<div class="cmdDmgExtraDiv1 row col100p h08p centerContent" id="cmdDmgExtraDiv1P2">
+							<button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra1P2 tilt" id="btnDmgCmdExtra1P2">
+								<span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra1P2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="cmdDmgExtraDiv2 row col100p h08p centerContent" id="cmdDmgExtraDiv2P2">
+							<button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra2P2 tilt" id="btnDmgCmdExtra2P2">
+								<span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra2P2">&nbsp;</span>
+							</button>
+						</div>
+					</div>
+					<div class="cmdPlayerRow col16p h100p" id="cmdPlayerRowP1">
+						<div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivRowP1">
+							<span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtRowP1">P1</span>
+						</div>
+						<div class="playerNameCmdDiv row col100p h24p centerContent" id="playerNameCmdDivP1">
+							<span class="txtPlayerNameCmd fontBlack fontFaded txt5 vertical" id="txtPlayerNameCmdP1">PLAYER 1</span>
+						</div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP1fromP1"></div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP1fromP2">
+							<button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP2 tilt" id="btnDmgCmdP1fromP2">
+								<span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP1fromP2">&nbsp;</span>
+							</button>
+						</div>
+						<div class="buttonDmgDiv row col100p h08p centerContent" id="buttonDmgDivP1fromP3">
+							<button class="btnDmg btnDmgLnd btnDmgBlank btnDmgP3 tilt" id="btnDmgCmdP1fromP3">
+								<span class="txtDmgCmd fontWhite txt5" id="txtDmgCmdP1fromP3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="cmdDmgExtraPad row col100p h02p centerContent" id="cmdDmgExtraPad1"></div>
+						<div class="cmdDmgExtraDiv1 row col100p h08p centerContent" id="cmdDmgExtraDiv1P1">
+							<button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra1P1 tilt" id="btnDmgCmdExtra1P1">
+								<span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra1P1">&nbsp;</span>
+							</button>
+						</div>
+						<div class="cmdDmgExtraDiv2 row col100p h08p centerContent" id="cmdDmgExtraDiv2P1">
+							<button class="btnDmg btnDmgLnd btnDmgExtra btnDmgExtra2P1 tilt" id="btnDmgCmdExtra2P1">
+								<span class="txtDmgCmdExtra fontBlack fontFaded txt5" id="txtDmgCmdExtra2P1">&nbsp;</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="sidebarMiddlePad row col10p h100p" id="cmdDmgSidebarMiddlePad">
+					<div class="pnumDmgPad row col100p h32p centerContent" id="pnumDmgPad"></div>
+					<div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivP1">
+						<span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtP1">P1</span>
+					</div>
+					<div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivP2">
+						<span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtP2">P2</span>
+					</div>
+					<div class="pnumDmgDiv row col100p h08p centerContent" id="pnumDmgDivP3">
+						<span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtP3">P3</span>
+					</div>
+					<div class="pnumDmgDivExtra row col100p h20p centerContent" id="pnumDmgDivExtra">
+						<span class="pnumTxt fontWhite txt3 vertical" id="pnumTxtExtra">Extra</span>
+					</div>
+				</div>
+			</div>
+			<div class="cmdDmgSidebarTop col15p h100p" id="cmdDmgSidebarTop">
+				<div class="cmdDmgSidebarTitlePad row col100p h15p centerContent" id="cmdDmgSidebarClose">
+					<button class="btnMenu btnMenuClose tilt" id="btnCmdDmgSidebarClose">
+						<span class="fontWhite txt5">&nbsp;</span>
+					</button>
+				</div>
+				<div class="cmdDmgSidebarTitle row col100p h70p centerContent" id="cmdDmgSidebarTitle">
+					<span class="fontBlack fontFaded txt5 vertical loc" id="game.cmddamagelnd"></span>
+				</div>
+				<div class="cmdDmgSidebarTitlePad row col100p h15p centerContent">
+					<button class="btnMenu btnMenuClear tilt" id="btnCmdSideBarClear">
+						<span class="fontRed txt3 loc" id="general.clear"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="settingsSidebar" class="row h100p col100p leftSidebar">
+			<div class="sidebarSide col10p h100p"></div>
+			<div class="sidebarMiddle col80p h100p">
+				<div class="sidebarTop row h08p">
+					<div class="col15p h100p centerContent">
+						<button id="btnInfo">&nbsp;</button>
+					</div>
+					<div class="sideBarTitle col70p h100p centerContent">
+						<span class="fontBlack fontFaded txt5 loc" id="game.settings"></span>
+					</div>
+					<div class="sideBarClose col15p h100p centerContent">
+						<button class="btnMenu btnMenuClose" id="btnSetSideBarClose">
+							<span class="fontWhite txt5">&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="row h01p"></div>
+				<div class="sidebarRow row h06p centerContent">
+					<input readonly type="text" class="textField inpSetStatus locph" id="inpSetStatus" placeholder="LOG" />
+				</div>
+				<div class="sidebarRow row h08p">
+					<div class="sideBarSlot col100p h100p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarResetGame">
+							<span class="fontWhite txt4 loc" id="game.resetgame"></span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h08p">
+					<div class="sideBarSlot col100p h100p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarResetStyles">
+							<span class="fontWhite txt4 loc" id="game.resetstyles"></span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h08p">
+					<div class="sideBarSlot col100p h100p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRandomStyles">
+							<span class="fontWhite txt4 loc" id="game.randomstyles"></span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h08p">
+					<div class="sideBarSlot col100p h100p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarTimerToggle">
+							<span class="fontWhite txt4 loc" id="game.toggletimer"></span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h02p"></div>
+				<div class="sidebarRow row h04p">
+					<div class="sideBarSection col100p h100p centerContent">
+						<span class="fontBlack fontFaded txt3 loc" id="game.startlifepoints"></span>
+						<span class="fontBlack fontFaded txt3" id="txtSetSideBarLifeSet"></span>
+					</div>
+				</div>
+				<div class="sidebarRow row h08p">
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP20">
+							<span class="fontWhite txt5">20</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP25">
+							<span class="fontWhite txt5">25</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP30">
+							<span class="fontWhite txt5">30</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP40">
+							<span class="fontWhite txt5">40</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h02p"></div>
+				<div class="sidebarRow row h04p">
+					<div class="sideBarSection col100p h100p centerContent">
+						<span class="fontBlack fontFaded txt3 loc" id="game.diceroller"></span>
+					</div>
+				</div>
+				<div class="sidebarRow row h10p">
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnFaded btnDiceD4 btnFull" id="btnDiceD4">
+							<span class="fontWhite txt3">&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnFaded btnDiceD6 btnFull" id="btnDiceD6">
+							<span class="fontWhite txt3">&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnFaded btnDiceD8 btnFull" id="btnDiceD8">
+							<span class="fontWhite txt3">&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnFaded btnDicePlanar btnFull" id="btnDicePlanar">
+							<span class="fontWhite txt3">&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h10p">
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnFaded btnDiceD10 btnFull" id="btnDiceD10">
+							<span class="fontWhite txt3">&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnFaded btnDiceD12 btnFull" id="btnDiceD12">
+							<span class="fontWhite txt3">&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnFaded btnDiceD20 btnFull" id="btnDiceD20">
+							<span class="fontWhite txt3">&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col25p centerContent">
+						<button class="btnMenu btnFaded btnDiceCoin btnFull" id="btnDiceCoin">
+							<span class="fontWhite txt3">&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h10p centerContent">
+					<input readonly type="text" class="textField inpDiceResult locph" id="setDiceResult" placeholder="RESULTS" />
+				</div>
+				<div class="row h03p"></div>
+			</div>
+			<div class="sidebarSide col10p h100p"></div>
+		</div>
+
+		<div id="styleSidebar" class="row h100p col100p leftSidebar">
+			<div class="sidebarSide col10p h100p"></div>
+			<div class="sidebarMiddle col80p h100p">
+				<div class="sidebarTop row h08p">
+					<div class="col15p h100p centerContent">
+						<span class="txtSideBarPad fontWhite txt5 lnd" id="txtStyleSideBarPad">0</span>
+					</div>
+					<div class="sideBarTitle col70p h100p centerContent">
+						<span class="fontBlack fontFaded txt5 loc" id="game.customization"></span>
+					</div>
+					<div class="sideBarClose col15p h100p centerContent">
+						<button class="btnMenu btnMenuClose" id="btnStyleSideBarClose">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarPlayerBox row h05p centerContent">
+					<input type="text" class="textField inpPlayerName locph" id="styleInpPlayerName" placeholder="PLAYER NAME" />
+				</div>
+				<div class="row h01p"></div>
+				<div class="row h04p centerContent">
+					<span class="fontBlack fontFaded txt3h loc" id="game.togglebuttons"></span>
+				</div>
+				<div class="sidebarRow row h06p">
+					<div class="column h100p col16p centerContent">
+						<button class="btnToggle btnMenu btnFull" id="btnToggleBls">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="column h100p col16p centerContent">
+						<button class="btnToggle btnMenu btnFull" id="btnToggleExp">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="column h100p col16p centerContent">
+						<button class="btnToggle btnMenu btnFull" id="btnTogglePoison">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="column h100p col16p centerContent">
+						<button class="btnToggle btnMenu btnFull" id="btnToggleCast">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="column h100p col16p centerContent">
+						<button class="btnToggle btnMenu btnFull" id="btnToggleSig">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="column h100p col16p centerContent">
+						<button class="btnToggle btnMenu btnFull" id="btnToggleMon">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="row h01p"></div>
+				<div class="sidebarSubtext row h04p centerContent">
+					<span class="fontBlack fontFaded txt3h loc" id="game.selectheme"></span>
+					<span class="txt3h" id="txtStyleSideBarSelectedTheme">&nbsp;</span>
+				</div>
+				<div class="sidebarRow row h07p">
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuWhite btnStyle btnFull" id="btnStyleBtn_White">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuBlue btnStyle btnFull" id="btnStyleBtn_Blue">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuBlack btnStyle btnFull" id="btnStyleBtn_Black">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuRed btnStyle btnFull" id="btnStyleBtn_Red">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuGreen btnStyle btnFull" id="btnStyleBtn_Green">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h07p">
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuAzorius btnStyle btnFull" id="btnStyleBtn_Azorius">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuBoros btnStyle btnFull" id="btnStyleBtn_Boros">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuDimir btnStyle btnFull" id="btnStyleBtn_Dimir">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuGolgari btnStyle btnFull" id="btnStyleBtn_Golgari">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuGruul btnStyle btnFull" id="btnStyleBtn_Gruul">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h07p">
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuIzzet btnStyle btnFull" id="btnStyleBtn_Izzet">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuOrzhov btnStyle btnFull" id="btnStyleBtn_Orzhov">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuRakdos btnStyle btnFull" id="btnStyleBtn_Rakdos">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuSelesnya btnStyle btnFull" id="btnStyleBtn_Selesnya">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuSimic btnStyle btnFull" id="btnStyleBtn_Simic">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h07p">
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuAbzan btnStyle btnFull" id="btnStyleBtn_Abzan">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuJeskai btnStyle btnFull" id="btnStyleBtn_Jeskai">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuMardu btnStyle btnFull" id="btnStyleBtn_Mardu">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuSultai btnStyle btnFull" id="btnStyleBtn_Sultai">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuTemur btnStyle btnFull" id="btnStyleBtn_Temur">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h07p">
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuBant btnStyle btnFull" id="btnStyleBtn_Bant">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuEsper btnStyle btnFull" id="btnStyleBtn_Esper">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuGrixis btnStyle btnFull" id="btnStyleBtn_Grixis">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuJund btnStyle btnFull" id="btnStyleBtn_Jund">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuNaya btnStyle btnFull" id="btnStyleBtn_Naya">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h07p">
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuArtificer btnStyle btnFull" id="btnStyleBtn_Artificer">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuEnchantress btnStyle btnFull" id="btnStyleBtn_Enchantress">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuSnow btnStyle btnFull" id="btnStyleBtn_Snow">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuSpellshaper btnStyle btnFull" id="btnStyleBtn_Spellshaper">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuElk btnStyle btnFull" id="btnStyleBtn_Elk">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h07p">
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuCoalition btnStyle btnFull" id="btnStyleBtn_Coalition">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuAvacyn btnStyle btnFull" id="btnStyleBtn_Avacyn">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuColorless btnStyle btnFull" id="btnStyleBtn_Colorless">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuBolas btnStyle btnFull" id="btnStyleBtn_Bolas">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuPhyrexia btnStyle btnFull" id="btnStyleBtn_Phyrexia">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h07p">
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuYawgmoth btnStyle btnFull" id="btnStyleBtn_Yawgmoth">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuEldrazi btnStyle btnFull" id="btnStyleBtn_Eldrazi">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuFive btnStyle btnFull" id="btnStyleBtn_Five">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuPlaneswalker btnStyle btnFull" id="btnStyleBtn_Planeswalker">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent">
+						<button class="btnMenu btnMenuMirran btnStyle btnFull" id="btnStyleBtn_Mirran">
+							<span>&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarStyleBox row h07p">
+					<div class="sidebarStyleBoxSlot col40p h100p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnStyleSideBarClear">
+							<span class="fontWhite txt4 loc" id="general.clear"></span>
+						</button>
+					</div>
+					<div class="sidebarCol h100p col20p centerContent"></div>
+					<div class="sidebarStyleBoxSlot col40p h100p centerContent">
+						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnStyleSideBarSave">
+							<span class="fontWhite txt4 loc" id="general.save"></span>
+						</button>
+					</div>
+				</div>
+				<div class="sidebarRow row h07p">
+
+				</div>
+				<div class="row h01p"></div>
+			</div>
+			<div class="sidebarSide col10p h100p"></div>
+		</div>
+
+		<div id="playerSidebar" class="row h100p col100p leftSidebar">
+			<div class="h100p col100p invisible absolutepos" id="tablemap">
+				<div class="col15p h100p dimBackground"></div>
+				<div class="col70p h100p">
+					<div class="col100p h20p dimBackground"></div>
+					<div class="col100p h60p" id="tablemapMiddle">
+						<div class="row col100p h15p">
+							<div class="col80p h100p centerContent">
+								<span class="fontWhite txt4 loc" id="players.tablemap"></span>
+							</div>
+							<div class="col20p h100p centerContent">
+								<button class="btnMenu btnXClose" id="btnCloseTableMap"><span class="fontWhite txt5">&nbsp;</span></button>
+							</div>
+						</div>
+						<div class="row col100p h10p centerContent">
+							<span class="fontWhite txt2h loc" id="players.selectpos"></span>
+						</div>
+						<div class="row col100p h70p">
+							<div class="row col100p h50p">
+								<div class="col50p h100p centerContent">
+									<button class="btnMenu btnFull btnMapPosition tilt" id="P1map"><span class="fontWhite txt10">1</span></button>
+								</div>
+								<div class="col50p h100p centerContent flip">
+									<button class="btnMenu btnFull btnMapPosition tilt" id="P2map"><span class="fontWhite txt10">2</span></button>
+								</div>
+							</div>
+							<div class="row col100p h50p">
+								<div class="col100p h100p centerContent">
+									<button class="btnMenu btnFull btnMapPosition" id="P3map"><span class="fontWhite txt10">3</span></button>
+								</div>
+							</div>
+						</div>
+						<div class="row col100p h05p">
+							<span class="fontWhite txt2 invisible" id="playerId">0</span>
+						</div>
+					</div>
+					<div class="col100p h20p dimBackground"></div>
+				</div>
+				<div class="col15p h100p dimBackground"></div>
+			</div>
+			<div class="sidebarSide col05p h100p"></div>
+			<div class="sidebarMiddle col90p h100p">
+				<div class="sidebarTop row h08p">
+					<div class="col15p h100p"></div>
+					<div class="sideBarTitle col70p h100p centerContent">
+						<span class="fontBlack fontFaded txt5 loc" id="options.players"></span>
+					</div>
+					<div class="sideBarClose col15p h100p centerContent">
+						<button class="btnMenu btnMenuClose" id="btnSidePlayersClose">
+							<span class="fontWhite txt5">&nbsp;</span>
+						</button>
+					</div>
+				</div>
+				<div class="row h04p centerContent">
+					<span class="fontWhite txt3 loc" id="options.registerplayer"></span>
+				</div>
+				<div class="row h05p centerContent">
+					<input type="text" class="textField inpPlayerName locph" id="inpDefaultPName" placeholder="PLAYER NAME" />
+				</div>
+				<div class="row h05p centerContent">
+					<div class="col05p h100p"></div>
+					<div class="col20p h100p">
+						<span class="fontBlack fontFaded lineMiddle txt3 loc" id="options.theme"></span>
+					</div>
+					<div class="col75p h100p centerContent" id="selectdiv">
+						<select id="selectThemes" class="selectBox">
+							<option disabled selected value class="defaultOption loc" id="options.selectvalue"></option>
+							<option value="White" class="btnDmgWhite loc" id="themes.white">White</option>
+							<option value="Blue" class="btnDmgBlue loc" id="themes.blue">Blue</option>
+							<option value="Black" class="btnDmgBlack loc" id="themes.black">Black</option>
+							<option value="Red" class="btnDmgRed loc" id="themes.red">Red</option>
+							<option value="Green" class="btnDmgGreen loc" id="themes.green">Green</option>
+							<option value="Selesnya" class="btnDmgSelesnya">Selesnya</option>
+							<option value="Azorius" class="btnDmgAzorius">Azorius</option>
+							<option value="Dimir" class="btnDmgDimir">Dimir</option>
+							<option value="Rakdos" class="btnDmgRakdos">Rakdos</option>
+							<option value="Gruul" class="btnDmgGruul">Gruul</option>
+							<option value="Boros" class="btnDmgBoros">Boros</option>
+							<option value="Simic" class="btnDmgSimic">Simic</option>
+							<option value="Orzhov" class="btnDmgOrzhov">Orzhov</option>
+							<option value="Izzet" class="btnDmgIzzet">Izzet</option>
+							<option value="Golgari" class="btnDmgGolgari">Golgari</option>
+							<option value="Bant" class="btnDmgBant">Bant</option>
+							<option value="Esper" class="btnDmgEsper">Esper</option>
+							<option value="Grixis" class="btnDmgGrixis">Grixis</option>
+							<option value="Jund" class="btnDmgJund">Jund</option>
+							<option value="Naya" class="btnDmgNaya">Naya</option>
+							<option value="Abzan" class="btnDmgAbzan">Abzan</option>
+							<option value="Jeskai" class="btnDmgJeskai">Jeskai</option>
+							<option value="Sultai" class="btnDmgSultai">Sultai</option>
+							<option value="Mardu" class="btnDmgMardu">Mardu</option>
+							<option value="Temur" class="btnDmgTemur">Temur</option>
+							<option value="Artificer" class="btnDmgArtificer loc" id="themes.artificer">Artificer</option>
+							<option value="Enchantress" class="btnDmgEnchantress loc" id="themes.enchantress">Enchantress</option>
+							<option value="Snow" class="btnDmgSnow loc" id="themes.snow">Snow</option>
+							<option value="Spellshaper" class="btnDmgSpellshaper loc" id="themes.spellshaper">Spellshaper</option>
+							<option value="Elk" class="btnDmgElk loc" id="themes.elk">Elk</option>
+							<option value="Coalition" class="btnDmgCoalition">Coalition</option>
+							<option value="Avacyn" class="btnDmgAvacyn">Avacyn</option>
+							<option value="Mirran" class="btnDmgMirran">Mirran</option>
+							<option value="Planeswalker" class="btnDmgPlaneswalker loc" id="themes.planeswalker">Planeswalker</option>
+							<option value="Yawgmoth" class="btnDmgYawgmoth">Yawgmoth</option>
+							<option value="Eldrazi" class="btnDmgEldrazi">Eldrazi</option>
+							<option value="Phyrexia" class="btnDmgPhyrexia">Phyrexia</option>
+							<option value="Bolas" class="btnDmgBolas">Bolas</option>
+							<option value="Colorless" class="btnDmgColorless">Colorless</option>
+							<option value="Five" class="btnDmgFive loc" id="themes.five">Five</option>
+						</select>
+					</div>
+				</div>
+				<div class="row h05p centerContent">
+					<button class="btnMenu btnMenuLight btn90" id="btnRegister"><span class="fontWhite txt3 loc" id="options.register"></span></button>
+				</div>
+				<div class="row h01p"></div>
+				<div class="row h04p centerContent">
+					<span class="fontWhite txt3 loc" id="options.registeredplayers"></span>
+				</div>
+				<div class="row h60p vscroll" id="playersList"></div>
+				<div class="row h05p centerContent">
+					<button class="btnMenu btnMenuLight btn90" id="btnLoadTable"><span class="fontWhite txt3 loc" id="players.loadtable"></span></button>
+				</div>
+				<div class="row h03p"></div>
+			</div>
+			<div class="sidebarSide col05p h100p"></div>
+		</div>
+
+		<script>
          window.onload = function() {
              document.addEventListener("deviceready", init, false);
 			setGame(3,1,0);
@@ -1186,6 +1381,6 @@
 			}
 		}
 		localize('game');
-      </script>
-   </body>
+		</script>
+	</body>
 </html>
