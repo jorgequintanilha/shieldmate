@@ -441,6 +441,11 @@ a {
 	opacity: 0.3;
 }
 
+.noDimensions {
+	height: 0%;
+	width: 0%;
+}
+
 .blockIncrement {
 	position: relative;
 }
@@ -457,6 +462,15 @@ a {
 
 .cardBack {
 	overflow: hidden;
+}
+
+.cardBottom {
+	display: flex;
+    justify-content: center;
+}
+
+.vflex {
+	flex-direction: column;
 }
 
 .blkPlayerName {
@@ -1025,18 +1039,13 @@ button {
 .btnMenuMirran { background: url(../img/btnmirran.png) no-repeat center center; }
 .btnMenuFive { background: url(../img/btnfive.png) no-repeat center center; }
 .btnMenuColorless { background: url(../img/btncolorless.png) no-repeat center center; }
-.btnMenuGraveyard { background: url(../img/btngraveyard.png) no-repeat center center; }
-.btnMenuAggro { background: url(../img/btnaggro.png) no-repeat center center; }
-.btnMenuCombo { background: url(../img/btncombo.png) no-repeat center center; }
-.btnMenuControl{ background: url(../img/btncontrol.png) no-repeat center center; }
-.btnMenuTribal { background: url(../img/btntribal.png) no-repeat center center; }
 .btnMenuEnergy { background: url(../img/btnenergy.png) no-repeat center center; }
 .btnMenuBlank { background: url(../img/blank.png) no-repeat center center; }
 .btnMenuArtificer{ background: url(../img/btnartificer.png) no-repeat center center; }
 .btnMenuEnchantress{ background: url(../img/btnenchantress.png) no-repeat center center; }
 .btnMenuSnow{ background: url(../img/btnsnow.png) no-repeat center center; }
-.btnMenuSpellshaper{ background: url(../img/btnspellshaper.png) no-repeat center center; }
-.btnMenuElk{ background: url(../img/btnelk.png) no-repeat center center; }
+.btnMenuSpellslinger{ background: url(../img/btnspellslinger.png) no-repeat center center; }
+.btnMenuVoltron{ background: url(../img/btnvoltron.png) no-repeat center center; }
 .btnMenuWhiteDk { background: url(../img/btnwhitedk.png) no-repeat center center; }
 .btnMenuBlueDk { background: url(../img/btnbluedk.png) no-repeat center center; }
 .btnMenuBlackDk { background: url(../img/btnblackdk.png) no-repeat center center; }
@@ -1071,7 +1080,7 @@ button {
 .btnDmgJund { background: #9e4d26;}
 .btnDmgNaya { background: #a8ae42;}
 .btnDmgBolas { background: #da811b;}
-.btnDmgCoalition { background: #ada816;}
+.btnDmgCoalition { background: #00aeca;}
 .btnDmgFive { background: #e0b944;}
 .btnDmgPhyrexia { background: #25422c;}
 .btnDmgPlaneswalker { background: #b9492d;}
@@ -1082,16 +1091,11 @@ button {
 .btnDmgColorless { background: #978b99;}
 .btnDmgBlank { background: #444444;}
 .btnDmgExtra { background: #efefef;}
-.btnDmgGraveyard { background: #383a30;}
-.btnDmgAggro{ background: #823405;}
-.btnDmgCombo { background: #224486;}
-.btnDmgControl { background: #4d2175;}
-.btnDmgTribal { background: #a6aeae;}
 .btnDmgArtificer { background: #6d5855;}
 .btnDmgEnchantress { background: #49b37d;}
 .btnDmgSnow { background: #a1b1c4;}
-.btnDmgSpellshaper { background: #7f3949;}
-.btnDmgElk { background: #73794d;}
+.btnDmgSpellslinger { background: #7f3949;}
+.btnDmgVoltron { background: #a6aeae;}
 
 .fontDmgWhite { color: #b7c17d;}
 .fontDmgBlue { color: #006eb9;}
@@ -1119,7 +1123,7 @@ button {
 .fontDmgJund { color: #9e4d26;}
 .fontDmgNaya { color: #a8ae42;}
 .fontDmgBolas { color: #da811b;}
-.fontDmgCoalition { color: #ada816;}
+.fontDmgCoalition { color: #00aeca;}
 .fontDmgFive { color: #e0b944;}
 .fontDmgPhyrexia { color: #25422c;}
 .fontDmgPlaneswalker { color: #b9492d;}
@@ -1130,16 +1134,11 @@ button {
 .fontDmgColorless { color: #978b99;}
 .fontDmgBlank { color: #444444;}
 .fontDmgExtra { color: #efefef;}
-.fontDmgGraveyard { color: #383a30;}
-.fontDmgAggro{ color: #823405;}
-.fontDmgCombo { color: #224486;}
-.fontDmgControl { color: #4d2175;}
-.fontDmgTribal{ color: #a6aeae;}
 .fontDmgArtificer { color: #6d5855;}
 .fontDmgEnchantress { color: #49b37d;}
 .fontDmgSnow { color: #a1b1c4;}
-.fontDmgSpellshaper { color: #7f3949;}
-.fontDmgElk { color: #73794d;}
+.fontDmgSpellslinger { color: #7f3949;}
+.fontDmgVoltron { color: #a6aeae;}
 
 .btn30 {
 	width: 30%;
@@ -1748,7 +1747,7 @@ label.checklabel {
 }
 
 .coalitionPtr {
-	background: #ada816 url(../img/coalitionptr.png) no-repeat center center;
+	background: #00aeca url(../img/coalitionptr.png) no-repeat center center;
 	background-size: 32vh 45vh;
 }
 
@@ -1792,31 +1791,6 @@ label.checklabel {
 	background-size: 45vh 45vh;
 }
 
-.graveyardPtr {
-	background: #383a30 url(../img/graveyardptr.png) no-repeat center center;
-	background-size: 45vh 45vh;
-}
-
-.aggroPtr {
-	background: #823405 url(../img/aggroptr.png) no-repeat center center;
-	background-size: 44vh 40vh;
-}
-
-.comboPtr {
-	background: #224486 url(../img/comboptr.png) no-repeat center center;
-	background-size: 45vh 45vh;
-}
-
-.controlPtr {
-	background: #4d2175 url(../img/controlptr.png) no-repeat center center;
-	background-size: 45vh 45vh;
-}
-
-.tribalPtr {
-	background: #a6aeae url(../img/tribalptr.png) no-repeat center center;
-	background-size: 44vh 38vh;
-}
-
 .enchantressPtr {
 	background: #49b37d url(../img/sunriseptr.png) no-repeat center center;
 	background-size: 44vh 31vh;
@@ -1832,14 +1806,14 @@ label.checklabel {
 	background-size: 45vh 45vh;
 }
 
-.spellshaperPtr {
-	background: #7f3949 url(../img/spellshaperptr.png) no-repeat center center;
+.spellslingerPtr {
+	background: #7f3949 url(../img/spellslingerptr.png) no-repeat center center;
 	background-size: 34vh 42vh;
 }
 
-.elkPtr {
-	background: #73794d url(../img/elkptr.png) no-repeat center center;
-	background-size: 45vh 45vh;
+.voltronPtr {
+	background: #a6aeae url(../img/voltronptr.png) no-repeat center center;
+	background-size: 49vh 39vh;
 }
 
 .blankPtr {
@@ -1977,7 +1951,7 @@ label.checklabel {
 }
 
 .coalitionLnd {
-	background: #ada816 url(../img/coalitionlnd.png) no-repeat center center;
+	background: #00aeca url(../img/coalitionlnd.png) no-repeat center center;
 	background-size: 23vh 17vh;
 }
 
@@ -2021,31 +1995,6 @@ label.checklabel {
 	background-size: 23vh 23vh;
 }
 
-.graveyardLnd {
-	background: #383a30 url(../img/graveyardlnd.png) no-repeat center center;
-	background-size: 22vh 22vh;
-}
-
-.aggroLnd {
-	background: #823405 url(../img/aggrolnd.png) no-repeat center center;
-	background-size: 20vh 24vh;
-}
-
-.comboLnd {
-	background: #224486 url(../img/combolnd.png) no-repeat center center;
-	background-size: 22vh 22vh;
-}
-
-.controlLnd {
-	background: #4d2175 url(../img/controllnd.png) no-repeat center center;
-	background-size: 22vh 22vh;
-}
-
-.tribalLnd {
-	background: #a6aeae url(../img/triballnd.png) no-repeat center center;
-	background-size: 19vh 25vh;
-}
-
 .artificerLnd {
 	background: #6d5855 url(../img/artificerlnd.png) no-repeat center center;
 	background-size: 15vh 25vh;
@@ -2061,14 +2010,14 @@ label.checklabel {
 	background-size: 23vh 23vh;
 }
 
-.spellshaperLnd {
-	background: #7f3949 url(../img/spellshaperlnd.png) no-repeat center center;
+.spellslingerLnd {
+	background: #7f3949 url(../img/spellslingerlnd.png) no-repeat center center;
 	background-size: 22vh 18vh;
 }
 
-.elkLnd {
-	background: #73794d url(../img/elklnd.png) no-repeat center center;
-	background-size: 23vh 23vh;
+.voltronLnd {
+	background: #a6aeae url(../img/voltronlnd.png) no-repeat center center;
+	background-size: 20vh 27vh;
 }
 
 .blankLnd {

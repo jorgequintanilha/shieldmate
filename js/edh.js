@@ -75,7 +75,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function sleep(time) {
+function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
@@ -313,7 +313,23 @@ function setDefaultSettings() {
 	for (var i = 0; i < auxbtns.length; i++) {
 		toggleClass(auxbtns[i], "invisible");
 	}
+	var auxdivs = document.getElementsByClassName("divAux");
+	for (var i = 0; i < auxdivs.length; i++) {
+		toggleClass(auxdivs[i], "noDimensions");
+	}
   }
+  else {
+	toggleClass(document.getElementById("btnToggleSig"), "inactive");
+	var auxbtns = document.getElementsByClassName("btnSig");
+	for (var i = 0; i < auxbtns.length; i++) {
+		toggleClass(auxbtns[i], "invisible");
+	}
+	var auxdivs = document.getElementsByClassName("divSig");
+	for (var i = 0; i < auxdivs.length; i++) {
+		toggleClass(auxdivs[i], "noDimensions");
+	}
+  }
+  
 }
 
 function saveTable() {
@@ -425,7 +441,7 @@ function setGameScreenFunctions(numPlayers, mode) {
         removeClass(document.getElementById("btnToggleCast"), "inactive");
       }
 	  if (hasClass(document.getElementById("btnSig" + pnum), "invisible")) {
-        addClass(document.getElementById("btnToggleCSig"), "inactive");
+        addClass(document.getElementById("btnToggleSig"), "inactive");
       } else {
         removeClass(document.getElementById("btnToggleSig"), "inactive");
       }
@@ -1132,7 +1148,7 @@ function setSettingsSidebarFunctions() {
   document.getElementById("btnCloseInfoPanel").addEventListener("click", function () {
     toggleClass(document.getElementById("infoPanel"), "invisible");
   }, false);
-  
+
   document.getElementById("btnSetSideBarRandomStyles").addEventListener("click", function () {
     setRandomStyles();
     document.getElementById("inpSetStatus").value = lang == "br" ? "ESTILOS APLICADOS!" : "STYLES SET!";
@@ -1462,36 +1478,42 @@ function setStyleSidebarFunctions() {
     let pnum = document.getElementById("txtStyleSideBarPad").innerHTML;
     toggleClass(document.getElementById("btnToggleExp"), "inactive");
     toggleClass(document.getElementById("btnExp" + pnum), "invisible");
+	toggleClass(document.getElementById("divAuxExp" + pnum), "noDimensions");
   }, false);
 
   document.getElementById("btnToggleBls").addEventListener("click", function () {
     let pnum = document.getElementById("txtStyleSideBarPad").innerHTML;
     toggleClass(document.getElementById("btnToggleBls"), "inactive");
     toggleClass(document.getElementById("btnBless" + pnum), "invisible");
+	toggleClass(document.getElementById("divAuxBless" + pnum), "noDimensions");
   }, false);
 
   document.getElementById("btnTogglePoison").addEventListener("click", function () {
     let pnum = document.getElementById("txtStyleSideBarPad").innerHTML;
     toggleClass(document.getElementById("btnTogglePoison"), "inactive");
     toggleClass(document.getElementById("btnPoison" + pnum), "invisible");
+	toggleClass(document.getElementById("divAuxPoison" + pnum), "noDimensions");
   }, false);
 
   document.getElementById("btnToggleMon").addEventListener("click", function () {
     let pnum = document.getElementById("txtStyleSideBarPad").innerHTML;
     toggleClass(document.getElementById("btnToggleMon"), "inactive");
     toggleClass(document.getElementById("btnMonarch" + pnum), "invisible");
+	toggleClass(document.getElementById("divAuxMonarch" + pnum), "noDimensions");
   }, false);
 
   document.getElementById("btnToggleCast").addEventListener("click", function () {
     let pnum = document.getElementById("txtStyleSideBarPad").innerHTML;
     toggleClass(document.getElementById("btnToggleCast"), "inactive");
     toggleClass(document.getElementById("btnCast" + pnum), "invisible");
+	toggleClass(document.getElementById("divAuxCast" + pnum), "noDimensions");
   }, false);
   
   document.getElementById("btnToggleSig").addEventListener("click", function () {
     let pnum = document.getElementById("txtStyleSideBarPad").innerHTML;
     toggleClass(document.getElementById("btnToggleSig"), "inactive");
     toggleClass(document.getElementById("btnSig" + pnum), "invisible");
+	toggleClass(document.getElementById("divAuxSig" + pnum), "noDimensions");
   }, false);
 }
 
@@ -1708,10 +1730,10 @@ function getStyleName(num) {
       return "Snow";
       break;
     case 29:
-      return "Spellshaper";
+      return "Spellslinger";
       break;
     case 30:
-      return "Elk";
+      return "Voltron";
       break;
     case 31:
       return "Coalition";
