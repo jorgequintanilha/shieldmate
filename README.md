@@ -37,6 +37,8 @@ Since its inception I've added a ton of new stuff to the app. Gonna list them be
 
 <h3>Hiding the auxiliary buttons:</h3> Requested so filthy modern and standard players can play without having a bunch of awesome EDH relevant buttons to look at! Just kidding, I like it as well (the functionality, not the formats).
 
+<h3>Flexbox design for auxiliary counters:</h3> Was trying to find a complicated solution for a simple problem, but I stumbled upon the satanic magic of flexbox and managed to solve it with an unbelievably small bit of css.
+
 <h3>Small improvments:</h3> Been learning better CSS practices so user interaction should feel a lot better. Bigger button areas, removed useless elements from the game screen, and so on.
 
 <hr>
@@ -65,7 +67,7 @@ Listed below is the suggestions I receive from users and friends. This is more o
 
 <h3>Rearranging panels:</h3>Also not a priority. Looking for a drag-and-drop solution that doesn't require jQuery, but this might be pushed to the upcoming framework transition.
 
-<h3>Rearranging auxiliar counters:</h3> Also not a priority, but it'd be a very interesting design challenge. I'll look up some better way to hide and display stuff than to use invisibility via css. This would need the counters to be rendered dynamically, which is cool but might impact performance a bit.
+<h3>Rearranging auxiliary counters:</h3> Also not a priority, but it'd be a very interesting design challenge. I'll look up some better way to hide and display stuff than to use invisibility via css. This would need the counters to be rendered dynamically, which is cool but might impact performance a bit.
 
 <h3>Commander damage to self and / or from partners:</h3> The extra columns are doing a fine job for now. I will make it clearer in the tutorial. The main problem with this is purely aesthetic though.
 
@@ -82,6 +84,8 @@ Listed below is the suggestions I receive from users and friends. This is more o
 <h3>Link the theme and player registration screens:</h3> This would be the end goal of the two features above. Implement the style screen theme selection (as in, the round buttons instead of the dropdown box), make it so the player can save his default counters, and so on. Again I think this is way too much of a hassle over something that's not that big. It is not a priority, but I intend to get there when there's nothing else left to do.
 
 <h3>Allow the player to choose the background color:</h3> Nope. Not happening. Each color was chosen to give the combinations some identity. Having a bright yellow background with a black mana symbol is stupid. Same goes for gradient colors, background images, and so on. The app's design direction is what it is.
+
+<h3>Theme ideas:</h3> Unstable faction symbols would make for amazing themes, if I ever find a high quality render for those. Ikoria ability counters are cool as well, especially the flying symbol.
 
 <hr>
 
