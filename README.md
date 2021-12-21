@@ -7,7 +7,7 @@ EDH Shieldmate Source Code
 
 <h2>Introduction</h2>
 
-So! I am a beginner developer and decided to try my hand at javascript / css. This app is more of a learning process than a product itself. Being a dedicated EDH player in the MTG world, I thought hey why not, lets make this happen.
+Hey ho! I am a beginner developer and decided to try my hand at javascript / css. This app is more of a learning process than a product itself. Being a dedicated EDH player in the MTG world, I thought hey why not, lets make this happen.
 
 This project is fun, I like to add stuff to it and learn along the way how to deal with performance issues and so on. But I feel I'm close to reaching a technical ceiling and I'll study other technologies for android development. When I started this, I opted to go hybrid because I thought I'd be releasing in all three platforms (microsoft was still a thing back then) at the same time but alas, reality is not so gentle. Publishing to iOS went from a priority, to a desire, to me simply not caring anymore.
 
@@ -54,9 +54,9 @@ Since its inception I've added a ton of new stuff to the app. Gonna list them be
 <h2>What's Going On</h2>
 This app went from a very, very small project to something I honestly love to work on and the community feedback has been great. With that in mind, I'll be porting the app to a newer framework. It will take A LOT of time though, but I'm positive it'll come up way better AND it'll be a great learning process to me as well.
 
-I'm divided between Flutter and Xamarin. Flutter (or maybe even React Native) looks awesome, but I'm a bit more familiar with C# dev environment and some of my coworkers use Xamarin at work so it might be a thing.
+Update on this: I still plan to get this ball rolling, but my work has been draining my life and I am not dedicating any free time in front of the computer anymore. When I get my life routine to a more stable position, I might get back at this.
 
-Meanwhile, I might not be updating the phonegap version unless absolutely necessary. I think version 1.8.0 is as good a final release as any.
+I don't plan on updating the app anymore. Just put up the final version with the night/day thingy and some interface polish, but that's it.
 
 <hr>
 
