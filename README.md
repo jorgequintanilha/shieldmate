@@ -21,7 +21,7 @@ Since its inception I've added a ton of new stuff to the app. Gonna list them be
 
 <h3>3P and 5P screens:</h3> Finally came around to fix that. Ugly code workaround was replaced with a more elegant solution and the screens turned out great.
 
-<h3>Oathbreaker Support:</h3> Widely requested. It is just a simple counter button, just like the experience one. Doubles as a partner commander counter as well. Now, if cards like Rowan and Will become a trend I'm in deep sh!t. If a new marker comes around, I might reuse it yet again, since Oathbreaker ain't THAT popular.
+<h3>Partner Casting Support:</h3> Widely requested. Formely the Oathbreaker spell counter, but in the end its just a simple counter button, just like the experience one. Doubles as a storm counter as well. If a new marker comes around, I might reuse this one yet again, since Oathbreaker ain't THAT popular.
 
 <h3>Player Registration:</h3> Just a way to record a player's name, default deck and default table position, to accelerate table setup for a familiar group. This is far from ideal but it is a step forward of the save-table-load-table approach from before.
 
@@ -30,6 +30,8 @@ Since its inception I've added a ton of new stuff to the app. Gonna list them be
 <h3>Negative Life:</h3> It is a very niche situation, such as Platinum Angel, but it was easy enough to implement so why not. Disabled by default to avoid confusion.
 
 <h3>Timer:</h3> Some players requested it so I did, mostly so I could learn how to do it. Personally I don't really use it and don't care about it.
+
+<h3>Night / Day cycle:</h3> Easy enough to implement, but just as niche as energy counters. Anyway, it's there, it works and there's nothing else to discuss.
 
 <h3>Binding Player Life and Commander Damage:</h3> This is essential in any EDH game, but I decided to make it an optional parameter so players may play without it and avoid mistakes.
 
