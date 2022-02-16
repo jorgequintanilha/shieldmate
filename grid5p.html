@@ -372,14 +372,14 @@
 			<div class="row h33p">
 				<div class="card h100p ptr" id="cardP5">
 					<div class="cardBack h100p col100p" id="cardBackP5">
-						<div class="cardTopPad h05p col100p"></div>
+						<div class="cardTopPad h02p col100p"></div>
 						<div class="cardContent col100p h95p">
 							<div class="cardTop row col100p h20p">
 								<div class="blkPlayerName col100p centerContent h100p" id="blkPlayerNameP5">
 									<span class="txtPlayerName fontWhite fiveP" id="txtPlayerNameP5">PLAYER 5</span>
 								</div>
 							</div>
-							<div class="cardMiddle row col100p h55p">
+							<div class="cardMiddle row col100p h50p">
 								<div class="blockIncrement h100p col16p">
 									<div class="blkIncPlusMain h50p col100p centerContent">
 										<button class="btnIncPlusMain btnInc btnFull" id="btnIncPlusMainP5">
@@ -414,6 +414,7 @@
 									</div>
 								</div>
 							</div>
+							<div class="cardTopPad h08p col100p"></div>
 							<div class="cardBottom row col100p h25p">
 								<div class="divAux divBless h100p col16p centerContent" id="divAuxBlessP5">
 									<button class="btnBless btnAux btnAuxPtr" id="btnBlessP5">
@@ -472,6 +473,16 @@
 			</div>
 			<div class="blkTimerBtn vertTableFix h20p col100p">
 				<button class="btnMenu tilt" id="btnResetConfirmNo">&nbsp;</button>
+			</div>
+		</div>
+
+		<div id="daynightBlock" class="daynightbox daynight5p invisible">
+			<div class="blkDaynightPad h100p col05p"></div>
+			<div class="blkDaynightBtn vertTableFix h100p col25p centerContent">
+				<image class="tutimg" id="daynightImg" src='./img/daynight.png'></image>
+			</div>
+			<div class="blkDaynightText vertTableFix h100p col70p centerContent" id="timerText">
+				<span class="txtDaynight fontWhite txt3h" id="txtDaynightDisplay">- - - -</span>
 			</div>
 		</div>
 
@@ -1170,138 +1181,154 @@
 		</div>
 
 		<div id="settingsSidebar" class="row h100p col100p leftSidebar">
-			<div class="sidebarSide col10p h100p"></div>
-			<div class="sidebarMiddle col80p h100p">
-				<div class="sidebarTop row h08p">
-					<div class="col15p h100p centerContent">
-						<button id="btnInfo">&nbsp;</button>
+			<div class="sidebarHeader col100p h08p">
+				<div class="sidebarTop row h100p">
+						<div class="col15p h100p centerContent">
+							<button id="btnInfo">&nbsp;</button>
+						</div>
+						<div class="sideBarTitle col70p h100p centerContent">
+							<span class="fontBlack fontFaded centerContent txt5 loc" id="game.settings"></span>
+						</div>
+						<div class="sideBarClose col15p h100p centerContent">
+							<button class="btnMenu btnMenuClose" id="btnSetSideBarClose">
+								<span class="fontWhite txt5">&nbsp;</span>
+							</button>
+						</div>
 					</div>
-					<div class="sideBarTitle col70p h100p centerContent">
-						<span class="fontBlack fontFaded txt5 loc" id="game.settings"></span>
-					</div>
-					<div class="sideBarClose col15p h100p centerContent">
-						<button class="btnMenu btnMenuClose" id="btnSetSideBarClose">
-							<span class="fontWhite txt5">&nbsp;</span>
-						</button>
-					</div>
-				</div>
-				<div class="row h01p"></div>
-				<div class="sidebarRow row h06p centerContent">
-					<input readonly type="text" class="textField inpSetStatus locph" id="inpSetStatus" placeholder="LOG" />
-				</div>
-				<div class="sidebarRow row h08p">
-					<div class="sideBarSlot col100p h100p centerContent">
-						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarResetGame">
-							<span class="fontWhite txt4 loc" id="game.resetgame"></span>
-						</button>
-					</div>
-				</div>
-				<div class="sidebarRow row h08p">
-					<div class="sideBarSlot col100p h100p centerContent">
-						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarResetStyles">
-							<span class="fontWhite txt4 loc" id="game.resetstyles"></span>
-						</button>
-					</div>
-				</div>
-				<div class="sidebarRow row h08p">
-					<div class="sideBarSlot col100p h100p centerContent">
-						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRandomStyles">
-							<span class="fontWhite txt4 loc" id="game.randomstyles"></span>
-						</button>
-					</div>
-				</div>
-				<div class="sidebarRow row h08p">
-					<div class="sideBarSlot col100p h100p centerContent">
-						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarTimerToggle">
-							<span class="fontWhite txt4 loc" id="game.toggletimer"></span>
-						</button>
-					</div>
-				</div>
-				<div class="sidebarRow row h02p"></div>
-				<div class="sidebarRow row h04p">
-					<div class="sideBarSection col100p h100p centerContent">
-						<span class="fontBlack fontFaded txt3 loc" id="game.startlifepoints"></span>
-						<span class="fontBlack fontFaded txt3" id="txtSetSideBarLifeSet"></span>
-					</div>
-				</div>
-				<div class="sidebarRow row h08p">
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP20">
-							<span class="fontWhite txt5">20</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP25">
-							<span class="fontWhite txt5">25</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP30">
-							<span class="fontWhite txt5">30</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP40">
-							<span class="fontWhite txt5">40</span>
-						</button>
-					</div>
-				</div>
-				<div class="sidebarRow row h02p"></div>
-				<div class="sidebarRow row h04p">
-					<div class="sideBarSection col100p h100p centerContent">
-						<span class="fontBlack fontFaded txt3 loc" id="game.diceroller"></span>
-					</div>
-				</div>
-				<div class="sidebarRow row h10p">
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnFaded btnDiceD4 btnFull" id="btnDiceD4">
-							<span class="fontWhite txt3">&nbsp;</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnFaded btnDiceD6 btnFull" id="btnDiceD6">
-							<span class="fontWhite txt3">&nbsp;</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnFaded btnDiceD8 btnFull" id="btnDiceD8">
-							<span class="fontWhite txt3">&nbsp;</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnFaded btnDicePlanar btnFull" id="btnDicePlanar">
-							<span class="fontWhite txt3">&nbsp;</span>
-						</button>
-					</div>
-				</div>
-				<div class="sidebarRow row h10p">
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnFaded btnDiceD10 btnFull" id="btnDiceD10">
-							<span class="fontWhite txt3">&nbsp;</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnFaded btnDiceD12 btnFull" id="btnDiceD12">
-							<span class="fontWhite txt3">&nbsp;</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnFaded btnDiceD20 btnFull" id="btnDiceD20">
-							<span class="fontWhite txt3">&nbsp;</span>
-						</button>
-					</div>
-					<div class="sidebarCol h100p col25p centerContent">
-						<button class="btnMenu btnFaded btnDiceCoin btnFull" id="btnDiceCoin">
-							<span class="fontWhite txt3">&nbsp;</span>
-						</button>
-					</div>
-				</div>
-				<div class="sidebarRow row h10p centerContent">
-					<input readonly type="text" class="textField inpDiceResult locph" id="setDiceResult" placeholder="RESULTS" />
-				</div>
-				<div class="row h03p"></div>
 			</div>
-			<div class="sidebarSide col10p h100p"></div>
+			<div class="sidebarBody col100p h92p">
+				<div class="sidebarSide col10p h100p"></div>
+				<div class="sidebarMiddle col80p h100p">
+					<div class="sidebarRow row h08p centerContent">
+						<div class="sideBarSlot col100p h100p centerContent">
+							<button class="btnMenu btnMenuWarning btn90" id="btnSetSideBarEndGame">
+								<span class="fontWhite txt4 loc" id="game.endgame"></span>
+							</button>
+						</div>
+					</div>
+					<div class="row h01p"></div>
+					<div class="sidebarRow row h06p centerContent">
+						<input readonly type="text" class="textField inpSetStatus locph" id="inpSetStatus" placeholder="LOG" />
+					</div>
+					<div class="sidebarRow row h08p">
+						<div class="sideBarSlot col100p h100p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarResetGame">
+								<span class="fontWhite txt4 loc" id="game.resetgame"></span>
+							</button>
+						</div>
+					</div>
+					<div class="sidebarRow row h08p">
+						<div class="sideBarSlot col100p h100p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarResetStyles">
+								<span class="fontWhite txt4 loc" id="game.resetstyles"></span>
+							</button>
+						</div>
+					</div>
+					<div class="sidebarRow row h08p">
+						<div class="sideBarSlot col100p h100p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRandomStyles">
+								<span class="fontWhite txt4 loc" id="game.randomstyles"></span>
+							</button>
+						</div>
+					</div>
+					<div class="sidebarRow row h08p">
+						<div class="sideBarSlot col50p h100p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarTimerToggle">
+								<image class="paddedimg" id="daynightImg" src='./img/timer.png'></image>
+							</button>
+						</div>
+						<div class="sideBarSlot col50p h100p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarDaynightToggle">
+								<image class="paddedimg" id="daynightImg" src='./img/daynightblk.png'></image>
+							</button>
+						</div>
+					</div>
+					<div class="sidebarRow row h02p"></div>
+					<div class="sidebarRow row h04p">
+						<div class="sideBarSection col100p h100p centerContent">
+							<span class="fontBlack fontFaded txt3 loc" id="game.startlifepoints"></span>
+							<span class="fontBlack fontFaded txt3" id="txtSetSideBarLifeSet"></span>
+						</div>
+					</div>
+					<div class="sidebarRow row h08p">
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP20">
+								<span class="fontWhite txt5">20</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP25">
+								<span class="fontWhite txt5">25</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP30">
+								<span class="fontWhite txt5">30</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnSetSideBarRLP40">
+								<span class="fontWhite txt5">40</span>
+							</button>
+						</div>
+					</div>
+					<div class="sidebarRow row h02p"></div>
+					<div class="sidebarRow row h04p">
+						<div class="sideBarSection col100p h100p centerContent">
+							<span class="fontBlack fontFaded txt3 loc" id="game.diceroller"></span>
+						</div>
+					</div>
+					<div class="sidebarRow row h10p">
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnFaded btnDiceD4 btnFull" id="btnDiceD4">
+								<span class="fontWhite txt3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnFaded btnDiceD6 btnFull" id="btnDiceD6">
+								<span class="fontWhite txt3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnFaded btnDiceD8 btnFull" id="btnDiceD8">
+								<span class="fontWhite txt3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnFaded btnDicePlanar btnFull" id="btnDicePlanar">
+								<span class="fontWhite txt3">&nbsp;</span>
+							</button>
+						</div>
+					</div>
+					<div class="sidebarRow row h10p">
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnFaded btnDiceD10 btnFull" id="btnDiceD10">
+								<span class="fontWhite txt3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnFaded btnDiceD12 btnFull" id="btnDiceD12">
+								<span class="fontWhite txt3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnFaded btnDiceD20 btnFull" id="btnDiceD20">
+								<span class="fontWhite txt3">&nbsp;</span>
+							</button>
+						</div>
+						<div class="sidebarCol h100p col25p centerContent">
+							<button class="btnMenu btnFaded btnDiceCoin btnFull" id="btnDiceCoin">
+								<span class="fontWhite txt3">&nbsp;</span>
+							</button>
+						</div>
+					</div>
+					<div class="sidebarRow row h10p centerContent">
+						<input readonly type="text" class="textField inpDiceResult locph" id="setDiceResult" placeholder="RESULTS" />
+					</div>
+					<div class="row h03p"></div>
+				</div>
+				<div class="sidebarSide col10p h100p"></div>
+			</div>
 		</div>
 
 		<div id="styleSidebar" class="row h100p col100p leftSidebar">
@@ -1580,7 +1607,8 @@
 						</button>
 					</div>
 				</div>
-				<div class="sidebarRow row h07p"></div>
+				<div class="sidebarRow row h07p">
+				</div>
 				<div class="sidebarStyleBox row h07p">
 					<div class="sidebarStyleBoxSlot col40p h100p centerContent">
 						<button class="btnMenu btnMenuLight btn90 btnSideBar" id="btnStyleSideBarClear">

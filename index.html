@@ -72,7 +72,7 @@
 			<div class="row h08p">
 				<div class="col10p h100p"></div>
 				<div class="col40p h100p centerContent">
-					<button class="btnMenu btnMenuLight btn90" id="btnBanlist"><span class="fontWhite txt4h loc" id="index.banlist"></span></button>
+					<button class="btnMenu btnMenuLight btn90" id="btnAbout"><span class="fontWhite txt4h loc" id="index.about"></span></button>
 				</div>
 				<div class="col40p h100p centerContent">
 					<button class="btnMenu btnMenuLight btn90" id="btnHowto"><span class="fontWhite txt4h loc" id="index.howto"></span></button>
@@ -81,36 +81,36 @@
 			</div>
 			<div class="row h08p">
 				<div class="col10p h100p"></div>
-				<div class="col40p h100p centerContent">
-					<button class="btnMenu btnMenuLight btn90" id="btnAbout"><span class="fontWhite txt4h loc" id="index.about"></span></button>
-				</div>
-				<div class="col40p h100p centerContent">
-					<button class="btnMenu btnMenuLight btn90" id="btnOptions"><span class="fontWhite txt4h loc" id="index.options"></span></button>
+				<div class="col80p h100p centerContent">
+					<button class="btnMenu btnMenuLight btn95" id="btnOptions"><span class="fontWhite txt4h loc" id="index.options"></span></button>
 				</div>
 				<div class="col10p h100p"></div>
 			</div>
 			<div class="row h02p"></div>
 			<div class="row h04p">
-				<div class="col100p h100p centerContent"><span class="fontBlack fontFaded txt4 loc" id="index.language"></span></div>
+				<div class="col10p h100p"></div>
+				<div class="col40p h100p centerContent"><span class="fontBlack fontFaded txt4 loc" id="index.language"></span></div>
+				<div class="col50p h100p centerContent"></div>
 			</div>
 			<div class="row h06p">
 				<div class="col10p h100p"></div>
-				<div class="col40p h100p centerContent">
-					<button class="btnMenu btn30 btnLangBR" id="btnLng2"><span class="fontWhite txt5">&nbsp;</span></button>
+				<div class="col20p h100p centerContent">
+					<button class="btnMenu btn70 btnLangBR" id="btnLng2"><span class="fontWhite txt5">&nbsp;</span></button>
 				</div>
-				<div class="col40p h100p centerContent">
-					<button class="btnMenu btn30 btnLangEN" id="btnLng1"><span class="fontWhite txt5">&nbsp;</span></button>
+				<div class="col20p h100p centerContent">
+					<button class="btnMenu btn70 btnLangEN" id="btnLng1"><span class="fontWhite txt5">&nbsp;</span></button>
+				</div>
+				<div class="col10p h100p"></div>
+				<div class="col30p h100p centerContent">
+					<button class="btnMenu btnEndapp btn70" id="btnEndapp">
+						<span class="fontWhite txt4 loc" id="game.endapp"></span>
+					</button>
 				</div>
 				<div class="col10p h100p"></div>
 			</div>
 			<div class="row h01p"></div>
-			<div class="row h06p">
+			<div class="row h06p">	
 				<div class="col15p h100p"></div>
-				<div class="col70p h100p centerContent">
-					<button class="btnMenu btnNumP btn90" id="btnSupport">
-						<span class="fontWhite txt3h loc" id="index.supporter"></span>
-					</button>
-				</div>
 				<div class="col15p h100p"></div>
 			</div>
 			<div class="row h01p"></div>
@@ -134,13 +134,11 @@
 		document.getElementById("5p").addEventListener('click', function(){sessionStorage.setItem('numPlayers',5); self.location="grid5p.html";}, false);     
 		document.getElementById("6p").addEventListener('click', function(){sessionStorage.setItem('numPlayers',6); self.location="grid6p.html";}, false);	
 		document.getElementById("ae").addEventListener('click', function(){sessionStorage.setItem('numPlayers',4); self.location="gridae.html";}, false);
-		document.getElementById("btnBanlist").addEventListener('click', function(){self.location="banlist.html";}, false);
 		document.getElementById("btnHowto").addEventListener('click', function(){self.location="howto.html";}, false);
 		document.getElementById("btnAbout").addEventListener('click', function(){self.location="about.html";}, false);
 		document.getElementById("btnOptions").addEventListener('click', function(){self.location="options.html";}, false);
 		document.getElementById("btnLng1").addEventListener('click', function(){setLanguage('en'); localize('index');}, false);
 		document.getElementById("btnLng2").addEventListener('click', function(){setLanguage('br'); localize('index');}, false);
-		document.getElementById("btnSupport").addEventListener('click', function(){self.location="https://play.google.com/store/apps/details?id=com.wired.shieldmatesuper";}, false);
 		localize('index');
 		function backKeyDown(e) { 
 			e.preventDefault();
@@ -151,6 +149,14 @@
 				navigator.notification.confirm("Do you wish to close the app?", onConfirm, "Confirmation", "Yes,No"); 
 			}
 		}
+		document.getElementById("btnEndapp").addEventListener('click', function(){
+			var lang = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
+			if(lang=='br') {
+				navigator.notification.confirm("Deseja fechar o aplicativo?", onConfirm, "Confirmação", "Sim,Não"); 
+			} else {
+				navigator.notification.confirm("Do you wish to close the app?", onConfirm, "Confirmation", "Yes,No"); 
+			}
+		}, false);
 		function onConfirm(button) {
 			if(button==2){
 				return;

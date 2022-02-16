@@ -342,6 +342,10 @@ a {
 	text-decoration: none;
 }
 
+.underline {
+	text-decoration: underline;
+}
+
 .justify {
 	text-align: justify;
 	text-justify: inter-word;
@@ -414,9 +418,9 @@ a {
 .txtIncMain.fourP { font-size: 6vh;}
 .txtIncExt.fourP { font-size: 6vh;}
 .txtPlayerName.fiveP { font-size: 6vh;}
-.txtLifePoints.fiveP { font-size: 18vh;}
-.txtIncMain.fiveP { font-size: 8vh;}
-.txtIncExt.fiveP { font-size: 8vh;}
+.txtLifePoints.fiveP { font-size: 16vh;}
+.txtIncMain.fiveP { font-size: 4vh;}
+.txtIncExt.fiveP { font-size: 4vh;}
 .txtPlayerName.sixP { font-size: 5vh;}
 .txtLifePoints.sixP { font-size: 13vh;}
 .txtIncMain.sixP { font-size: 5vh;}
@@ -558,6 +562,13 @@ textarea {
 	opacity: 0.5;
 }
 
+.paddedimg {
+	max-width: 90%;
+	max-height: 90%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}			
 .tutimg {
 	max-width: 100%;
 	max-height: 100%;
@@ -593,7 +604,7 @@ textarea {
 	right: 0;
 	top: 4%;
 	left: 0;
-	width: 4.5vh;
+	width: 4vh;
 	height: 25vh;
 }
 
@@ -601,13 +612,12 @@ textarea {
 	right: 0;
 	top: 10%;
 	left: 0;
-	width: 4.5vh;
+	width: 4vh;
 	height: 25vh;
 }
 
 .timer2p {
-	right: 0;
-	left: 0;
+	left: 2%;
 	bottom: 11%;
 	width: 50vw;
 	height: 5vh;
@@ -621,10 +631,72 @@ textarea {
 	height: 5vh;
 }
 
-#timerLnd,
-#timerLnd2 {
-	z-index: 5;
+.daynightbox {
+	position: absolute;
+	margin: auto;
+	background-color: #333333;
+	border-radius: 10px;
 }
+
+.daynightextrabox {
+	margin: auto;
+	background-color: #333333;
+	border-radius: 10px;
+}
+
+.daynight6p {
+	right: 0;
+	bottom: 5%;
+	left: 0;
+	width: 4vh;
+	height: 14vh;
+}
+
+.daynight5p {
+	right: 0;
+	bottom: 8%;
+	left: 0;
+	width: 14vh;
+	height: 4vh;
+}
+
+.daynight4p {
+	right: 0;
+	bottom: 5%;
+	left: 0;
+	width: 4vh;
+	height: 14vh;
+}
+
+.daynight3p {
+	right: 0;
+	bottom: 9%;
+	left: 0;
+	width: 14vh;
+	height: 5vh;
+}
+
+
+.daynight2p {
+	right: 4%;
+	bottom: 11%;
+	width: 14vh;
+	height: 5vh;
+}
+
+.daynight1p {
+	right: 0;
+	bottom: 12%;
+	left: 0;
+	width: 14vh;
+	height: 5vh;
+}
+
+#timerLnd,
+#timerLnd2,
+#daynightBlock {
+	z-index: 5;
+}			  
 
 #timerConfirmation,
 #timerConfirmation2 {
@@ -1039,6 +1111,12 @@ button {
 .btnMenuMirran { background: url(../img/btnmirran.png) no-repeat center center; }
 .btnMenuFive { background: url(../img/btnfive.png) no-repeat center center; }
 .btnMenuColorless { background: url(../img/btncolorless.png) no-repeat center center; }
+.btnMenuGraveyard { background: url(../img/btngraveyard.png) no-repeat center center; }
+.btnMenuAggro { background: url(../img/btnaggro.png) no-repeat center center; }
+.btnMenuCombo { background: url(../img/btncombo.png) no-repeat center center; }
+.btnMenuControl{ background: url(../img/btncontrol.png) no-repeat center center; }
+.btnMenuTribal { background: url(../img/btntribal.png) no-repeat center center; }
+.btnMenuNeon { background: url(../img/btnneon.png) no-repeat center center; }
 .btnMenuEnergy { background: url(../img/btnenergy.png) no-repeat center center; }
 .btnMenuBlank { background: url(../img/blank.png) no-repeat center center; }
 .btnMenuArtificer{ background: url(../img/btnartificer.png) no-repeat center center; }
@@ -1091,11 +1169,20 @@ button {
 .btnDmgColorless { background: #978b99;}
 .btnDmgBlank { background: #444444;}
 .btnDmgExtra { background: #efefef;}
+.btnDmgGraveyard { background: #383a30;}
+.btnDmgAggro{ background: #823405;}
+.btnDmgCombo { background: #224486;}
+.btnDmgControl { background: #4d2175;}
+.btnDmgTribal { background: #888888;}
 .btnDmgArtificer { background: #6d5855;}
 .btnDmgEnchantress { background: #49b37d;}
 .btnDmgSnow { background: #a1b1c4;}
 .btnDmgSpellslinger { background: #7f3949;}
 .btnDmgVoltron { background: #a6aeae;}
+.btnDmgNeon1 { background: #ff0055;}
+.btnDmgNeon2 { background: #cccc00;}
+.btnDmgNeon3 { background: #0000ff;}
+.btnDmgNeon4 { background: #ff00cc;}
 
 .fontDmgWhite { color: #b7c17d;}
 .fontDmgBlue { color: #006eb9;}
@@ -1134,11 +1221,20 @@ button {
 .fontDmgColorless { color: #978b99;}
 .fontDmgBlank { color: #444444;}
 .fontDmgExtra { color: #efefef;}
+.fontDmgGraveyard { color: #383a30;}
+.fontDmgAggro{ color: #823405;}
+.fontDmgCombo { color: #224486;}
+.fontDmgControl { color: #4d2175;}
+.fontDmgTribal{ color: #888888;}
 .fontDmgArtificer { color: #6d5855;}
 .fontDmgEnchantress { color: #49b37d;}
 .fontDmgSnow { color: #a1b1c4;}
 .fontDmgSpellslinger { color: #7f3949;}
 .fontDmgVoltron { color: #a6aeae;}
+.fontDmgNeon1 { color: #ff0055;}
+.fontDmgNeon2 { color: #cccc00;}
+.fontDmgNeon3 { color: #0000ff;}
+.fontDmgNeon4 { color: #ff00cc;}
 
 .btn30 {
 	width: 30%;
@@ -1146,8 +1242,26 @@ button {
 	border-radius: 5px;
 }
 
+.btn50 {
+	width: 50%;
+	height: 80%;
+	border-radius: 5px;
+}
+
 .btn60 {
 	width: 60%;
+	height: 80%;
+	border-radius: 5px;
+}
+
+.btn70 {
+	width: 70%;
+	height: 80%;
+	border-radius: 5px;
+}
+
+.btn75 {
+	width: 75%;
 	height: 80%;
 	border-radius: 5px;
 }
@@ -1163,6 +1277,13 @@ button {
 	height: 80%;
 	border-radius: 5px;
 }
+
+.btn95 {
+	width: 96.5%;
+	height: 80%;
+	border-radius: 5px;
+}
+
 
 .btnFull {
 	width: 100%;
@@ -1358,6 +1479,12 @@ button {
 	width: 7vh;
 }
 
+.btnAuxPtr5p {
+	background-size: 6vh 6vh;
+	height: 6vh;
+	width: 6vh;
+}
+
 .btnAuxLnd {
 	background-size: 5vh 5vh;
 	height: 5vh;
@@ -1408,6 +1535,18 @@ button {
 
 .btnMenuDark {
 	background: #222222;
+}
+
+.btnMenuWarning {
+	height: 5vh;
+    width: 20vh;
+    background-color: lightcoral;
+}
+
+.btnEndapp {
+	height: 5vh;
+    width: 10vh;
+    background-color: darkred;
 }
 
 .btnStyle {

@@ -76,7 +76,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function sleep(time) {
+function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
@@ -1330,22 +1330,6 @@ function setSettingsSidebarFunctions() {
     document.getElementById("setDiceResult").value = (x == 1 ? (lang == "br" ? "Cara!" : "Heads!") : (lang == "br" ? "Coroa!" : "Tails!"));
     document.getElementById("setDiceResult").style.opacity = 1;
   }, false);
-
-  document.getElementById("btnSetSideBarEndGame").addEventListener("click", function () {
-    if(lang=='br') {
-      navigator.notification.confirm("CUIDADO! Deseja sair do jogo? Você perderá todo o progresso!", onConfirmEndgame, "Confirmação", "Sim,Não"); 
-    } else {
-      navigator.notification.confirm("WARNING! Do wish you wish to quit the game? All progress will be lost!", onConfirmEndgame, "Confirmation", "Yes,No"); 
-    }
-  }, false);
-}
-
-function onConfirmEndgame(button) {
-  if(button==2){
-    return;
-  }else{
-    self.location="index.html";
-  }
 }
 
 function setPlayersSidebarFunctions() {
